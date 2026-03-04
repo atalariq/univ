@@ -21,7 +21,6 @@
   paper: "a4",
   font: "Times New Roman",
   font-size: 12pt,
-  lang: "id",
 )
 
 #set heading(numbering: numbly("{1:A}.", "{2}.", "{2}.{3}", "{2}.{3}.{4}"))
@@ -36,10 +35,9 @@
 
 = Dasar Teori
 
-Version control adalah sistem yang mencatat perubahan pada file seiring waktu sehingga dapat召回 versi tertentu. Git merupakan distributed version control system yang dibuat oleh Linus Torvalds pada tahun 2005 @git-book.
+Version control adalah sistem yang mencatat perubahan pada file seiring waktu sehingga dapat versi tertentu. Git merupakan distributed version control system yang dibuat oleh Linus Torvalds pada tahun 2005 @git-book.
 
 #code(
-  lang: "bash",
   caption: "Instalasi Git di Ubuntu",
   ```bash
   # Install Git
@@ -60,7 +58,6 @@ Version control adalah sistem yang mencatat perubahan pada file seiring waktu se
 Berikut adalah hasil instalasi Git pada sistem operasi Ubuntu:
 
 #code(
-  lang: "bash",
   caption: "Cek versi Git",
   ```bash
   $ git --version
