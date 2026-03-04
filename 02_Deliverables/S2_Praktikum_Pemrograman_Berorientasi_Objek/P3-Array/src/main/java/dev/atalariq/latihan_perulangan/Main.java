@@ -1,9 +1,9 @@
 public class Main {
   public static void main(String[] args) {
-    // latihan1();
-    // latihan2();
-    // latihan3();
-    // latihan4();
+    latihan1();
+    latihan2();
+    latihan3();
+    latihan4();
     praktikConditionalStatement();
     latihan5();
   }
