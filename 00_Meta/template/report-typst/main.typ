@@ -6,25 +6,28 @@
   author: "Atalariq Barra Hadinugraha",
   id: "25/557554/SV/26192",
   class: "B2",
-  course: "Rekayasa Perangkat Lunak",
-  course-code: "TRPL",
-  lecturer: "Dr. Jane Doe, M.T.",
-  meeting: "1",
-  title: "Pengenalan Version Control dengan Git",
+  course: "<course-name>",
+  course-code: "<course-code>",
+  lecturer: "<lecturer-name>",
+  meeting: "<meeting>",
+  title: "<report-title>",
 
+  // Content
   minimal: false,
   show-table-of-content: true,
-  show-table-of-figure: true,
-  show-table-of-table: true,
+  show-table-of-figure: false,
+  show-table-of-table: false,
   show-bibliography: true,
 
+  // Document
   paper: "a4",
-  font: "Times New Roman",
   font-size: 12pt,
+  font: "New Computer Modern",
+  code-font: "Fira Code",
+  export-preset: "screen",
 )
 
 #set heading(numbering: numbly("{1:A}.", "{2}.", "{2}.{3}", "{2}.{3}.{4}"))
-
 
 = Tujuan Praktikum
 
@@ -83,18 +86,6 @@ Berikut adalah hasil instalasi Git pada sistem operasi Ubuntu:
   $E = m c^2$,
   caption: "Relativitas Umum Einstein",
   numbered: true,
-)
-
-=== Contoh Alert/Callout
-
-#alert(
-  type: "info",
-  [Pastikan Anda telah mengkonfigurasi Git sebelum memulai!]
-)
-
-#alert(
-  type: "warning",
-  [Jangan pernah melakukan force push ke repository bersama!]
 )
 
 

@@ -32,33 +32,6 @@
     numbering: "1.1",
     caption-size: 0.8em,
   ),
-  fonts: (
-    body: "New Computer Modern",
-    code: "Fira Code",
-  ),
-)
-
-#let _line-spacing-map = (
-  single: 1.0,
-  "1.5": 1.5,
-  double: 2.0,
-)
-
-#let _page-number-positions = (
-  "bottom-center": (alignment: center, margin-bottom: 0.5in),
-  "bottom-left": (alignment: left, margin-bottom: 0.5in),
-  "bottom-right": (alignment: right, margin-bottom: 0.5in),
-  "top-center": (alignment: center, margin-top: 0.5in),
-  "top-left": (alignment: left, margin-top: 0.5in),
-  "top-right": (alignment: right, margin-top: 0.5in),
-)
-
-#let _heading-numbering-presets = (
-  "1.": "{1}.",
-  "I.": "{1:I}.",
-  "A.": "{1:A}.",
-  "1.1": "{1}.{2}",
-  "1.1.1": "{1}.{2}.{3}",
 )
 
 #let _export-font-adjustments = (
@@ -84,7 +57,7 @@
 ) = {
   align(center)[
     #upper(
-      text(size: 1.5em, weight: "bold")[
+      text(size: 1.25em, weight: "bold")[
         #_const.title-page.title \
         #course \
         PERTEMUAN #meeting \
@@ -130,7 +103,7 @@
   title,
 ) = {
   align(center)[
-    #text(1.5em, weight: "bold")[
+    #text(1.25em, weight: "bold")[
       Tugas #course \
       Pertemuan #meeting - #title
     ]
@@ -183,27 +156,6 @@
   )
 }
 
-#let _page-numbering(
-  show-page-number,
-  page-number-position,
-  paper,
-) = {
-  if show-page-number {
-    let pos = _page-number-positions.at(page-number-position)
-    if "margin-top" in pos {
-      set page(
-        header: align(pos.alignment)[#counter(page).display()],
-        header-edge: pos.margin-top,
-      )
-    } else {
-      set page(
-        footer: align(pos.alignment)[#counter(page).display()],
-        footer-edge: pos.margin-bottom,
-      )
-    }
-  }
-}
-
 #let report(
   author: "Atalariq Barra Hadinugraha",
   id: "25/557554/SV/26192",
@@ -222,16 +174,9 @@
   font-size: 12pt,
   font: "New Computer Modern",
   code-font: "Fira Code",
-  add-indentation-every-paragraph: true,
-  line-spacing: 1.5,
-  heading-numbering-preset: "1.",
-  show-page-number: false,
-  page-number-position: "bottom-center",
   export-preset: "screen",
   body,
 ) = {
-  let line-spacing-value = _line-spacing-map.at(str(line-spacing), default: line-spacing)
-  let heading-numbering = _heading-numbering-presets.at(heading-numbering-preset, default: heading-numbering-preset)
   let export-adjustments = _export-font-adjustments.at(export-preset, default: _export-font-adjustments.screen)
 
   set document(author: author, title: title)
@@ -243,24 +188,9 @@
     weight: export-adjustments.body-weight,
     ligatures: false,
   )
-  let indent-value = if add-indentation-every-paragraph { (amount: 0.5in, all: true) } else { 0pt }
-  set par(
-    spacing: line-spacing-value * 1em,
-    leading: line-spacing-value * 0.8em,
-    justify: true,
-    first-line-indent: indent-value
-  )
-  set heading(
-    numbering: heading-numbering,
-  )
-
-  show heading: it => {
-    v(0.5em)
-    it
-    v(0.5em)
-  }
-
-  _page-numbering(show-page-number, page-number-position, paper)
+  show raw: set text(font: code-font, weight: export-adjustments.code-weight)
+  show raw.where(block: true): set text(font-size * 0.8)
+  set par( justify: true)
 
   if not minimal {
     _title-page(
@@ -296,16 +226,6 @@
   }
 }
 
-#let columns2(gutter: 1cm, ..items) = {
-  let items-arr = items.pos()
-  let columns-count = items-arr.len()
-  columns(
-    count: calc.min(columns-count, 2),
-    gutter: gutter,
-    ..items-arr
-  )
-}
-
 #let col2(
   left,
   right,
@@ -316,7 +236,7 @@
 
 #let img(path, caption: none, width: 10cm, align: center) = {
   if caption == none {
-    align(align)[image(path, width: width)]
+    align(align)[#image(path, width: width)]
   } else {
     figure(image(path, width: width), caption: caption)
   }
@@ -331,11 +251,12 @@
   let code-content = zebraw(
     numbering: show-line-numbers,
     numbering-separator: show-line-numbers,
+    hanging-indent: true,
     code,
   )
   
   if caption == none {
-    align(align)[code-content]
+    code-content
   } else {
     figure(
       code-content,
@@ -377,50 +298,15 @@
 #let eq(formula, caption: none, numbered: false, align-item: center) = {
   if numbered {
     if caption == none {
-      align(align-item)[math.equation(block: true, numbering: "(1)", formula)]
+      align(align-item)[#math.equation(block: true, numbering: "(1)", formula)]
     } else {
       figure(
-        align(align-item)[math.equation(block: true, numbering: "(1)", formula)],
+        align(align-item)[#math.equation(block: true, numbering: "(1)", formula)],
         caption: caption,
       )
     }
   } else {
-    align(align-item)[math.equation(block: true, formula)]
+    align(align-item)[#math.equation(block: true, formula)]
   }
 }
 
-#let alert(
-  type: "info",
-  text
-) = {
-  let bg-color = (
-    info: rgb("#e3f2fd"),
-    warning: rgb("#fff3e0"),
-    error: rgb("#ffebee"),
-    success: rgb("#e8f5e9"),
-  ).at(type)
-  
-  let icon = (
-    info: "ℹ",
-    warning: "⚠",
-    error: "✕",
-    success: "✓",
-  ).at(type)
-
-  block(
-    fill: bg-color,
-    inset: 12pt,
-    radius: 4pt,
-    [#icon #text]
-  )
-}
-
-#let appendix(title: "Lampiran", body) = {
-  pagebreak()
-  heading(numbering: none, supplement: "Lampiran")[#title]
-  body
-}
-
-#let appendix-section(title) = {
-  heading(numbering: "A.", supplement: "Lampiran")[#title]
-}
