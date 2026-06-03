@@ -1,0 +1,219 @@
+\documentclass[a4paper,oneside,11pt]{book}
+
+% Package dasar
+\usepackage[utf8]{inputenc}     % untuk karakter UTF-8
+\usepackage[T1]{fontenc}        % encoding font
+\usepackage{graphicx}
+\usepackage{titling}
+\usepackage[indonesian]{babel}
+\usepackage{titlesec}
+
+% Package tambahan untuk layout dan formatting
+\usepackage{geometry}           % untuk margin
+\usepackage{setspace}           % untuk spasi baris
+\usepackage{fancyhdr}           % untuk header/footer
+\usepackage{hyperref}           % untuk link dan bookmark
+\usepackage{listings}           % untuk code Python
+\usepackage{xcolor}             % untuk warna
+\usepackage{float}              % untuk posisi gambar
+\usepackage{tocloft}            % Untuk membuat daftar isi menampilkan "Bab 1. Pendahuluan" instead of "1. Pendahuluan",
+\usepackage{lipsum}             % untuk lorem ipsum
+\usepackage{indentfirst}        % untuk indent paragraf pertama
+
+% Pengaturan layout
+\geometry{left=3cm, right=2cm, top=2cm, bottom=2cm}
+\onehalfspacing  % spasi 1.5
+
+% Format chapter
+\titleformat{\chapter}[hang]
+  {\normalfont\huge\bfseries\centering}{\chaptertitlename\ \thechapter.}{1em}{}
+
+% Format code Python
+\lstset{
+    language=Python,
+    basicstyle=\ttfamily\small,
+    keywordstyle=\color{blue},
+    commentstyle=\color{gray},
+    stringstyle=\color{red},
+    numbers=left,
+    numberstyle=\tiny,
+    frame=single,
+    breaklines=true,
+    showstringspaces=false,
+    xleftmargin=2cm,
+    xrightmargin=1cm
+}
+
+% Pengaturan hyperref
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black,
+    filecolor=magenta,
+    urlcolor=blue,
+    citecolor=red
+}
+
+% Info dokumen
+\title{Laporan Praktikum \\ Pemrograman Komputer\\
+Pertemuan 1\\
+Perkenalan Python dan Algoritma}
+\author{Nama Mahasiswa: (Nama)\\NIM:(NIM)}
+
+\begin{document}
+
+% Title Page
+\begin{titlingpage} 
+\begin{center}
+
+\vspace{4cm} 
+\begin{Large} 
+\textbf{\thetitle} \\
+\end{Large}
+\vspace{2cm}
+
+\includegraphics[height=8cm]{logo.png}\\ 
+\begin{large}
+\vspace{2cm} 
+\theauthor\\
+Kelas: A1 \\ 
+\end{large}
+\begin{large}
+Dosen Pengampu: Dinar Nugroho Pratomo, S.Kom., M.IM., M.Cs.\\
+\end{large}
+
+\vspace{2cm}
+\begin{Large}
+\textbf{Sekolah Vokasi}\\
+\textbf{Universitas Gadjah Mada}\\
+\textbf{Yogyakarta}\\
+\textbf{2025}\\
+\end{Large}
+
+\end{center}
+\end{titlingpage}
+
+% Header/Footer
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{Laporan Praktikum}
+\fancyhead[R]{Pemrograman Komputer}
+\fancyfoot[C]{\thepage}
+
+% Daftar Isi
+\renewcommand{\cfttoctitlefont}{\hfill\normalfont\huge\bfseries}
+\renewcommand{\cftaftertoctitle}{\hfill}
+\renewcommand{\cftbeforetoctitleskip}{0pt}
+\renewcommand{\cftaftertoctitleskip}{20pt}
+\renewcommand{\cftchappresnum}{Bab }
+\renewcommand{\cftchapaftersnum}{.}
+\renewcommand{\cftchapnumwidth}{3.7em}
+\tableofcontents
+\newpage
+
+% BAB 1: PENDAHULUAN
+\chapter{Pendahuluan}
+
+\section{Latar Belakang}
+\indent Python merupakan salah satu bahasa pemrograman yang paling populer di dunia saat ini karena memiliki sintaks yang sederhana dan mudah dipahami. Dalam era digital yang berkembang pesat, kemampuan memahami dan menerapkan algoritma pemrograman menjadi sangat penting bagi mahasiswa teknologi informasi. 
+
+\indent Praktikum ini dirancang untuk memberikan pemahaman dasar tentang konsep pemrograman menggunakan Python, mulai dari sintaks dasar hingga implementasi algoritma sederhana. Melalui pembelajaran praktis ini, diharapkan mahasiswa dapat membangun fondasi yang kuat dalam pemrograman komputer.
+
+\section{Tujuan Praktikum}
+\begin{enumerate}
+  \item Memahami dasar-dasar pemrograman Python dan sintaksnya
+  \item Mengenal konsep algoritma dan penerapannya dalam pemrograman
+  \item Mampu membuat program sederhana menggunakan Python
+  \item Dapat mengimplementasikan struktur data dan control flow dasar
+  \item Memahami konsep debugging dan error handling dalam Python
+\end{enumerate}
+
+% BAB 2: DASAR TEORI
+\chapter{Dasar Teori}
+
+\section{Pengenalan Python}
+\indent Python adalah bahasa pemrograman tingkat tinggi yang dikembangkan oleh Guido van Rossum pada tahun 1991. Python memiliki filosofi desain yang menekankan keterbacaan kode dengan menggunakan spasi putih yang signifikan. Bahasa ini mendukung multiple paradigma pemrograman termasuk pemrograman berorientasi objek, imperatif, dan fungsional.
+
+\indent Keunggulan Python antara lain:
+\begin{itemize}
+    \item Memiliki library yang sangat lengkap
+    \item Cross-platform (dapat berjalan di Windows, macOS, Linux)
+    \item Mendukung integrasi dengan bahasa pemrograman lain
+\end{itemize}
+
+\section{Konsep Algoritma}
+\indent Algoritma adalah serangkaian langkah-langkah logis dan sistematis yang digunakan untuk menyelesaikan suatu masalah atau mencapai tujuan tertentu. Dalam konteks pemrograman, algoritma merupakan blueprint yang menjelaskan bagaimana suatu program harus bekerja.
+
+\indent Seperti yang terlihat di gambar \ref{fig:komputer}, komputer merupakan alat yang dapat mengeksekusi algoritma dengan cepat dan akurat.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[height=4cm]{assets/komputer.jpg}
+\caption{Ilustrasi Komputer Modern untuk Pemrograman}
+\label{fig:komputer}
+\end{figure}
+
+\indent Karakteristik algoritma yang baik meliputi:
+\begin{enumerate}
+    \item \textbf{Input}: Algoritma memiliki nol atau lebih input
+    \item \textbf{Output}: Algoritma menghasilkan minimal satu output
+    \item \textbf{Definiteness}: Setiap langkah harus jelas dan tidak ambigu
+\end{enumerate}
+
+% BAB 3: HASIL DAN PEMBAHASAN
+\chapter{Hasil dan Pembahasan}
+
+\section{Tugas}
+\indent Program pertama yang dibuat adalah program sederhana untuk menampilkan pesan "Hello World" ke layar. Program ini merupakan tradisi dalam pembelajaran pemrograman karena memperkenalkan konsep dasar output. Berikut adalah kode programnya:
+
+\begin{lstlisting}
+# Program Hello World sederhana
+print("Hello World!")
+print("Selamat datang di dunia Python")
+
+# Program interaktif dengan user
+nama = input("Masukkan nama Anda: ")
+print(f"Halo {nama}, selamat belajar Python!")
+\end{lstlisting}
+
+\indent Hasil output dari program di atas menunjukkan bagaimana Python dapat melakukan operasi input dan output dasar. Program ini berhasil menampilkan pesan dan berinteraksi dengan pengguna secara sederhana.
+
+\section{Quiz}
+\indent Soal yang diberikan adalah membuat program untuk menentukan apakah suatu bilangan adalah genap atau ganjil. Program ini menggunakan operator modulus untuk mengecek sisa pembagian.
+
+\begin{lstlisting}
+# Program menentukan bilangan genap atau ganjil
+def cek_genap_ganjil(angka):
+    if angka % 2 == 0:
+        return "genap"
+    else:
+        return "ganjil"
+
+# Input dari user
+bilangan = int(input("Masukkan sebuah bilangan: "))
+jenis = cek_genap_ganjil(bilangan)
+print(f"Bilangan {bilangan} adalah bilangan {jenis}")
+\end{lstlisting}
+
+\indent Program di atas menggunakan fungsi untuk membuat kode lebih terstruktur. Konsep modulus (persen) digunakan untuk mengetahui sisa pembagian, dimana bilangan genap memiliki sisa 0 ketika dibagi 2.
+
+% BAB 4: KESIMPULAN DAN SARAN
+\chapter{Kesimpulan dan Saran}
+
+\section{Kesimpulan}
+Berdasarkan praktikum yang telah dilakukan, dapat disimpulkan beberapa hal penting:
+
+\begin{enumerate}
+    \item Konsep algoritma sangat fundamental dalam pemrograman. Sebelum menulis kode, penting untuk merancang algoritma terlebih dahulu agar program dapat berjalan dengan efisien dan sesuai dengan tujuan yang diinginkan.
+    \item Praktikum ini berhasil memperkenalkan konsep-konsep dasar Python seperti variabel, tipe data, struktur kontrol (if-else, loop), dan fungsi. Pemahaman terhadap konsep-konsep ini menjadi fondasi untuk mempelajari topik pemrograman yang lebih advanced.
+    \item Program-program sederhana yang telah dibuat (Hello World, kalkulator, penentuan genap/ganjil, dan perhitungan rata-rata) menunjukkan bagaimana konsep algoritma dapat diimplementasikan dalam kode Python yang berfungsi dengan baik.
+\end{enumerate}
+
+% Referensi/Daftar Pustaka
+\renewcommand{\bibname}{Daftar Pustaka}
+\begin{thebibliography}{99}
+\bibitem{python2024} Van Rossum, G. \& Drake, F.L. (2024). \textit{Python Tutorial}. Python Software Foundation. Diakses dari https://docs.python.org/3/tutorial/
+\bibitem{matthes2019} Matthes, E. (2019). \textit{Python Crash Course: A Hands-On, Project-Based Introduction to Programming}. 2nd Edition. No Starch Press.
+\bibitem{cormen2022} Cormen, T.H., Leiserson, C.E., Rivest, R.L., \& Stein, C. (2022). \textit{Introduction to Algorithms}. 4th Edition. MIT Press.
+\end{thebibliography}
+
+\end{document}

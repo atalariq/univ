@@ -1,0 +1,6 @@
+NIK: 1
+NAMA: Barra
+TEMPAT/TGL LAHIR: Byl, 26 Okt 2006
+ALAMAT: Byl
+STATUS PERKAWINAN: Jones
+PEKERJAAN: Pro Player Balatro

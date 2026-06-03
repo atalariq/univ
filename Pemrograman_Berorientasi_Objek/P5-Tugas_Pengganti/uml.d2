@@ -1,0 +1,87 @@
+Kendaraan: {
+  shape: class
+  "<<abstract>>": ""
+  "-nomorKendaraan": ""
+  "-merk": ""
+  "-tahunProduksi": ""
+  "-status": ""
+  "+ubahStatus()": ""
+  "+tampilInfo()": ""
+  "+hitungBiaya()": ""
+}
+
+Sewa: {
+  shape: class
+  "<<interface>>": ""
+  "+hitungBiaya()": ""
+  "+tampilDetail()": ""
+}
+
+Mobil: {
+  shape: class
+  "-jumlahPintu": ""
+  "+tampilInfo()": ""
+  "+hitungBiaya()": ""
+  "+tampilDetail()": ""
+}
+
+Motor: {
+  shape: class
+  "-tipeTransmisi": ""
+  "+tampilInfo()": ""
+  "+hitungBiaya()": ""
+  "+tampilDetail()": ""
+}
+
+Bus: {
+  shape: class
+  "-kapasitasPenumpang": ""
+  "+tampilInfo()": ""
+  "+hitungBiaya()": ""
+  "+tampilDetail()": ""
+}
+
+Mobil -> Kendaraan: extends {
+  target-arrowhead: {
+    shape: triangle
+    style.filled: false
+  }
+}
+
+Motor -> Kendaraan: extends {
+  target-arrowhead: {
+    shape: triangle
+    style.filled: false
+  }
+}
+
+Bus -> Kendaraan: extends {
+  target-arrowhead: {
+    shape: triangle
+    style.filled: false
+  }
+}
+
+Mobil -> Sewa: implements {
+  style.stroke-dash: 5
+  target-arrowhead: {
+    shape: triangle
+    style.filled: false
+  }
+}
+
+Motor -> Sewa: implements {
+  style.stroke-dash: 5
+  target-arrowhead: {
+    shape: triangle
+    style.filled: false
+  }
+}
+
+Bus -> Sewa: implements {
+  style.stroke-dash: 5
+  target-arrowhead: {
+    shape: triangle
+    style.filled: false
+  }
+}

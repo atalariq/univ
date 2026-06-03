@@ -1,0 +1,723 @@
+<!DOCTYPE html> <html lang=id style><!--
+ Page saved with SingleFile 
+ url: https://elok.ugm.ac.id/pluginfile.php/3099548/mod_resource/content/2/modul-crud-php.html?embed=1 
+ saved date: Tue Feb 10 2026 09:19:43 GMT+0700 (Western Indonesia Time)
+--><meta charset=utf-8>
+<meta name=viewport content="width=device-width, initial-scale=1.0">
+<title>Modul Praktikum CRUD dengan PHP</title>
+<style>*{box-sizing:border-box;margin:0;padding:0;font-family:"Segoe UI",Tahoma,Geneva,Verdana,sans-serif}body{background-color:#f7f9fc;color:#333;line-height:1.6}.container{max-width:1000px;margin:0 auto;padding:20px}header{background:linear-gradient(135deg,#4a6fdc 0%,#6a3de8 100%);color:white;padding:40px 0;text-align:center;border-radius:10px;margin-bottom:30px;box-shadow:0 4px 6px rgba(0,0,0,0.1)}h1{font-size:2.5rem;margin-bottom:10px}.subtitle{font-size:1.2rem;opacity:0.9}h2{color:#4a6fdc;font-size:1.8rem;margin:30px 0 15px;padding-bottom:10px;border-bottom:2px solid #e6e9f0}h3{color:#6a3de8;font-size:1.4rem;margin:25px 0 10px}p,ul,ol{margin-bottom:20px}ul,ol{padding-left:25px}li{margin-bottom:8px}code{background-color:#f1f1f1;padding:2px 5px;border-radius:3px;font-family:"Courier New",monospace;font-size:0.9em}pre{background-color:#282c34;color:#abb2bf;padding:15px;border-radius:5px;overflow-x:auto;margin:20px 0;font-family:"Courier New",monospace}pre code{background-color:transparent;color:inherit;padding:0}.step{background-color:white;border-radius:8px;padding:25px;margin-bottom:25px;box-shadow:0 2px 4px rgba(0,0,0,0.05)}.note{background-color:#fff8e6;border-left:4px solid #ffc107;padding:15px;margin:20px 0;border-radius:0 5px 5px 0}.warning{background-color:#ffebee;border-left:4px solid #f44336;padding:15px;margin:20px 0;border-radius:0 5px 5px 0}.success{background-color:#e8f5e9;border-left:4px solid #4caf50;padding:15px;margin:20px 0;border-radius:0 5px 5px 0}.code-label{background-color:#6a3de8;color:white;font-size:0.85rem;padding:5px 10px;border-radius:3px 3px 0 0;margin-bottom:-5px;display:inline-block}footer{text-align:center;margin-top:50px;padding:20px;color:#666;font-size:0.9rem;border-top:1px solid #e6e9f0}@media (max-width:768px){h1{font-size:2rem}h2{font-size:1.5rem}h3{font-size:1.2rem}.step{padding:15px}}</style>
+<meta name=referrer content=no-referrer><link rel=canonical href="https://elok.ugm.ac.id/pluginfile.php/3099548/mod_resource/content/2/modul-crud-php.html?embed=1"><meta http-equiv=content-security-policy content="default-src 'none'; font-src 'self' data:; img-src 'self' data:; style-src 'unsafe-inline'; media-src 'self' data:; script-src 'unsafe-inline' data:; object-src 'self' data:; frame-src 'self' data:;"></head>
+<body>
+ <div class=container>
+ <header>
+ <h1>Modul Praktikum CRUD dengan PHP</h1>
+ <p class=subtitle>Panduan Lengkap Membuat Aplikasi Create, Read, Update, Delete</p>
+ </header>
+ <div class=step>
+ <h2>Pendahuluan</h2>
+ <p>CRUD adalah singkatan dari Create, Read, Update, dan Delete yang merupakan operasi dasar dalam pengelolaan data pada aplikasi web. Operasi-operasi ini sangat penting dalam pengembangan aplikasi yang melibatkan basis data.</p>
+ 
+ <p>Pada modul praktikum ini, kita akan belajar membuat aplikasi CRUD sederhana menggunakan PHP dan MySQL sebagai database. Aplikasi ini akan memiliki fungsionalitas:</p>
+ 
+ <ul>
+ <li><strong>Create</strong> - Menambahkan data baru ke database</li>
+ <li><strong>Read</strong> - Menampilkan data dari database</li>
+ <li><strong>Update</strong> - Mengubah data yang sudah ada</li>
+ <li><strong>Delete</strong> - Menghapus data dari database</li>
+ </ul>
+ </div>
+ <div class=step>
+ <h2>Prasyarat</h2>
+ <p>Sebelum memulai praktikum ini, pastikan Anda telah menyiapkan hal-hal berikut:</p>
+ 
+ <ul>
+ <li>Web server lokal (XAMPP, WAMP, MAMP, atau Laragon)</li>
+ <li>Text editor (Visual Studio Code, Sublime Text, atau Notepad++)</li>
+ <li>Browser web (Chrome, Firefox, atau Edge)</li>
+ <li>Pengetahuan dasar HTML, CSS, PHP, dan MySQL</li>
+ </ul>
+ 
+ <div class=note>
+ <p><strong>Catatan:</strong> Pastikan web server lokal Anda sudah berjalan dengan baik dan layanan MySQL aktif.</p>
+ </div>
+ </div>
+ <div class=step>
+ <h2>Langkah 1: Membuat Database</h2>
+ <p>Pertama, kita perlu membuat database dan tabel untuk menyimpan data. Ikuti langkah-langkah berikut:</p>
+ 
+ <ol>
+ <li>Buka <strong>phpMyAdmin</strong> di browser (biasanya di <code>http://localhost/phpmyadmin</code>)</li>
+ <li>Klik pada tab "SQL" untuk menjalankan query SQL</li>
+ <li>Jalankan query berikut untuk membuat database dan tabel:</li>
+ </ol>
+ 
+ <div class=code-label>SQL</div>
+ <pre><code>CREATE DATABASE praktikum_crud;
+
+USE praktikum_crud;
+
+CREATE TABLE mahasiswa (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nim VARCHAR(15) NOT NULL,
+    nama VARCHAR(100) NOT NULL,
+    jurusan VARCHAR(100) NOT NULL,
+    email VARCHAR(100) NOT NULL,
+    alamat TEXT,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);</code></pre>
+ </div>
+ <div class=step>
+ <h2>Langkah 2: Membuat Struktur Folder Proyek</h2>
+ <p>Mari membuat struktur folder untuk proyek CRUD kita:</p>
+ 
+ <ol>
+ <li>Buat folder dengan nama <code>praktikum_crud</code> di dalam direktori <code>htdocs</code> (untuk XAMPP) atau <code>www</code> (untuk WAMP/MAMP)</li>
+ <li>Di dalam folder tersebut, buat file-file berikut:
+ <ul>
+ <li><code>config.php</code> - Untuk konfigurasi database</li>
+ <li><code>index.php</code> - Halaman utama (Read)</li>
+ <li><code>tambah.php</code> - Halaman untuk menambah data (Create)</li>
+ <li><code>edit.php</code> - Halaman untuk mengedit data (Update)</li>
+ <li><code>hapus.php</code> - Script untuk menghapus data (Delete)</li>
+ </ul>
+ </li>
+ </ol>
+ </div>
+ <div class=step>
+ <h2>Langkah 3: Membuat Koneksi Database</h2>
+ <p>Buat file <code>config.php</code> untuk mengatur koneksi ke database:</p>
+ 
+ <div class=code-label>config.php</div>
+ <pre><code>&lt;?php
+// Konfigurasi database
+$host = "localhost";
+$username = "root";
+$password = ""; // Sesuaikan dengan password MySQL Anda, biasanya kosong
+$database = "praktikum_crud";
+
+// Membuat koneksi
+$conn = mysqli_connect($host, $username, $password, $database);
+
+// Cek koneksi
+if (!$conn) {
+    die("Koneksi gagal: " . mysqli_connect_error());
+}
+?&gt;</code></pre>
+ 
+ <div class=warning>
+ <p><strong>Perhatian:</strong> Dalam lingkungan produksi, jangan gunakan username dan password default seperti di atas. Selalu gunakan kredensial yang aman.</p>
+ </div>
+ </div>
+ <div class=step>
+ <h2>Langkah 4: Membuat Halaman Utama (Read)</h2>
+ <p>Buat file <code>index.php</code> untuk menampilkan data mahasiswa:</p>
+ 
+ <div class=code-label>index.php</div>
+ <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="id"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Data Mahasiswa&lt;/title&gt;
+    &lt;style&gt;
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #f2f2f2;
+            font-weight: bold;
+        }
+        tr:hover {
+            background-color: #f5f5f5;
+        }
+        .btn {
+            display: inline-block;
+            padding: 8px 12px;
+            background-color: #4CAF50;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+        .btn:hover {
+            background-color: #45a049;
+        }
+        .btn-edit {
+            background-color: #2196F3;
+        }
+        .btn-edit:hover {
+            background-color: #0b7dda;
+        }
+        .btn-delete {
+            background-color: #f44336;
+        }
+        .btn-delete:hover {
+            background-color: #da190b;
+        }
+        .header-action {
+            margin-bottom: 20px;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class="container"&gt;
+        &lt;h1&gt;Data Mahasiswa&lt;/h1&gt;
+        
+        &lt;div class="header-action"&gt;
+            &lt;a href="tambah.php" class="btn"&gt;Tambah Mahasiswa&lt;/a&gt;
+        &lt;/div&gt;
+        
+        &lt;table&gt;
+            &lt;thead&gt;
+                &lt;tr&gt;
+                    &lt;th&gt;No&lt;/th&gt;
+                    &lt;th&gt;NIM&lt;/th&gt;
+                    &lt;th&gt;Nama&lt;/th&gt;
+                    &lt;th&gt;Jurusan&lt;/th&gt;
+                    &lt;th&gt;Email&lt;/th&gt;
+                    &lt;th&gt;Alamat&lt;/th&gt;
+                    &lt;th&gt;Aksi&lt;/th&gt;
+                &lt;/tr&gt;
+            &lt;/thead&gt;
+            &lt;tbody&gt;
+                &lt;?php
+                // Include file koneksi database
+                include_once("config.php");
+                
+                // Query untuk mengambil data mahasiswa
+                $result = mysqli_query($conn, "SELECT * FROM mahasiswa ORDER BY id DESC");
+                
+                // Cek apakah ada data
+                if (mysqli_num_rows($result) &gt; 0) {
+                    $no = 1;
+                    // Looping untuk menampilkan data
+                    while($row = mysqli_fetch_assoc($result)) {
+                        echo "&lt;tr&gt;";
+                        echo "&lt;td&gt;".$no++."&lt;/td&gt;";
+                        echo "&lt;td&gt;".$row['nim']."&lt;/td&gt;";
+                        echo "&lt;td&gt;".$row['nama']."&lt;/td&gt;";
+                        echo "&lt;td&gt;".$row['jurusan']."&lt;/td&gt;";
+                        echo "&lt;td&gt;".$row['email']."&lt;/td&gt;";
+                        echo "&lt;td&gt;".$row['alamat']."&lt;/td&gt;";
+                        echo "&lt;td&gt;";
+                        echo "&lt;a href='edit.php?id=".$row['id']."' class='btn btn-edit'&gt;Edit&lt;/a&gt; ";
+                        echo "&lt;a href='hapus.php?id=".$row['id']."' class='btn btn-delete' onclick='return confirm(\"Yakin ingin menghapus data?\")'&gt;Hapus&lt;/a&gt;";
+                        echo "&lt;/td&gt;";
+                        echo "&lt;/tr&gt;";
+                    }
+                } else {
+                    echo "&lt;tr&gt;&lt;td colspan='7' style='text-align:center'&gt;Tidak ada data&lt;/td&gt;&lt;/tr&gt;";
+                }
+                
+                // Tutup koneksi
+                mysqli_close($conn);
+                ?&gt;
+            &lt;/tbody&gt;
+        &lt;/table&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+ </div>
+ <div class=step>
+ <h2>Langkah 5: Membuat Halaman Tambah Data (Create)</h2>
+ <p>Buat file <code>tambah.php</code> untuk menambahkan data mahasiswa baru:</p>
+ 
+ <div class=code-label>tambah.php</div>
+ <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="id"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Tambah Mahasiswa&lt;/title&gt;
+    &lt;style&gt;
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        textarea {
+            height: 100px;
+            resize: vertical;
+        }
+        .btn {
+            display: inline-block;
+            padding: 10px 15px;
+            background-color: #4CAF50;
+            color: white;
+            text-decoration: none;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .btn:hover {
+            background-color: #45a049;
+        }
+        .btn-secondary {
+            background-color: #6c757d;
+        }
+        .btn-secondary:hover {
+            background-color: #5a6268;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class="container"&gt;
+        &lt;h1&gt;Tambah Mahasiswa&lt;/h1&gt;
+        
+        &lt;?php
+        // Include file koneksi database
+        include_once("config.php");
+        
+        // Cek apakah form telah di-submit
+        if(isset($_POST['submit'])) {
+            $nim = $_POST['nim'];
+            $nama = $_POST['nama'];
+            $jurusan = $_POST['jurusan'];
+            $email = $_POST['email'];
+            $alamat = $_POST['alamat'];
+            
+            // Validasi form
+            $errors = array();
+            
+            if(empty($nim)) {
+                $errors[] = "NIM tidak boleh kosong";
+            }
+            
+            if(empty($nama)) {
+                $errors[] = "Nama tidak boleh kosong";
+            }
+            
+            if(empty($jurusan)) {
+                $errors[] = "Jurusan tidak boleh kosong";
+            }
+            
+            if(empty($email)) {
+                $errors[] = "Email tidak boleh kosong";
+            } elseif(!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+                $errors[] = "Format email tidak valid";
+            }
+            
+            // Jika tidak ada error, simpan data
+            if(empty($errors)) {
+                $result = mysqli_query($conn, "INSERT INTO mahasiswa(nim, nama, jurusan, email, alamat) 
+                                               VALUES('$nim', '$nama', '$jurusan', '$email', '$alamat')");
+                
+                if($result) {
+                    echo "&lt;div style='padding: 10px; background-color: #d4edda; color: #155724; border-radius: 5px; margin-bottom: 15px;'&gt;";
+                    echo "Data berhasil ditambahkan. &lt;a href='index.php'&gt;Lihat Data&lt;/a&gt;";
+                    echo "&lt;/div&gt;";
+                } else {
+                    echo "&lt;div style='padding: 10px; background-color: #f8d7da; color: #721c24; border-radius: 5px; margin-bottom: 15px;'&gt;";
+                    echo "Error: " . mysqli_error($conn);
+                    echo "&lt;/div&gt;";
+                }
+            } else {
+                echo "&lt;div style='padding: 10px; background-color: #f8d7da; color: #721c24; border-radius: 5px; margin-bottom: 15px;'&gt;";
+                echo "&lt;ul&gt;";
+                foreach($errors as $error) {
+                    echo "&lt;li&gt;$error&lt;/li&gt;";
+                }
+                echo "&lt;/ul&gt;";
+                echo "&lt;/div&gt;";
+            }
+        }
+        ?&gt;
+        
+        &lt;form action="tambah.php" method="post"&gt;
+            &lt;div class="form-group"&gt;
+                &lt;label for="nim"&gt;NIM&lt;/label&gt;
+                &lt;input type="text" name="nim" id="nim" required&gt;
+            &lt;/div&gt;
+            
+            &lt;div class="form-group"&gt;
+                &lt;label for="nama"&gt;Nama Lengkap&lt;/label&gt;
+                &lt;input type="text" name="nama" id="nama" required&gt;
+            &lt;/div&gt;
+            
+            &lt;div class="form-group"&gt;
+                &lt;label for="jurusan"&gt;Jurusan&lt;/label&gt;
+                &lt;input type="text" name="jurusan" id="jurusan" required&gt;
+            &lt;/div&gt;
+            
+            &lt;div class="form-group"&gt;
+                &lt;label for="email"&gt;Email&lt;/label&gt;
+                &lt;input type="email" name="email" id="email" required&gt;
+            &lt;/div&gt;
+            
+            &lt;div class="form-group"&gt;
+                &lt;label for="alamat"&gt;Alamat&lt;/label&gt;
+                &lt;textarea name="alamat" id="alamat"&gt;&lt;/textarea&gt;
+            &lt;/div&gt;
+            
+            &lt;div style="margin-top: 20px;"&gt;
+                &lt;input type="submit" name="submit" value="Simpan" class="btn"&gt;
+                &lt;a href="index.php" class="btn btn-secondary"&gt;Batal&lt;/a&gt;
+            &lt;/div&gt;
+        &lt;/form&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+ </div>
+ <div class=step>
+ <h2>Langkah 6: Membuat Halaman Edit Data (Update)</h2>
+ <p>Buat file <code>edit.php</code> untuk mengedit data mahasiswa yang sudah ada:</p>
+ 
+ <div class=code-label>edit.php</div>
+ <pre><code>
+                &lt;!DOCTYPE html&gt;
+&lt;html lang="id"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Edit Mahasiswa&lt;/title&gt;
+    &lt;style&gt;
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        textarea {
+            height: 100px;
+            resize: vertical;
+        }
+        .btn {
+            display: inline-block;
+            padding: 10px 15px;
+            background-color: #4CAF50;
+            color: white;
+            text-decoration: none;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .btn:hover {
+            background-color: #45a049;
+        }
+        .btn-secondary {
+            background-color: #6c757d;
+        }
+        .btn-secondary:hover {
+            background-color: #5a6268;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class="container"&gt;
+        &lt;h1&gt;Edit Mahasiswa&lt;/h1&gt;
+        
+        &lt;?php
+        // Include file koneksi database
+        include_once("config.php");
+        
+        // Cek apakah ada ID yang dikirimkan
+        if(!isset($_GET['id'])) {
+            header("Location: index.php");
+            exit();
+        }
+        
+        $id = $_GET['id'];
+        
+        // Cek apakah form telah di-submit
+        if(isset($_POST['update'])) {
+            $nim = $_POST['nim'];
+            $nama = $_POST['nama'];
+            $jurusan = $_POST['jurusan'];
+            $email = $_POST['email'];
+            $alamat = $_POST['alamat'];
+            
+            // Validasi form
+            $errors = array();
+            
+            if(empty($nim)) {
+                $errors[] = "NIM tidak boleh kosong";
+            }
+            
+            if(empty($nama)) {
+                $errors[] = "Nama tidak boleh kosong";
+            }
+            
+            if(empty($jurusan)) {
+                $errors[] = "Jurusan tidak boleh kosong";
+            }
+            
+            if(empty($email)) {
+                $errors[] = "Email tidak boleh kosong";
+            } elseif(!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+                $errors[] = "Format email tidak valid";
+            }
+            
+            // Jika tidak ada error, update data
+            if(empty($errors)) {
+                $result = mysqli_query($conn, "UPDATE mahasiswa SET 
+                                               nim='$nim', 
+                                               nama='$nama', 
+                                               jurusan='$jurusan', 
+                                               email='$email', 
+                                               alamat='$alamat' 
+                                               WHERE id=$id");
+                
+                if($result) {
+                    echo "&lt;div style='padding: 10px; background-color: #d4edda; color: #155724; border-radius: 5px; margin-bottom: 15px;'&gt;";
+                    echo "Data berhasil diperbarui. &lt;a href='index.php'&gt;Lihat Data&lt;/a&gt;";
+                    echo "&lt;/div&gt;";
+                } else {
+                    echo "&lt;div style='padding: 10px; background-color: #f8d7da; color: #721c24; border-radius: 5px; margin-bottom: 15px;'&gt;";
+                    echo "Error: " . mysqli_error($conn);
+                    echo "&lt;/div&gt;";
+                }
+            } else {
+                echo "&lt;div style='padding: 10px; background-color: #f8d7da; color: #721c24; border-radius: 5px; margin-bottom: 15px;'&gt;";
+                echo "&lt;ul&gt;";
+                foreach($errors as $error) {
+                    echo "&lt;li&gt;$error&lt;/li&gt;";
+                }
+                echo "&lt;/ul&gt;";
+                echo "&lt;/div&gt;";
+            }
+        }
+        
+        // Ambil data mahasiswa berdasarkan ID
+        $result = mysqli_query($conn, "SELECT * FROM mahasiswa WHERE id=$id");
+        
+        // Jika data tidak ditemukan, kembali ke halaman utama
+        if(mysqli_num_rows($result) == 0) {
+            header("Location: index.php");
+            exit();
+        }
+        
+        // Ambil data untuk ditampilkan di form
+        $row = mysqli_fetch_assoc($result);
+        $nim = $row['nim'];
+        $nama = $row['nama'];
+        $jurusan = $row['jurusan'];
+        $email = $row['email'];
+        $alamat = $row['alamat'];
+        ?&gt;
+        
+        &lt;form action="edit.php?id=&lt;?php echo $id; ?&gt;" method="post"&gt;
+            &lt;div class="form-group"&gt;
+                &lt;label for="nim"&gt;NIM&lt;/label&gt;
+                &lt;input type="text" name="nim" id="nim" value="&lt;?php echo $nim; ?&gt;" required&gt;
+            &lt;/div&gt;
+            
+            &lt;div class="form-group"&gt;
+                &lt;label for="nama"&gt;Nama Lengkap&lt;/label&gt;
+                &lt;input type="text" name="nama" id="nama" value="&lt;?php echo $nama; ?&gt;" required&gt;
+            &lt;/div&gt;
+            
+            &lt;div class="form-group"&gt;
+                &lt;label for="jurusan"&gt;Jurusan&lt;/label&gt;
+                &lt;input type="text" name="jurusan" id="jurusan" value="&lt;?php echo $jurusan; ?&gt;" required&gt;
+            &lt;/div&gt;
+            
+            &lt;div class="form-group"&gt;
+                &lt;label for="email"&gt;Email&lt;/label&gt;
+                &lt;input type="email" name="email" id="email" value="&lt;?php echo $email; ?&gt;" required&gt;
+            &lt;/div&gt;
+            
+            &lt;div class="form-group"&gt;
+                &lt;label for="alamat"&gt;Alamat&lt;/label&gt;
+                &lt;textarea name="alamat" id="alamat"&gt;&lt;?php echo $alamat; ?&gt;&lt;/textarea&gt;
+            &lt;/div&gt;
+            
+            &lt;div style="margin-top: 20px;"&gt;
+                &lt;input type="submit" name="update" value="Update" class="btn"&gt;
+                &lt;a href="index.php" class="btn btn-secondary"&gt;Batal&lt;/a&gt;
+            &lt;/div&gt;
+        &lt;/form&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+            </code></pre>
+ </div>
+ <div class=step>
+ <h2>Langkah 7: Membuat Script Hapus Data (Delete)</h2>
+ <p>Buat file <code>hapus.php</code> untuk menghapus data mahasiswa:</p>
+ 
+ <div class=code-label>hapus.php</div>
+ <pre><code>&lt;?php
+// Include file koneksi database
+include_once("config.php");
+
+// Cek apakah ada ID yang dikirimkan
+if(isset($_GET['id'])) {
+    $id = $_GET['id'];
+    
+    // Query untuk menghapus data
+    $result = mysqli_query($conn, "DELETE FROM mahasiswa WHERE id=$id");
+    
+    // Redirect ke halaman utama
+    header("Location: index.php");
+} else {
+    // Jika tidak ada ID yang dikirimkan, kembali ke halaman utama
+    header("Location: index.php");
+}
+?&gt;</code></pre>
+ </div>
+ <div class=step>
+ <h2>Langkah 8: Menguji Aplikasi</h2>
+ <p>Setelah semua file dibuat, saatnya menguji aplikasi CRUD yang telah kita buat:</p>
+ 
+ <ol>
+ <li>Buka browser dan akses <code>http://localhost/praktikum_crud/</code></li>
+ <li>Pada halaman utama, klik tombol "Tambah Mahasiswa" untuk menambahkan data baru</li>
+ <li>Isi formulir dengan data mahasiswa yang valid, lalu klik "Simpan"</li>
+ <li>Data akan ditampilkan di halaman utama</li>
+ <li>Coba lakukan operasi Edit dan Hapus untuk memastikan semua fungsi berjalan dengan baik</li>
+ </ol>
+ 
+ <div class=success>
+ <p><strong>Tips:</strong> Jika aplikasi berjalan dengan baik, Anda telah berhasil membuat aplikasi CRUD sederhana menggunakan PHP dan MySQL!</p>
+ </div>
+ </div>
+ <div class=step>
+ <h2>Penjelasan Konsep CRUD</h2>
+ 
+ <h3>Create (Membuat)</h3>
+ <p>Operasi Create digunakan untuk membuat atau menambahkan data baru ke dalam database. Dalam aplikasi kita, operasi ini dilakukan melalui file <code>tambah.php</code> yang berisi form untuk menambahkan data mahasiswa. Data yang dimasukkan akan disimpan ke database menggunakan query SQL INSERT.</p>
+ 
+ <h3>Read (Membaca)</h3>
+ <p>Operasi Read digunakan untuk membaca atau menampilkan data dari database. Dalam aplikasi kita, operasi ini dilakukan melalui file <code>index.php</code> yang menampilkan semua data mahasiswa dalam bentuk tabel. Data diambil dari database menggunakan query SQL SELECT.</p>
+ 
+ <h3>Update (Memperbarui)</h3>
+ <p>Operasi Update digunakan untuk memperbarui atau mengubah data yang sudah ada di database. Dalam aplikasi kita, operasi ini dilakukan melalui file <code>edit.php</code> yang berisi form untuk mengedit data mahasiswa. Data yang diubah akan diperbarui ke database menggunakan query SQL UPDATE.</p>
+ 
+ <h3>Delete (Menghapus)</h3>
+ <p>Operasi Delete digunakan untuk menghapus data dari database. Dalam aplikasi kita, operasi ini dilakukan melalui file <code>hapus.php</code> yang menghapus data mahasiswa berdasarkan ID. Data dihapus dari database menggunakan query SQL DELETE.</p>
+ </div>
+ <div class=step>
+ <h2>Keamanan Aplikasi</h2>
+ <p>Aplikasi CRUD sederhana yang telah kita buat di atas masih rentan terhadap beberapa masalah keamanan, seperti SQL Injection. Untuk aplikasi yang akan digunakan di lingkungan produksi, sebaiknya tambahkan beberapa langkah keamanan berikut:</p>
+ 
+ <h3>Menggunakan Prepared Statements</h3>
+ <p>Prepared statements membantu mencegah SQL Injection dengan memisahkan SQL query dari data yang dikirimkan pengguna:</p>
+ 
+ <div class=code-label>Contoh Prepared Statement</div>
+ <pre><code>// Contoh prepared statement untuk INSERT
+$stmt = $conn-&gt;prepare("INSERT INTO mahasiswa(nim, nama, jurusan, email, alamat) VALUES(?, ?, ?, ?, ?)");
+$stmt-&gt;bind_param("sssss", $nim, $nama, $jurusan, $email, $alamat);
+
+// Set parameter
+$nim = $_POST['nim'];
+$nama = $_POST['nama'];
+$jurusan = $_POST['jurusan'];
+$email = $_POST['email'];
+$alamat = $_POST['alamat'];
+
+// Eksekusi query
+$stmt-&gt;execute();</code></pre>
+ 
+ <h3>Validasi Input</h3>
+ <p>Selalu validasi semua input pengguna sebelum diproses. Dalam modul ini kita sudah menerapkan validasi dasar, namun untuk aplikasi yang lebih aman, Anda bisa menambahkan validasi lebih lanjut seperti sanitasi data dan validasi format.</p>
+ 
+ <h3>Penanganan Error</h3>
+ <p>Implementasikan penanganan error yang baik untuk mencegah informasi sensitif terlihat oleh pengguna. Dalam lingkungan produksi, jangan tampilkan detail error database kepada pengguna.</p>
+ </div>
+ <div class=step>
+ <h2>Tugas Tambahan</h2>
+ <p>Untuk meningkatkan pemahaman Anda tentang CRUD dengan PHP, coba lakukan pengembangan berikut pada aplikasi proyek anda:</p>
+ 
+ <ol>
+ <li>Tambahkan fitur pencarian data </li>
+ <li>Implementasikan pagination untuk menampilkan data per halaman</li>
+ <li>Tambahkan fitur upload foto</li>
+ <li>Tambahkan validasi data yang lebih lengkap</li>
+ <li>Implementasikan autentikasi user (login/logout) sebelum bisa mengakses aplikasi</li>
+ </ol>
+ </div>
+ <footer>
+ <p>Modul Praktikum PPW 1 by DNP | © 2025</p>
+ </footer></div>

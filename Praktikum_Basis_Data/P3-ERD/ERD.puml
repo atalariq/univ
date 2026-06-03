@@ -1,0 +1,63 @@
+@startuml indekos_erd
+entity "PEMILIK" as pemilik {
+  * <u>pemilik_id</u>  : CHAR(8)      <<PK>>
+  --
+  * nama            : VARCHAR(100)
+  * no_hp           : VARCHAR(15)
+  * email           : VARCHAR(100)
+  * alamat          : TEXT
+}
+
+entity "KAMAR" as kamar {
+  * <u>kamar_id</u>    : CHAR(8)      <<PK>>
+  --
+  * pemilik_id      : CHAR(8)       <<FK>>
+  * nomor_kamar     : VARCHAR(10)
+  * tipe            : ENUM(single, double, VIP)
+  * harga_per_bulan : DECIMAL(10,2)
+  * fasilitas       : TEXT
+  * status          : ENUM(tersedia, terisi, perbaikan)
+}
+
+entity "PENGHUNI" as penghuni {
+  * <u>penghuni_id</u> : CHAR(8)      <<PK>>
+  --
+  * nama            : VARCHAR(100)
+  * nik             : CHAR(16)      <<UNIQUE>>
+  * no_hp           : VARCHAR(15)
+  * email           : VARCHAR(100)
+  * pekerjaan       : VARCHAR(50)
+  * kontak_darurat  : VARCHAR(100)
+}
+
+entity "SEWA" as sewa {
+  * <u>sewa_id</u>     : CHAR(12)     <<PK>>
+  --
+  * penghuni_id     : CHAR(8)       <<FK>>
+  * kamar_id        : CHAR(8)       <<FK>>
+  * tgl_masuk       : DATE
+  * tgl_keluar      : DATE
+  * status          : ENUM(aktif, selesai, dibatalkan)
+}
+
+entity "PEMBAYARAN" as pembayaran {
+  * <u>bayar_id</u>    : CHAR(12)     <<PK>>
+  --
+  * sewa_id         : CHAR(12)      <<FK>>
+  * bulan_bayar     : CHAR(7)
+  * jumlah          : DECIMAL(10,2)
+  * tgl_bayar       : DATE
+  * metode          : ENUM(tunai, transfer, qris)
+  * status          : ENUM(lunas, belum_bayar, terlambat)
+}
+
+' ============================================================
+' RELATIONSHIPS
+' ============================================================
+
+pemilik  ||--o{ kamar      : "memiliki"
+penghuni ||--o{ sewa       : "melakukan"
+kamar    ||--o{ sewa       : "disewa melalui"
+sewa     ||--o{ pembayaran : "menghasilkan"
+
+@enduml
