@@ -1,51 +1,87 @@
+# Kuliah
 
-# Univ Stuff
+Repositori materi perkuliahan [Software Engineering TRPL](https://trpl.sv.ugm.ac.id/) UGM. Berisi slide dosen, catatan pribadi, tugas, laporan praktikum, bank soal, dan referensi — diorganisasi per mata kuliah, bukan per semester.
 
-This repository is where I document my journey as a [Software Engineering](https://trpl.sv.ugm.ac.id/) student. Instead of mixing everything into messy semester folders, I divided this project into two main parts: university deliverables (assignments/tasks/projects) and personal notes.
+> **Language Disclaimer**: Konten di repositori ini campur Bahasa Indonesia dan Inggris. Gue nulis pakai bahasa yang paling enak buat mencerna konsep saat itu.
 
-> [!CAUTION]
-> **Language Disclaimer**
-> 
-> The content in this repository is a mix of Indonesian and English. I write in whatever language helps me process the concepts best at that moment. Expect code comments, notes, and logs to switch between the two freely.
+## Struktur
 
-## Digital Garden
-
-Most of this repository is built around the idea of a [digital garden](https://www.thunknotes.com/blog/what-is-a-digital-garden). A blog usually shows highly polished posts ordered by publication date. A digital garden is different. It functions more like a public notebook.
-
-Notes here are not strictly chronological. They are grouped by topics and how one concept links to another. Just like a real garden, some ideas are just seeds or rough drafts. Other notes are fully matured and constantly refined. The goal isn't to be perfect before publishing. The goal is to learn and connect information over time. I keep these notes here so my understanding of a subject doesn't vanish after final exams.
-
-## Folder Structure
+Setiap folder _top-level_ merepresentasikan satu mata kuliah dengan pola penamaan:
 
 ```
-univ
-├── 00_Meta
-│   ├── ...
-│   ├── scratchpad
-│   └── template
-├── 01_Notes
-│   ├── Concepts
-│   ├── ...
-│   └── MOCs
-├── 02_Deliverables
-│   ├── S1_Praktikum_Pemrograman_Komputer
-│   └── ...
-└── 03_Sources
-    ├── 'Bank Soal'
-    └── ...
+<singkatan>-<nama-mata-kuliah-dalam-kebab-case>/
 ```
 
-- **`00_Meta/`** This holds configurations, templates for lab reports, and temporary scratchpads.
-- **`01_Notes/`** This is my actual digital garden. It contains concept notes, summaries, and personal reflections that link together.
-- **`02_Deliverables/`** This area is strictly for university logistics . It holds source code and assignments created to meet specific academic deadlines.
-- **`03_Sources/`** This folder is ignored by Git. It holds raw materials given by lecturers like PDF slides and syllabi. stays on my local machine (or on my cloud provider), feel free if you want to [ask for it](mailto:atalariq.dev@outlook.dev).
+Contoh:
 
-## License and Contributions
+```
+pbo-pemrograman-berorientasi-objek/
+aasd-analisis-algoritma-dan-struktur-data/
+ppw1-praktikum-pemrograman-web-1/
+```
 
-This repository uses a dual-license structure to separate my code from my personal writing.
+### Kenapa bukan per semester?
 
-1. **Code (under `02_Deliverables/`):** Licensed under the MIT License. You are free to use, modify, and distribute the code.
-2. **Notes (under `01_Notes/`):** Licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0). You can share and adapt my notes. However, you must give appropriate credit, you cannot use them for commercial purposes, and any modifications must be shared under the same license.
+- Banyak mata kuliah saling terkait lintas semester (misalnya Basis Data teori dan praktikum).
+- Lebih mudah mencari semua materi satu topik dalam satu tempat.
+- Semester bisa berubah, materi tetap relevan.
 
-See the `LICENSE` file for full details.
+## Konvensi Penamaan
 
-By contributing to this repository, you agree to license your contributions under the respective licenses of the files you modify.
+### Folder
+
+| Pola | Contoh Baik | Contoh Buruk |
+|------|-------------|--------------|
+| `singkatan-nama-kebab-case/` | `pbo-pemrograman-berorientasi-objek/` | `Pemrograman_Berorientasi_Objek/` |
+| Subfolder: `p01-nama/` untuk materi berurutan | `p01-pengantar/` | `P1-Pengantar/` |
+
+### File
+
+| Pola | Contoh Baik | Contoh Buruk |
+|------|-------------|--------------|
+| `##-nama-topik.ext` (materi berurutan) | `01-pengantar-oop.pdf` | `1. Introduction to OOP.pdf` |
+| `yyyy-mm-dd-nama.ext` (berbasis tanggal) | `2025-06-07-normalisasi.pdf` | `20250607 - Normalization.pdf` |
+| `p##-nama.ext` (slide dari dosen) | `p01-pengantar-k3.pptx` | `P1 - Pengantar K3.pptx` |
+| `nama.local.ext` (file lokal/rekaman) | `rekaman-kuliah.local.mp4` | `Rekaman Kuliah.local.mp4` |
+| `nama.private.ext` (buku referensi pribadi) | `buku-aljabar.private.pdf` | `Elementary Linear Algebra...private.pdf` |
+
+### Aturan umum
+
+- **lowercase** — semua nama file dan folder
+- **kebab-case** — tanda hubung (`-`) untuk spasi
+- **tanpa spasi** — ganti dengan `-`
+- **tanpa tanda kurung** — hapus `()` dari nama
+- **prefix numerik zero-padded** — `01`, `02`, ..., `10`, `11` (bukan `1`, `2`)
+- **ISO 8601 untuk tanggal** — `yyyy-mm-dd`
+- **ekstensi lowercase** — `.pdf`, bukan `.PDF`
+- **preserve judul asli** — untuk buku/referensi pihak ketiga, pertahankan makna judul
+- **underscore hanya untuk ekosistem** — `snake_case` dipakai khusus di file code ecosystem (Python, SQL, dsb)
+
+## Daftar Mata Kuliah
+
+| Singkatan | Folder | Nama |
+|-----------|--------|------|
+| AASD | `aasd-analisis-algoritma-dan-struktur-data/` | Analisis Algoritma dan Struktur Data |
+| ALPRO | `alpro-algoritma-dan-pemrograman/` | Algoritma dan Pemrograman |
+| AVM | `avm-aljabar-vektor-dan-matriks/` | Aljabar Vektor dan Matriks |
+| — | `bahasa-indonesia/` | Bahasa Indonesia |
+| — | `basis-data/` | Basis Data |
+| — | `english-1/` | English I |
+| — | `english-2/` | English II |
+| K3 | `k3-keselamatan-dan-kesehatan-kerja/` | Keselamatan dan Kesehatan Kerja |
+| MATDIS | `matdis-matematika-diskrit/` | Matematika Diskrit |
+| MATTEK | `mattek-matematika-teknik/` | Matematika Teknik |
+| PBO | `pbo-pemrograman-berorientasi-objek/` | Pemrograman Berorientasi Objek |
+| PTI | `pti-pengantar-teknologi-informasi/` | Pengantar Teknologi Informasi |
+| PBD | `pbd-praktikum-basis-data/` | Praktikum Basis Data |
+| PDE | `pde-praktikum-desain-elementer/` | Praktikum Desain Elementer |
+| PPBO | `ppbo-praktikum-pemrograman-berorientasi-objek/` | Praktikum PBO |
+| PPK | `ppk-praktikum-pemrograman-komputer/` | Praktikum Pemrograman Komputer |
+| PPW1 | `ppw1-praktikum-pemrograman-web-1/` | Praktikum Pemrograman Web 1 |
+| PSD | `psd-praktikum-struktur-data/` | Praktikum Struktur Data |
+| PTIIK | `ptiik-praktikum-teknologi-informasi-dan-instalasi-komputer/` | Praktikum TI dan Instalasi Komputer |
+| — | `statistika/` | Statistika |
+
+## License
+
+Dual-license: kode di bawah MIT, catatan pribadi di bawah CC BY-NC-SA 4.0. Lihat `LICENSE` untuk detail.
