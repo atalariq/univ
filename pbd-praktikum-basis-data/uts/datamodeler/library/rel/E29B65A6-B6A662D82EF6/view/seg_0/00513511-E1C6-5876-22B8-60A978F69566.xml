@@ -1,0 +1,109 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableView class="oracle.dbtools.crest.model.design.relational.TableView" directorySegmentName="seg_0" id="00513511-E1C6-5876-22B8-60A978F69566" name="V_penulis-buku">
+<createdBy>atalariq</createdBy>
+<createdTime>2026-04-15 07:07:47 UTC</createdTime>
+<ownerDesignName>library</ownerDesignName>
+<userDefined>true</userDefined>
+<userDefinedSQL><![CDATA[CREATE VIEW "V_penulis-buku"
+  ( penulis_id
+   , buku_isbn
+   , buku_id_penerbit
+   , buku_id_penulis
+   , buku_penerbit_id )
+ AS SELECT
+    penulis_id
+   , buku_isbn
+   , buku_id_penerbit
+   , buku_id_penulis
+   , buku_penerbit_id
+ FROM 
+    "penulis-buku" ;]]></userDefinedSQL>
+<parsed>true</parsed>
+<originalTableID>2A6CD353-B7DB-39A2-764E-13C7B9A234B4</originalTableID>
+<usedContainers>
+<container containerID="2A6CD353-B7DB-39A2-764E-13C7B9A234B4"/>
+</usedContainers>
+<viewElements>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="penulis_id" id="7F99D23C-8DB0-F665-AE89-15FEC8078E00">
+<createdBy>atalariq</createdBy>
+<createdTime>2026-04-15 07:07:47 UTC</createdTime>
+<ownerDesignName>library</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<dataType>CHAR</dataType>
+<reference>false</reference>
+<referencedColumn>86A96991-90EB-D412-58A3-77B9C8F52F1E</referencedColumn>
+<table>2A6CD353-B7DB-39A2-764E-13C7B9A234B4</table>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="buku_isbn" id="61FF102E-DA96-64DC-099B-43523F9294C0">
+<createdBy>atalariq</createdBy>
+<createdTime>2026-04-15 07:07:47 UTC</createdTime>
+<ownerDesignName>library</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<dataType>CHAR</dataType>
+<reference>false</reference>
+<referencedColumn>29A78FC4-6970-F37D-AE03-C53DB04E618A</referencedColumn>
+<table>2A6CD353-B7DB-39A2-764E-13C7B9A234B4</table>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="buku_id_penerbit" id="31697FE6-6AD7-5554-5408-2246967A37C6">
+<createdBy>atalariq</createdBy>
+<createdTime>2026-04-15 07:07:47 UTC</createdTime>
+<ownerDesignName>library</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<dataType>CHAR</dataType>
+<reference>false</reference>
+<referencedColumn>38791B6E-2CC9-7E6D-8D5F-5493088018E3</referencedColumn>
+<table>2A6CD353-B7DB-39A2-764E-13C7B9A234B4</table>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="buku_id_penulis" id="A6084DF8-A90F-7E3A-D97C-B8DBC005DF37">
+<createdBy>atalariq</createdBy>
+<createdTime>2026-04-15 07:07:47 UTC</createdTime>
+<ownerDesignName>library</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<dataType>CHAR</dataType>
+<reference>false</reference>
+<referencedColumn>3970D6A8-92EB-3C2F-82C2-9216F97E8C7E</referencedColumn>
+<table>2A6CD353-B7DB-39A2-764E-13C7B9A234B4</table>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="buku_penerbit_id" id="C3A4F5FA-60C0-35A3-DC3B-BB5C20C6D3A8">
+<createdBy>atalariq</createdBy>
+<createdTime>2026-04-15 07:07:47 UTC</createdTime>
+<ownerDesignName>library</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<dataType>CHAR</dataType>
+<reference>false</reference>
+<referencedColumn>EE7C9323-0CA4-C0D7-89F1-9CC062C33BCE</referencedColumn>
+<table>2A6CD353-B7DB-39A2-764E-13C7B9A234B4</table>
+</viewElement>
+</viewElements>
+<usedObjects>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="2A6CD353-B7DB-39A2-764E-13C7B9A234B4">
+<container>true</container>
+<tableName>penulis-buku</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="86A96991-90EB-D412-58A3-77B9C8F52F1E">
+<columnName>penulis_id</columnName>
+<tableName>penulis-buku</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="29A78FC4-6970-F37D-AE03-C53DB04E618A">
+<columnName>buku_isbn</columnName>
+<tableName>penulis-buku</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="38791B6E-2CC9-7E6D-8D5F-5493088018E3">
+<columnName>buku_id_penerbit</columnName>
+<tableName>penulis-buku</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="3970D6A8-92EB-3C2F-82C2-9216F97E8C7E">
+<columnName>buku_id_penulis</columnName>
+<tableName>penulis-buku</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="EE7C9323-0CA4-C0D7-89F1-9CC062C33BCE">
+<columnName>buku_penerbit_id</columnName>
+<tableName>penulis-buku</tableName>
+</UsedObject>
+</usedObjects>
+</TableView>

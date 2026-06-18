@@ -1,0 +1,21 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="buku-peminjaman" directorySegmentName="seg_0" id="4FDF4BD4-0B0A-4C62-0F2B-53558C1AF5CE">
+<createdBy>atalariq</createdBy>
+<createdTime>2026-04-15 06:13:37 UTC</createdTime>
+<ownerDesignName>library</ownerDesignName>
+<engineerTo>
+<item key="E29B65A6-323C-48B2-A2BE-B6A662D82EF6" value="true"/>
+</engineerTo>
+<sourcePk>6C12F2E4-3E97-41C2-F45B-2BE27E812478</sourcePk>
+<targetPk>BD5633AB-F462-F471-7FF3-88C1BE30C875</targetPk>
+<identifying>false</identifying>
+<nameOnSource>DIPINJAM/DIKEMBALIKAN</nameOnSource>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>B09B1F51-CE7E-C77C-665F-8A4504F886EA</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>A717E4B6-CF2E-FCBC-13AE-A4AD507C06CB</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

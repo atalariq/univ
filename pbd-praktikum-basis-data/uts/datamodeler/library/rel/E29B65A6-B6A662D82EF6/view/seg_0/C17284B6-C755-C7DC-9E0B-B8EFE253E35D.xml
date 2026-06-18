@@ -1,0 +1,75 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableView class="oracle.dbtools.crest.model.design.relational.TableView" directorySegmentName="seg_0" id="C17284B6-C755-C7DC-9E0B-B8EFE253E35D" name="V_penerbit">
+<createdBy>atalariq</createdBy>
+<createdTime>2026-04-15 07:07:47 UTC</createdTime>
+<ownerDesignName>library</ownerDesignName>
+<userDefined>true</userDefined>
+<userDefinedSQL><![CDATA[CREATE VIEW V_penerbit
+  ( id
+   , nama
+   , kota )
+ AS SELECT
+    id
+   , nama
+   , kota
+ FROM 
+    penerbit ;]]></userDefinedSQL>
+<parsed>true</parsed>
+<originalTableID>F9335DA2-125C-BAE7-9FB7-74FB088ECC4B</originalTableID>
+<usedContainers>
+<container containerID="F9335DA2-125C-BAE7-9FB7-74FB088ECC4B"/>
+</usedContainers>
+<viewElements>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="id" id="BAC76336-48ED-962B-9B9F-32D474F81DD3">
+<createdBy>atalariq</createdBy>
+<createdTime>2026-04-15 07:07:47 UTC</createdTime>
+<ownerDesignName>library</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<dataType>CHAR</dataType>
+<reference>false</reference>
+<referencedColumn>B0EA245E-C358-B4CF-D9DF-B9BE42CB3B9F</referencedColumn>
+<table>F9335DA2-125C-BAE7-9FB7-74FB088ECC4B</table>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="nama" id="6AA1AEC0-CAC4-BEEE-2814-30E1B2463895">
+<createdBy>atalariq</createdBy>
+<createdTime>2026-04-15 07:07:47 UTC</createdTime>
+<ownerDesignName>library</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<dataType>VARCHAR2 (255)</dataType>
+<reference>false</reference>
+<referencedColumn>FE211CFB-AC55-57C8-A60E-408FAB611CBD</referencedColumn>
+<table>F9335DA2-125C-BAE7-9FB7-74FB088ECC4B</table>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="kota" id="1C361829-962D-F5D1-52F3-6AF380C61C01">
+<createdBy>atalariq</createdBy>
+<createdTime>2026-04-15 07:07:47 UTC</createdTime>
+<ownerDesignName>library</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<dataType>CLOB</dataType>
+<reference>false</reference>
+<referencedColumn>BDEABAAF-6C3C-0C7F-1225-22C0F4F1CEF6</referencedColumn>
+<table>F9335DA2-125C-BAE7-9FB7-74FB088ECC4B</table>
+</viewElement>
+</viewElements>
+<usedObjects>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="F9335DA2-125C-BAE7-9FB7-74FB088ECC4B">
+<container>true</container>
+<tableName>penerbit</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="B0EA245E-C358-B4CF-D9DF-B9BE42CB3B9F">
+<columnName>id</columnName>
+<tableName>penerbit</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="FE211CFB-AC55-57C8-A60E-408FAB611CBD">
+<columnName>nama</columnName>
+<tableName>penerbit</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="BDEABAAF-6C3C-0C7F-1225-22C0F4F1CEF6">
+<columnName>kota</columnName>
+<tableName>penerbit</tableName>
+</UsedObject>
+</usedObjects>
+</TableView>

@@ -1,0 +1,7 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<LogicalDesign class="oracle.dbtools.crest.model.design.logical.LogicalDesign" name="Logical" id="7B059B63-E219-097C-9F75-6554D09EE9AC" mainViewID="697A5318-CB5E-C27D-4F51-0069769A35F9">
+<createdBy>atalariq</createdBy>
+<createdTime>2026-04-15 05:26:35 UTC</createdTime>
+<ownerDesignName>library</ownerDesignName>
+<shouldBeOpen>false</shouldBeOpen>
+</LogicalDesign>

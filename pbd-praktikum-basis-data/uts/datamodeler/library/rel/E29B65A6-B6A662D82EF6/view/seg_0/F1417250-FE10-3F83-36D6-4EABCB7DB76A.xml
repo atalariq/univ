@@ -1,0 +1,92 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableView class="oracle.dbtools.crest.model.design.relational.TableView" directorySegmentName="seg_0" id="F1417250-FE10-3F83-36D6-4EABCB7DB76A" name="V_anggota">
+<createdBy>atalariq</createdBy>
+<createdTime>2026-04-15 07:07:47 UTC</createdTime>
+<ownerDesignName>library</ownerDesignName>
+<userDefined>true</userDefined>
+<userDefinedSQL><![CDATA[CREATE VIEW V_anggota
+  ( id
+   , nama
+   , email
+   , nomor_telepon )
+ AS SELECT
+    id
+   , nama
+   , email
+   , nomor_telepon
+ FROM 
+    anggota ;]]></userDefinedSQL>
+<parsed>true</parsed>
+<originalTableID>BF9277EA-0659-D352-9D76-56D0449DBCC1</originalTableID>
+<usedContainers>
+<container containerID="BF9277EA-0659-D352-9D76-56D0449DBCC1"/>
+</usedContainers>
+<viewElements>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="id" id="2FEF7811-E6D4-3026-0DFC-0F1DD3B06CFA">
+<createdBy>atalariq</createdBy>
+<createdTime>2026-04-15 07:07:47 UTC</createdTime>
+<ownerDesignName>library</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<dataType>CHAR</dataType>
+<reference>false</reference>
+<referencedColumn>8D6D5F20-1019-0C69-81FF-BF75CAADBE11</referencedColumn>
+<table>BF9277EA-0659-D352-9D76-56D0449DBCC1</table>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="nama" id="AE656A82-33EE-46C1-64A6-B178FD4BADAD">
+<createdBy>atalariq</createdBy>
+<createdTime>2026-04-15 07:07:47 UTC</createdTime>
+<ownerDesignName>library</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<dataType>VARCHAR2 (255 CHAR)</dataType>
+<reference>false</reference>
+<referencedColumn>2C8500E7-1580-1881-A2A7-CF655F05974E</referencedColumn>
+<table>BF9277EA-0659-D352-9D76-56D0449DBCC1</table>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="email" id="5F4D1CEE-32D9-E403-223A-84ADE0BBBC21">
+<createdBy>atalariq</createdBy>
+<createdTime>2026-04-15 07:07:47 UTC</createdTime>
+<ownerDesignName>library</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<dataType>VARCHAR2 (255 BYTE)</dataType>
+<reference>false</reference>
+<referencedColumn>6777FCCA-E30E-CAEE-29A7-9F8F8F09627B</referencedColumn>
+<table>BF9277EA-0659-D352-9D76-56D0449DBCC1</table>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="nomor_telepon" id="4065610D-F614-E5A7-E7FF-B963DBBF405C">
+<createdBy>atalariq</createdBy>
+<createdTime>2026-04-15 07:07:47 UTC</createdTime>
+<ownerDesignName>library</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<dataType>NVARCHAR2 (13)</dataType>
+<reference>false</reference>
+<referencedColumn>C63DDB26-9A0E-E32B-074B-0D167ACEE60A</referencedColumn>
+<table>BF9277EA-0659-D352-9D76-56D0449DBCC1</table>
+</viewElement>
+</viewElements>
+<usedObjects>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="BF9277EA-0659-D352-9D76-56D0449DBCC1">
+<container>true</container>
+<tableName>anggota</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="8D6D5F20-1019-0C69-81FF-BF75CAADBE11">
+<columnName>id</columnName>
+<tableName>anggota</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="2C8500E7-1580-1881-A2A7-CF655F05974E">
+<columnName>nama</columnName>
+<tableName>anggota</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="6777FCCA-E30E-CAEE-29A7-9F8F8F09627B">
+<columnName>email</columnName>
+<tableName>anggota</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="C63DDB26-9A0E-E32B-074B-0D167ACEE60A">
+<columnName>nomor_telepon</columnName>
+<tableName>anggota</tableName>
+</UsedObject>
+</usedObjects>
+</TableView>

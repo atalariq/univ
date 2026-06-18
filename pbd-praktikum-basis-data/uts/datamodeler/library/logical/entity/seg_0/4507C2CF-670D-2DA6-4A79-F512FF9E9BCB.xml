@@ -1,0 +1,58 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="4507C2CF-670D-2DA6-4A79-F512FF9E9BCB" name="penulis">
+<createdBy>atalariq</createdBy>
+<createdTime>2026-04-15 05:37:05 UTC</createdTime>
+<ownerDesignName>library</ownerDesignName>
+<engineerTo>
+<item key="E29B65A6-323C-48B2-A2BE-B6A662D82EF6" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id" id="E2C227AF-A600-4A77-7AA1-446471895527">
+<createdBy>atalariq</createdBy>
+<createdTime>2026-04-15 05:45:59 UTC</createdTime>
+<ownerDesignName>library</ownerDesignName>
+<engineerTo>
+<item key="E29B65A6-323C-48B2-A2BE-B6A662D82EF6" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT057</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="nama" id="1484EE2F-06F6-E6AF-E9E1-B9A94D7BD294">
+<createdBy>atalariq</createdBy>
+<createdTime>2026-04-15 05:46:10 UTC</createdTime>
+<ownerDesignName>library</ownerDesignName>
+<engineerTo>
+<item key="E29B65A6-323C-48B2-A2BE-B6A662D82EF6" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255</dataTypeSize>
+<ownDataTypeParameters>255,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="78058BD0-DE29-9541-7AB1-593D09EFF792" name="penulis PK">
+<createdBy>atalariq</createdBy>
+<createdTime>2026-04-15 05:46:08 UTC</createdTime>
+<ownerDesignName>library</ownerDesignName>
+<engineerTo>
+<item key="E29B65A6-323C-48B2-A2BE-B6A662D82EF6" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>E2C227AF-A600-4A77-7AA1-446471895527</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

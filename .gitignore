@@ -8,12 +8,16 @@ build/
 *.out
 .vscode/
 .idea/
+.claude/
+.opencode/
+.bak
 
 # Python
 __pycache__/
 *.py[codz]
 *$py.class
 .venv/
+.ruff_cache/
 
 # Java
 *.class
@@ -35,8 +39,12 @@ __pycache__/
 # ----------------------------------------------------------------------
 # Private / Local-only files (keep on disk, out of git)
 # ----------------------------------------------------------------------
+*.private
 *.private.*
+*.private/
+*.local
 *.local.*
+*.local/
 00_Bank_Soal/
 .templates/report.docx
 .archive/
@@ -49,6 +57,11 @@ __pycache__/
 *.avi
 *.mkv
 *.webm
+
+# Manim generated cache
+**/media/texts/
+**/media/videos/
+**/media/images/
 
 # ----------------------------------------------------------------------
 # OS Specific

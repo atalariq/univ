@@ -1,0 +1,60 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="F9335DA2-125C-BAE7-9FB7-74FB088ECC4B" name="penerbit">
+<createdBy>atalariq</createdBy>
+<createdTime>2026-04-15 06:17:30 UTC</createdTime>
+<generatorID>87A6D1A5-0353-ECCC-8670-081E1D832BB6</generatorID>
+<ownerDesignName>library</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id" id="B0EA245E-C358-B4CF-D9DF-B9BE42CB3B9F">
+<createdBy>atalariq</createdBy>
+<createdTime>2026-04-15 06:17:30 UTC</createdTime>
+<generatorID>A14D6035-519E-511E-48DE-5CC032D61C3A</generatorID>
+<ownerDesignName>library</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT057</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="nama" id="FE211CFB-AC55-57C8-A60E-408FAB611CBD">
+<createdBy>atalariq</createdBy>
+<createdTime>2026-04-15 06:17:30 UTC</createdTime>
+<generatorID>EC7323B7-79D4-272E-BC22-183A3D8B8285</generatorID>
+<ownerDesignName>library</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255</dataTypeSize>
+<ownDataTypeParameters>255,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="kota" id="BDEABAAF-6C3C-0C7F-1225-22C0F4F1CEF6">
+<createdBy>atalariq</createdBy>
+<createdTime>2026-04-15 06:17:30 UTC</createdTime>
+<generatorID>9358C283-91B6-409D-C9EE-7FED77C7D7BF</generatorID>
+<ownerDesignName>library</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT040</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="FB186A54-42A3-33FB-8665-6BFC4CD91221" name="penerbit_PK">
+<createdBy>atalariq</createdBy>
+<createdTime>2026-04-15 06:17:30 UTC</createdTime>
+<generatorID>C4B6A3F7-4A9F-B0AC-E515-8DFDD981B793</generatorID>
+<ownerDesignName>library</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="B0EA245E-C358-B4CF-D9DF-B9BE42CB3B9F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

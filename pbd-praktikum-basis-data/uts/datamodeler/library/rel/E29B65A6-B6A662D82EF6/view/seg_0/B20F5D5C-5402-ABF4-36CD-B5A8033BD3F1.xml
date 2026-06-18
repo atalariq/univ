@@ -1,0 +1,58 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableView class="oracle.dbtools.crest.model.design.relational.TableView" directorySegmentName="seg_0" id="B20F5D5C-5402-ABF4-36CD-B5A8033BD3F1" name="V_pustakawan">
+<createdBy>atalariq</createdBy>
+<createdTime>2026-04-15 07:07:47 UTC</createdTime>
+<ownerDesignName>library</ownerDesignName>
+<userDefined>true</userDefined>
+<userDefinedSQL><![CDATA[CREATE VIEW V_pustakawan
+  ( id
+   , nama )
+ AS SELECT
+    id
+   , nama
+ FROM 
+    pustakawan ;]]></userDefinedSQL>
+<parsed>true</parsed>
+<originalTableID>58452568-603A-7D2F-1109-09C785191FEB</originalTableID>
+<usedContainers>
+<container containerID="58452568-603A-7D2F-1109-09C785191FEB"/>
+</usedContainers>
+<viewElements>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="id" id="0F55EF70-C05C-BE40-5F13-7593F1A7B7F0">
+<createdBy>atalariq</createdBy>
+<createdTime>2026-04-15 07:07:47 UTC</createdTime>
+<ownerDesignName>library</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<dataType>CHAR (4 CHAR)</dataType>
+<reference>false</reference>
+<referencedColumn>25F8864A-7201-6097-4BC1-8BD83B7B30A3</referencedColumn>
+<table>58452568-603A-7D2F-1109-09C785191FEB</table>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="nama" id="D55983D5-5DF5-8ABA-7F4E-3BB511A162D3">
+<createdBy>atalariq</createdBy>
+<createdTime>2026-04-15 07:07:47 UTC</createdTime>
+<ownerDesignName>library</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<dataType>VARCHAR2 (255 CHAR)</dataType>
+<reference>false</reference>
+<referencedColumn>8424CE13-B9AC-64F5-804F-63D27384D5C6</referencedColumn>
+<table>58452568-603A-7D2F-1109-09C785191FEB</table>
+</viewElement>
+</viewElements>
+<usedObjects>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="58452568-603A-7D2F-1109-09C785191FEB">
+<container>true</container>
+<tableName>pustakawan</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="25F8864A-7201-6097-4BC1-8BD83B7B30A3">
+<columnName>id</columnName>
+<tableName>pustakawan</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="8424CE13-B9AC-64F5-804F-63D27384D5C6">
+<columnName>nama</columnName>
+<tableName>pustakawan</tableName>
+</UsedObject>
+</usedObjects>
+</TableView>

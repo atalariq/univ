@@ -1,0 +1,21 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="pustakawan-peminjaman" directorySegmentName="seg_0" id="084B3D64-FF0D-E341-2274-FD4DBD1D948F">
+<createdBy>atalariq</createdBy>
+<createdTime>2026-04-15 06:14:10 UTC</createdTime>
+<ownerDesignName>library</ownerDesignName>
+<engineerTo>
+<item key="E29B65A6-323C-48B2-A2BE-B6A662D82EF6" value="true"/>
+</engineerTo>
+<sourcePk>B8505F49-6D1D-D341-4A7A-ACD94CC4F947</sourcePk>
+<targetPk>6FEAC516-5974-6BBD-A82B-AD971F74EB50</targetPk>
+<identifying>false</identifying>
+<nameOnSource>MENCATAT</nameOnSource>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>42B117F9-73CA-FC55-5B49-DF5AFDB8DBF7</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>A717E4B6-CF2E-FCBC-13AE-A4AD507C06CB</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

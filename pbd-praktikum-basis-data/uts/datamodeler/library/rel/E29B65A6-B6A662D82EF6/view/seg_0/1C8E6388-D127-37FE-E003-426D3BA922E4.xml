@@ -1,0 +1,299 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableView class="oracle.dbtools.crest.model.design.relational.TableView" directorySegmentName="seg_0" id="1C8E6388-D127-37FE-E003-426D3BA922E4" name="V_peminjaman">
+<createdBy>atalariq</createdBy>
+<createdTime>2026-04-15 07:07:47 UTC</createdTime>
+<ownerDesignName>library</ownerDesignName>
+<userDefined>true</userDefined>
+<userDefinedSQL><![CDATA[CREATE VIEW V_peminjaman
+  ( id
+   , id_anggota
+   , id_pustakawan
+   , id_buku
+   , tanggal_pinjam
+   , tenggat_pengembalian
+   , tanggal_pengembalian
+   , status
+   , denda
+   , anggota_id
+   , pustakawan_id
+   , buku_isbn
+   , buku_id_penerbit
+   , buku_id_penulis
+   , id3
+   , isbn )
+ AS SELECT
+    id
+   , id_anggota
+   , id_pustakawan
+   , id_buku
+   , tanggal_pinjam
+   , tenggat_pengembalian
+   , tanggal_pengembalian
+   , status
+   , denda
+   , anggota_id
+   , pustakawan_id
+   , buku_isbn
+   , buku_id_penerbit
+   , buku_id_penulis
+   , id3
+   , isbn
+ FROM 
+    peminjaman ;]]></userDefinedSQL>
+<parsed>true</parsed>
+<originalTableID>E4A5451A-A9B8-D55C-0E0E-D2CE10BC8E3D</originalTableID>
+<usedContainers>
+<container containerID="E4A5451A-A9B8-D55C-0E0E-D2CE10BC8E3D"/>
+</usedContainers>
+<viewElements>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="id" id="B8243139-467F-C4C4-6273-119499924FEF">
+<createdBy>atalariq</createdBy>
+<createdTime>2026-04-15 07:07:47 UTC</createdTime>
+<ownerDesignName>library</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<dataType>CHAR</dataType>
+<reference>false</reference>
+<referencedColumn>CC1E6CDD-90C6-9061-1CD8-C0267963737A</referencedColumn>
+<table>E4A5451A-A9B8-D55C-0E0E-D2CE10BC8E3D</table>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="id_anggota" id="14B89537-5487-74F9-C215-DE2EF1DDAE94">
+<createdBy>atalariq</createdBy>
+<createdTime>2026-04-15 07:07:47 UTC</createdTime>
+<ownerDesignName>library</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<dataType>CHAR</dataType>
+<reference>false</reference>
+<referencedColumn>4B8FE026-993F-865A-3339-44C298B0BB1E</referencedColumn>
+<table>E4A5451A-A9B8-D55C-0E0E-D2CE10BC8E3D</table>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="id_pustakawan" id="51E42F22-FE10-0C8E-5BEB-02E9B1374FC9">
+<createdBy>atalariq</createdBy>
+<createdTime>2026-04-15 07:07:47 UTC</createdTime>
+<ownerDesignName>library</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<dataType>CHAR</dataType>
+<reference>false</reference>
+<referencedColumn>4CEA485A-A04C-6FAF-6796-57553BFE9C15</referencedColumn>
+<table>E4A5451A-A9B8-D55C-0E0E-D2CE10BC8E3D</table>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="id_buku" id="D81242FB-28AC-F724-747E-BB7B94E52C10">
+<createdBy>atalariq</createdBy>
+<createdTime>2026-04-15 07:07:47 UTC</createdTime>
+<ownerDesignName>library</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<dataType>CHAR</dataType>
+<reference>false</reference>
+<referencedColumn>882934A5-4AC0-B8CB-9B2A-C94197A4F66C</referencedColumn>
+<table>E4A5451A-A9B8-D55C-0E0E-D2CE10BC8E3D</table>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="tanggal_pinjam" id="90AD5CB9-C9AC-0DD0-8C6A-54B80A756CAD">
+<createdBy>atalariq</createdBy>
+<createdTime>2026-04-15 07:07:47 UTC</createdTime>
+<ownerDesignName>library</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<dataType>DATE</dataType>
+<reference>false</reference>
+<referencedColumn>A220BA43-F872-A8B9-DB93-8BBE4A352DF4</referencedColumn>
+<table>E4A5451A-A9B8-D55C-0E0E-D2CE10BC8E3D</table>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="tenggat_pengembalian" id="BCF4BDDE-2C14-04FB-EA99-F0484E6B7F40">
+<createdBy>atalariq</createdBy>
+<createdTime>2026-04-15 07:07:47 UTC</createdTime>
+<ownerDesignName>library</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<dataType>DATE</dataType>
+<reference>false</reference>
+<referencedColumn>D9925339-44E1-1946-5BA1-95BA7E9DAE1F</referencedColumn>
+<table>E4A5451A-A9B8-D55C-0E0E-D2CE10BC8E3D</table>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="tanggal_pengembalian" id="1DF8EE9F-2F74-8CD5-662F-CB7A95AFD948">
+<createdBy>atalariq</createdBy>
+<createdTime>2026-04-15 07:07:47 UTC</createdTime>
+<ownerDesignName>library</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<dataType>DATE</dataType>
+<reference>false</reference>
+<referencedColumn>B4EEA340-8206-19A9-359B-B564EB003FE6</referencedColumn>
+<table>E4A5451A-A9B8-D55C-0E0E-D2CE10BC8E3D</table>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="status" id="21D8474F-2EF1-3F03-4303-C7C995820628">
+<createdBy>atalariq</createdBy>
+<createdTime>2026-04-15 07:07:47 UTC</createdTime>
+<commentInRDBMS><![CDATA[MASIH DIPINJAM (P)
+SUDAH KEMABLI (K)
+TERLAMBAT (T)]]></commentInRDBMS>
+<ownerDesignName>library</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<dataType>CHAR (1 CHAR)</dataType>
+<reference>false</reference>
+<referencedColumn>B21DA0C1-A290-8CE2-D790-F1BA778B34A7</referencedColumn>
+<table>E4A5451A-A9B8-D55C-0E0E-D2CE10BC8E3D</table>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="denda" id="6EE07959-0481-B99A-B4DB-672A9D534EBB">
+<createdBy>atalariq</createdBy>
+<createdTime>2026-04-15 07:07:47 UTC</createdTime>
+<ownerDesignName>library</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<dataType>NUMBER</dataType>
+<reference>false</reference>
+<referencedColumn>80677C83-55CB-1981-F438-7CD238C65F65</referencedColumn>
+<table>E4A5451A-A9B8-D55C-0E0E-D2CE10BC8E3D</table>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="anggota_id" id="5C17FCAC-9B41-44E5-762C-D884DA4F7577">
+<createdBy>atalariq</createdBy>
+<createdTime>2026-04-15 07:07:47 UTC</createdTime>
+<ownerDesignName>library</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<dataType>CHAR</dataType>
+<reference>false</reference>
+<referencedColumn>26C4223F-A738-52CF-835F-BAA4FB906ABA</referencedColumn>
+<table>E4A5451A-A9B8-D55C-0E0E-D2CE10BC8E3D</table>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="pustakawan_id" id="4836310A-086C-6402-5E27-F34012359E39">
+<createdBy>atalariq</createdBy>
+<createdTime>2026-04-15 07:07:47 UTC</createdTime>
+<ownerDesignName>library</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<dataType>CHAR (4 CHAR)</dataType>
+<reference>false</reference>
+<referencedColumn>798D5F22-8BA0-11E9-724E-6127BE07A6F8</referencedColumn>
+<table>E4A5451A-A9B8-D55C-0E0E-D2CE10BC8E3D</table>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="buku_isbn" id="595EE95B-832D-EA3B-516D-F591131B4D4F">
+<createdBy>atalariq</createdBy>
+<createdTime>2026-04-15 07:07:47 UTC</createdTime>
+<ownerDesignName>library</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<dataType>CHAR</dataType>
+<reference>false</reference>
+<referencedColumn>73E0FAE4-3CC2-1097-6AFD-7DA7CDD28C36</referencedColumn>
+<table>E4A5451A-A9B8-D55C-0E0E-D2CE10BC8E3D</table>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="buku_id_penerbit" id="5C6F891F-50DE-075D-5F58-C8714D504F14">
+<createdBy>atalariq</createdBy>
+<createdTime>2026-04-15 07:07:47 UTC</createdTime>
+<ownerDesignName>library</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<dataType>CHAR</dataType>
+<reference>false</reference>
+<referencedColumn>2B66A2E3-FAF7-FE95-693F-3D518992B215</referencedColumn>
+<table>E4A5451A-A9B8-D55C-0E0E-D2CE10BC8E3D</table>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="buku_id_penulis" id="5165822A-3C21-6B96-2782-149A5649FC47">
+<createdBy>atalariq</createdBy>
+<createdTime>2026-04-15 07:07:47 UTC</createdTime>
+<ownerDesignName>library</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<dataType>CHAR</dataType>
+<reference>false</reference>
+<referencedColumn>2023623E-0693-C80A-3B6F-2F6119FDAAE7</referencedColumn>
+<table>E4A5451A-A9B8-D55C-0E0E-D2CE10BC8E3D</table>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="id3" id="112EE79A-C6B8-505D-1CA2-E1040B1C7DD0">
+<createdBy>atalariq</createdBy>
+<createdTime>2026-04-15 07:07:47 UTC</createdTime>
+<ownerDesignName>library</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<dataType>CHAR</dataType>
+<reference>false</reference>
+<referencedColumn>939FA5BD-11CE-957B-A5A5-88A8DB3554C3</referencedColumn>
+<table>E4A5451A-A9B8-D55C-0E0E-D2CE10BC8E3D</table>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="isbn" id="84D5149F-1D5F-7AFD-6357-2CC3D65B1986">
+<createdBy>atalariq</createdBy>
+<createdTime>2026-04-15 07:07:47 UTC</createdTime>
+<ownerDesignName>library</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<dataType>CHAR</dataType>
+<reference>false</reference>
+<referencedColumn>3270A5E3-CCCB-064D-8D0A-7AB019703DC5</referencedColumn>
+<table>E4A5451A-A9B8-D55C-0E0E-D2CE10BC8E3D</table>
+</viewElement>
+</viewElements>
+<usedObjects>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="E4A5451A-A9B8-D55C-0E0E-D2CE10BC8E3D">
+<container>true</container>
+<tableName>peminjaman</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="CC1E6CDD-90C6-9061-1CD8-C0267963737A">
+<columnName>id</columnName>
+<tableName>peminjaman</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="4B8FE026-993F-865A-3339-44C298B0BB1E">
+<columnName>id_anggota</columnName>
+<tableName>peminjaman</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="4CEA485A-A04C-6FAF-6796-57553BFE9C15">
+<columnName>id_pustakawan</columnName>
+<tableName>peminjaman</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="882934A5-4AC0-B8CB-9B2A-C94197A4F66C">
+<columnName>id_buku</columnName>
+<tableName>peminjaman</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="A220BA43-F872-A8B9-DB93-8BBE4A352DF4">
+<columnName>tanggal_pinjam</columnName>
+<tableName>peminjaman</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="D9925339-44E1-1946-5BA1-95BA7E9DAE1F">
+<columnName>tenggat_pengembalian</columnName>
+<tableName>peminjaman</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="B4EEA340-8206-19A9-359B-B564EB003FE6">
+<columnName>tanggal_pengembalian</columnName>
+<tableName>peminjaman</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="B21DA0C1-A290-8CE2-D790-F1BA778B34A7">
+<columnName>status</columnName>
+<tableName>peminjaman</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="80677C83-55CB-1981-F438-7CD238C65F65">
+<columnName>denda</columnName>
+<tableName>peminjaman</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="26C4223F-A738-52CF-835F-BAA4FB906ABA">
+<columnName>anggota_id</columnName>
+<tableName>peminjaman</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="798D5F22-8BA0-11E9-724E-6127BE07A6F8">
+<columnName>pustakawan_id</columnName>
+<tableName>peminjaman</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="73E0FAE4-3CC2-1097-6AFD-7DA7CDD28C36">
+<columnName>buku_isbn</columnName>
+<tableName>peminjaman</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="2B66A2E3-FAF7-FE95-693F-3D518992B215">
+<columnName>buku_id_penerbit</columnName>
+<tableName>peminjaman</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="2023623E-0693-C80A-3B6F-2F6119FDAAE7">
+<columnName>buku_id_penulis</columnName>
+<tableName>peminjaman</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="939FA5BD-11CE-957B-A5A5-88A8DB3554C3">
+<columnName>id3</columnName>
+<tableName>peminjaman</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="3270A5E3-CCCB-064D-8D0A-7AB019703DC5">
+<columnName>isbn</columnName>
+<tableName>peminjaman</tableName>
+</UsedObject>
+</usedObjects>
+</TableView>

@@ -1,0 +1,21 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="anggota-peminjaman" directorySegmentName="seg_0" id="B17B64E3-E20E-65C9-4523-0777DCAD1AC0">
+<createdBy>atalariq</createdBy>
+<createdTime>2026-04-15 06:12:42 UTC</createdTime>
+<ownerDesignName>library</ownerDesignName>
+<engineerTo>
+<item key="E29B65A6-323C-48B2-A2BE-B6A662D82EF6" value="true"/>
+</engineerTo>
+<sourcePk>923D1A52-0906-37DF-4F44-778A2A05FE91</sourcePk>
+<targetPk>F4973F1B-CC69-6F0A-85A5-881C10A9DE2F</targetPk>
+<identifying>false</identifying>
+<nameOnSource>MENGAJUKAN</nameOnSource>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>CE706FC8-F79F-83CF-1589-74D318500A6B</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>A717E4B6-CF2E-FCBC-13AE-A4AD507C06CB</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

@@ -1,0 +1,22 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="penulis-buku" directorySegmentName="seg_0" id="96C4D4FB-F82B-9790-C175-0A3F12417094">
+<createdBy>atalariq</createdBy>
+<createdTime>2026-04-15 06:08:39 UTC</createdTime>
+<ownerDesignName>library</ownerDesignName>
+<engineerTo>
+<item key="E29B65A6-323C-48B2-A2BE-B6A662D82EF6" value="true"/>
+</engineerTo>
+<sourcePk>78058BD0-DE29-9541-7AB1-593D09EFF792</sourcePk>
+<targetPk>6EAD0CD0-FCF1-9A90-9B01-CC6640F4B9C0</targetPk>
+<identifying>false</identifying>
+<nameOnSource>MENULIS</nameOnSource>
+<nameOnTarget>DITULIS</nameOnTarget>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>*</sourceCardinality>
+<sourceEntity>4507C2CF-670D-2DA6-4A79-F512FF9E9BCB</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>B09B1F51-CE7E-C77C-665F-8A4504F886EA</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

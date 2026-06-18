@@ -1,0 +1,190 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="85D68CF5-B4CC-0FC8-D721-052B22B3455E" name="buku">
+<createdBy>atalariq</createdBy>
+<createdTime>2026-04-15 06:17:30 UTC</createdTime>
+<generatorID>B09B1F51-CE7E-C77C-665F-8A4504F886EA</generatorID>
+<ownerDesignName>library</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="isbn" id="25B9C243-AFC7-D379-2026-B7660F89B2B6">
+<createdBy>atalariq</createdBy>
+<createdTime>2026-04-15 06:17:30 UTC</createdTime>
+<generatorID>1E721EF9-8B5C-486D-34CB-C6964386A3D3</generatorID>
+<ownerDesignName>library</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT057</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="id_penulis" id="7EF20367-7766-8D6A-41E3-979BB9AA1D87">
+<createdBy>atalariq</createdBy>
+<createdTime>2026-04-15 06:17:30 UTC</createdTime>
+<generatorID>88B2C415-9BEB-9145-8D8A-62721EF143E0</generatorID>
+<ownerDesignName>library</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT057</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="id_penerbit" id="6DB3C284-E881-1448-D328-26723503E32E">
+<createdBy>atalariq</createdBy>
+<createdTime>2026-04-15 06:17:30 UTC</createdTime>
+<generatorID>BADCD615-73AD-497D-0224-32E6895B4E22</generatorID>
+<ownerDesignName>library</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT057</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="judul" id="EA2C7C78-E946-2A21-1DFA-50EA93A450AB">
+<createdBy>atalariq</createdBy>
+<createdTime>2026-04-15 06:17:30 UTC</createdTime>
+<generatorID>94A88849-92B2-597E-C619-4660E6D9D816</generatorID>
+<ownerDesignName>library</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT040</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="tahun_terbit" id="1E9AC23F-59E2-BAEA-4BFE-AF631770D622">
+<createdBy>atalariq</createdBy>
+<createdTime>2026-04-15 06:17:30 UTC</createdTime>
+<generatorID>C03C366C-F33C-9344-0CC8-89EF19C69106</generatorID>
+<ownerDesignName>library</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="kategori" id="8134D793-DE0F-1EBA-D92F-070C5F52F3B9">
+<createdBy>atalariq</createdBy>
+<createdTime>2026-04-15 06:17:30 UTC</createdTime>
+<generatorID>F08E2024-47AC-75AD-0329-2FEDB35D64B6</generatorID>
+<ownerDesignName>library</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255 CHAR</dataTypeSize>
+<ownDataTypeParameters>255 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="format" id="7327CFB7-E30E-FDE3-7A96-F1AD4E61F676">
+<createdBy>atalariq</createdBy>
+<createdTime>2026-04-15 06:17:30 UTC</createdTime>
+<generatorID>5FB44929-0371-A0D7-DD50-09139D44B20F</generatorID>
+<ownerDesignName>library</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>1 CHAR</dataTypeSize>
+<ownDataTypeParameters>1 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="lokasi_rak" id="7F5EE6ED-A44B-B104-9980-5346E7CFACD6">
+<createdBy>atalariq</createdBy>
+<createdTime>2026-04-15 06:17:30 UTC</createdTime>
+<generatorID>ED14332A-4288-C6EA-811B-501BE64A6D0F</generatorID>
+<ownerDesignName>library</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="akses_url" id="5DE54C6F-9037-83AC-7F28-0C6EE4A76F75">
+<createdBy>atalariq</createdBy>
+<createdTime>2026-04-15 06:17:30 UTC</createdTime>
+<generatorID>092F2270-F9AB-D640-0AF6-E824937E951B</generatorID>
+<ownerDesignName>library</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT040</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="stok" id="B6A4FBBD-5F38-37EB-2F5E-17A65786C047">
+<createdBy>atalariq</createdBy>
+<createdTime>2026-04-15 06:17:30 UTC</createdTime>
+<generatorID>593F722A-3870-B3E9-6D9A-7FF616280D78</generatorID>
+<ownerDesignName>library</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="penerbit_id" id="7589154B-B3D2-AC68-BEC0-6F8C242022A8">
+<createdBy>atalariq</createdBy>
+<createdTime>2026-04-15 06:17:30 UTC</createdTime>
+<generatorID>A84E70E4-3499-1D49-8695-CEA08448E4E9</generatorID>
+<ownerDesignName>library</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT057</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="7881A899-B8F4-D6E4-4512-C71AB8CF7744" referredColumn="B0EA245E-C358-B4CF-D9DF-B9BE42CB3B9F"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="84BC20E5-3663-9585-7A7A-62F0494EEE9C" name="buku_PK">
+<createdBy>atalariq</createdBy>
+<createdTime>2026-04-15 06:17:30 UTC</createdTime>
+<generatorID>6C12F2E4-3E97-41C2-F45B-2BE27E812478</generatorID>
+<ownerDesignName>library</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="7589154B-B3D2-AC68-BEC0-6F8C242022A8"/>
+<colUsage columnID="25B9C243-AFC7-D379-2026-B7660F89B2B6"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="360541DE-6838-9F1D-AF18-915B5F83A07B" name="buku_id_penulis_UN">
+<createdBy>atalariq</createdBy>
+<createdTime>2026-04-15 06:17:30 UTC</createdTime>
+<generatorID>6EAD0CD0-FCF1-9A90-9B01-CC6640F4B9C0</generatorID>
+<ownerDesignName>library</ownerDesignName>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="7EF20367-7766-8D6A-41E3-979BB9AA1D87"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="56AD964A-64E3-2BA8-045D-A312B784E6C1" name="buku_id_penerbit_UN">
+<createdBy>atalariq</createdBy>
+<createdTime>2026-04-15 06:17:30 UTC</createdTime>
+<generatorID>6B88AB9C-C7B1-C5FB-C2ED-10E1BC1FA1A3</generatorID>
+<ownerDesignName>library</ownerDesignName>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="6DB3C284-E881-1448-D328-26723503E32E"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="D2514F58-3E8B-8633-D9DB-F6982E8848C7" name="buku_penerbit_FK">
+<createdBy>atalariq</createdBy>
+<createdTime>2026-04-15 06:17:30 UTC</createdTime>
+<generatorID>5AB217D5-965B-7759-D753-D1D3E4F993B7</generatorID>
+<ownerDesignName>library</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="7589154B-B3D2-AC68-BEC0-6F8C242022A8"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -1,0 +1,58 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableView class="oracle.dbtools.crest.model.design.relational.TableView" directorySegmentName="seg_0" id="399422D6-A722-8AF7-FBCD-698F070D5FDE" name="V_penulis">
+<createdBy>atalariq</createdBy>
+<createdTime>2026-04-15 07:07:47 UTC</createdTime>
+<ownerDesignName>library</ownerDesignName>
+<userDefined>true</userDefined>
+<userDefinedSQL><![CDATA[CREATE VIEW V_penulis
+  ( id
+   , nama )
+ AS SELECT
+    id
+   , nama
+ FROM 
+    penulis ;]]></userDefinedSQL>
+<parsed>true</parsed>
+<originalTableID>C56127F7-D9A9-EAE5-A028-AE72CB773045</originalTableID>
+<usedContainers>
+<container containerID="C56127F7-D9A9-EAE5-A028-AE72CB773045"/>
+</usedContainers>
+<viewElements>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="id" id="A9FF005A-C011-08CB-8654-D8617174095B">
+<createdBy>atalariq</createdBy>
+<createdTime>2026-04-15 07:07:47 UTC</createdTime>
+<ownerDesignName>library</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<dataType>CHAR</dataType>
+<reference>false</reference>
+<referencedColumn>40738360-EE9B-4950-8CE8-DED48DBFFF59</referencedColumn>
+<table>C56127F7-D9A9-EAE5-A028-AE72CB773045</table>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="nama" id="E9FCE604-DC3D-CC25-9A55-54B4E2995B94">
+<createdBy>atalariq</createdBy>
+<createdTime>2026-04-15 07:07:47 UTC</createdTime>
+<ownerDesignName>library</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<dataType>VARCHAR2 (255)</dataType>
+<reference>false</reference>
+<referencedColumn>B6593BDF-D3E1-92D5-40C6-3B0B7C46E534</referencedColumn>
+<table>C56127F7-D9A9-EAE5-A028-AE72CB773045</table>
+</viewElement>
+</viewElements>
+<usedObjects>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="C56127F7-D9A9-EAE5-A028-AE72CB773045">
+<container>true</container>
+<tableName>penulis</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="40738360-EE9B-4950-8CE8-DED48DBFFF59">
+<columnName>id</columnName>
+<tableName>penulis</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="B6593BDF-D3E1-92D5-40C6-3B0B7C46E534">
+<columnName>nama</columnName>
+<tableName>penulis</tableName>
+</UsedObject>
+</usedObjects>
+</TableView>

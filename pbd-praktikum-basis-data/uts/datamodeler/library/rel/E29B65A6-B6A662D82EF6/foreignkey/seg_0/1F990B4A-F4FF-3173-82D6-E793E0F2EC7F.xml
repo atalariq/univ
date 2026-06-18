@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="1F990B4A-F4FF-3173-82D6-E793E0F2EC7F" containerWithKeyObject="E4A5451A-A9B8-D55C-0E0E-D2CE10BC8E3D" localFKIndex="FC709C91-5FC0-9029-A6E6-43D18700156C" name="peminjaman_pustakawan_FK">
+<createdBy>atalariq</createdBy>
+<createdTime>2026-04-15 06:20:04 UTC</createdTime>
+<generatorID>084B3D64-FF0D-E341-2274-FD4DBD1D948F</generatorID>
+<ownerDesignName>library</ownerDesignName>
+<referredTableLongName>pustakawan</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>58452568-603A-7D2F-1109-09C785191FEB</referredTableID>
+<keyObject>87D5D8DF-6BB1-A317-BA8C-3A38F2BFD2E6</keyObject>
+<referredKeyID>87D5D8DF-6BB1-A317-BA8C-3A38F2BFD2E6</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>id</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

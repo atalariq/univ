@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="D7FDE9EA-7203-6246-760E-4F5E3A6BD606" containerWithKeyObject="E4A5451A-A9B8-D55C-0E0E-D2CE10BC8E3D" localFKIndex="B4C30233-C4D1-29E8-8006-532DB2B33263" name="peminjaman_buku_FK">
+<createdBy>atalariq</createdBy>
+<createdTime>2026-04-15 06:21:40 UTC</createdTime>
+<generatorID>4FDF4BD4-0B0A-4C62-0F2B-53558C1AF5CE</generatorID>
+<ownerDesignName>library</ownerDesignName>
+<referredTableLongName>buku</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>85D68CF5-B4CC-0FC8-D721-052B22B3455E</referredTableID>
+<keyObject>84BC20E5-3663-9585-7A7A-62F0494EEE9C</keyObject>
+<referredKeyID>84BC20E5-3663-9585-7A7A-62F0494EEE9C</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>penerbit_id,isbn</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

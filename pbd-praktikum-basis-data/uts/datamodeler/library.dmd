@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="library" id="99BC7AB8-CFC8-E889-7050-E162F6648478" version="3.5">
+<createdBy>atalariq</createdBy>
+<createdTime>2026-04-15 05:26:35 UTC</createdTime>
+<ownerDesignName>library</ownerDesignName>
+<capitalNames>false</capitalNames>
+<designId>99BC7AB8-CFC8-E889-7050-E162F6648478</designId>
+</OSDM_Design>
