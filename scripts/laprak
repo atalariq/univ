@@ -94,14 +94,8 @@ cmd_new() {
     mkdir -p "$full_path/assets"
     mkdir -p "$full_path/modules"
 
-    # Copy template files from .templates/report-typst/
-    if [[ -f "$TEMPLATE_DIR/template.typ" ]]; then
-        cp "$TEMPLATE_DIR/template.typ" "$full_path/template.typ"
-        ok "Copied template.typ"
-    else
-        warn "template.typ not found at $TEMPLATE_DIR/template.typ"
-    fi
-
+    # Copy starter references.bib (the report template now lives in the
+    # @local/lab-report package, so no local template.typ copy is needed).
     if [[ -f "$TEMPLATE_DIR/references.bib" ]]; then
         cp "$TEMPLATE_DIR/references.bib" "$full_path/references.bib"
         ok "Copied references.bib"
@@ -126,9 +120,9 @@ cmd_new() {
     meeting_title="$(echo "$topic" | sed 's/-/ /g')"
 
     cat > "$full_path/report.typ" <<TYPTEMPLATE
-#import "@local/report:1.0.0": *
+#import "@local/lab-report:2.0.0": *
 
-#show: report.with(
+#let meta = (
   author: "Atalariq Barra Hadinugraha",
   id: "25/557554/SV/26192",
   class: "B2",
@@ -137,19 +131,26 @@ cmd_new() {
   lecturer: "<lecturer-name>",
   meeting: "$meeting_num",
   title: "$meeting_title",
-  use-cover: true,
+)
+
+// \`full\` preset renders cover + daftar isi + body + bibliography + lampiran.
+// \`association\` defaults to UGM D-IV TRPL; \`year\` defaults to today.
+#show: full.with(
+  ..meta,
+  logo: image("assets/logo.png", width: 6cm),
   bib: bibliography("references.bib"),
   font: "Times New Roman",
   code-font: "Fira Code",
   font-size: 12pt,
 )
 
-#set par(justify: true)
-#set par(first-line-indent: (amount: 0.5in, all: true))
+#set par(justify: true, first-line-indent: (amount: 0.5in, all: true))
 
-#daftar-isi()
-// #daftar-gambar()
-// #daftar-tabel()
+// Helper bindings (hapus kalau tidak dipakai):
+//   #img("assets/foo.png", caption: [..])     — gambar
+//   #include-code("src/main.py")              — sisipkan kode dari file
+#let img(path, ..args) = image-wrapper(read(path, encoding: none), ..args)
+#let include-code(path, ..args) = code-from-file(read(path), lang: path.split(".").at(-1), header: path, ..args)
 
 = Tujuan Praktikum
 
@@ -186,10 +187,9 @@ TYPTEMPLATE
 
     ok "Created report.typ"
 
-    # Create typst.toml if needed (for @local package resolution)
-    if [[ ! -f "$course_dir/typst.toml" ]]; then
-        # Don't create -- user should handle package resolution
-        info "Note: Ensure @local/report package is linked (see ~/Repos/typst-packages/packages/)"
+    # Reminder: the @local/lab-report package must be linked for compilation.
+    if [[ ! -e "$HOME/.local/share/typst/packages/local/lab-report/2.0.0" ]]; then
+        warn "@local/lab-report:2.0.0 not linked — run: $REPO_ROOT/scripts/setup-typst-packages"
     fi
 
     echo ""
@@ -199,7 +199,6 @@ TYPTEMPLATE
     echo "  Files:"
     echo "    ├── report.typ"
     echo "    ├── references.bib"
-    echo "    ├── template.typ"
     echo "    ├── modules/"
     echo "    └── assets/"
     echo "        └── logo.png → (symlink to shared)"
