@@ -1,0 +1,77 @@
+Table Admin {
+  id int [pk]
+  username varchar
+  password_hash varchar
+  full_name varchar
+}
+
+Table Category {
+  id int [pk]
+  title varchar
+}
+
+Table Package {
+  id int [pk]
+  title varchar
+  description varchar
+  imageUri varchar
+}
+
+Table Product {
+  id int [pk]
+  category_id int [ref: > Category.id]
+  package_id int [ref: > Package.id]
+  title varchar
+  description varchar
+  hidden boolean [default: true]
+}
+
+Table ProductPhoto {
+  id int [pk]
+  product_id int [ref: > Product.id]
+  imageUri varchar
+  imageDescription varchar
+}
+
+Table Portfolio {
+  id int [pk]
+  title varchar
+  fileUri varchar
+  hidden boolean
+}
+
+Table Testimony {
+  id int [pk]
+  content text
+  upvote_count int [note: 'denormalized cache']
+  status varchar [note: 'pending | approved | rejected']
+}
+
+// delta: ip_address -> ip_hash (privacy), tambah count (bukan 1 row per klik)
+Table TestimonyUpvote {
+  id int [pk]
+  testimony_id int [ref: > Testimony.id]
+  ip_hash varchar
+  count int [note: 'capped by app logic, e.g. max 10']
+}
+
+Table Faq {
+  id int [pk]
+  question varchar [note: 'kalimat (maksimal 30 kata?)']
+  answer text [note: 'paragraf']
+  status varchar [note: 'pending | approved | rejected']
+}
+
+Table Contact {
+  id int [pk]
+  address varchar
+  phone varchar
+  email varchar
+}
+
+Table ContactLink {
+  id int [pk]
+  contact_id int [ref: > Contact.id]
+  platform varchar
+  url varchar
+}

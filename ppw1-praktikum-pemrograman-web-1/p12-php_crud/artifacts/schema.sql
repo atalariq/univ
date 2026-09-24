@@ -1,1 +1,0 @@
-/home/atalariq/Repos/PPW1-PHP/schema.sql

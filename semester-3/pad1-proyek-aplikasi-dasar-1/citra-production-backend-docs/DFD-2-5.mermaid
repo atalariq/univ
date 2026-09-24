@@ -1,0 +1,45 @@
+%% DFD Level 2 - Sistem Katalog Souvenir - Citra Production | 2026-09-18
+%% Dekomposisi proses 2.0 dan 5.0 dari DFD-1.
+%% Dua diagram terpisah. Render satu per satu.
+
+%% ============================================================
+%% DIAGRAM B - Dekomposisi 5.0 Moderasi FAQ & Testimoni
+%% Potong dari baris di bawah ini dan render terpisah.
+%% ============================================================
+
+%%{ init: { 'flowchart': { 'curve': 'linear' } } }%%
+flowchart TB
+    Admin2[Admin]
+
+    P51((5.1<br/>Tampilkan Antrian<br/>Moderasi))
+    P52((5.2<br/>Jawab &<br/>Approve FAQ))
+    P53((5.3<br/>Tolak<br/>Pengajuan))
+    P54((5.4<br/>Approve & Atur<br/>Urutan Testimoni))
+    P55((5.5<br/>Input Manual<br/>FAQ & Testimoni))
+
+    D4b[(D4 FAQ)]
+    D5b[(D5 Testimoni)]
+    D8b[(D8 Admin)]
+
+    D4b -->|FAQ berstatus pending| P51
+    D5b -->|testimoni berstatus pending| P51
+    P51 -->|daftar antrian terurut waktu masuk| Admin2
+
+    Admin2 -->|id FAQ & teks jawaban| P52
+    D8b -->|identitas admin penjawab| P52
+    P52 -->|jawaban, status approved,<br/>penjawab, waktu jawab| D4b
+    P52 -->|konfirmasi publikasi| Admin2
+
+    Admin2 -->|id pengajuan & alasan tolak| P53
+    P53 -->|status rejected| D4b
+    P53 -->|status rejected| D5b
+    P53 -->|konfirmasi penolakan| Admin2
+
+    Admin2 -->|id testimoni, urutan tampil| P54
+    P54 -->|status approved & urutan| D5b
+    P54 -->|konfirmasi publikasi| Admin2
+
+    Admin2 -->|pertanyaan & jawaban siap tayang,<br/>nama & isi testimoni hasil kurasi| P55
+    P55 -->|entri baru source admin,<br/>status approved| D4b
+    P55 -->|entri baru source admin,<br/>status approved| D5b
+    P55 -->|status simpan| Admin2

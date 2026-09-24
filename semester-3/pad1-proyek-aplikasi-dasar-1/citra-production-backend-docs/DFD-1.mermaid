@@ -1,0 +1,94 @@
+%% DFD Level 1 - Sistem Katalog Souvenir - Citra Production | 2026-09-18
+%% Dekomposisi proses 0 dari DFD-0.
+%% Proses diturunkan dari kode fitur di PROJECT-CONTEXT.md section 6.
+
+%%{ init: { 'flowchart': { 'curve': 'linear' } } }%%
+flowchart TB
+    Admin[Admin]
+    Client[Client]
+    WA[WhatsApp]
+
+    P1((1.0<br/>Autentikasi<br/>Admin<br/>AD-01))
+    P2((2.0<br/>Kelola Produk<br/>Kategori Packaging<br/>MP-01 MP-02))
+    P3((3.0<br/>Kelola<br/>Portofolio<br/>MK-01))
+    P4((4.0<br/>Kelola Konten<br/>Situs & Kontak<br/>MK-03))
+    P5((5.0<br/>Moderasi FAQ<br/>& Testimoni<br/>MK-02 MK-01))
+    P6((6.0<br/>Tampilkan<br/>Katalog Publik<br/>PU-01..PU-06))
+    P7((7.0<br/>Terima Pengajuan<br/>Publik<br/>PU-05))
+    P8((8.0<br/>Catat Dukungan<br/>Testimoni))
+    P9((9.0<br/>Sajikan Ringkasan<br/>Dashboard<br/>AD-02))
+
+    D1[(D1 Kategori & Packaging)]
+    D2[(D2 Produk & Foto Produk)]
+    D3[(D3 Portofolio)]
+    D4[(D4 FAQ)]
+    D5[(D5 Testimoni)]
+    D6[(D6 Dukungan Testimoni)]
+    D7[(D7 Konten Situs & Kontak)]
+    D8[(D8 Admin)]
+
+    %% --- 1.0 Autentikasi ---
+    Admin -->|username & password| P1
+    P1 -->|permintaan verifikasi kredensial| D8
+    D8 -->|hash password & profil admin| P1
+    P1 -->|token sesi & identitas admin| Admin
+
+    %% --- 2.0 Kelola Produk ---
+    Admin -->|judul deskripsi rentang harga,<br/>pilihan kategori & packaging,<br/>berkas foto & alt text| P2
+    P2 -->|data kategori & packaging baru| D1
+    D1 -->|daftar kategori & packaging| P2
+    P2 -->|data produk, relasi packaging,<br/>metadata foto| D2
+    D2 -->|data produk tersimpan| P2
+    P2 -->|status simpan & pesan validasi| Admin
+
+    %% --- 3.0 Portofolio ---
+    Admin -->|judul deskripsi berkas foto,<br/>status tampil| P3
+    P3 -->|data portofolio| D3
+    D3 -->|daftar portofolio| P3
+    P3 -->|status simpan| Admin
+
+    %% --- 4.0 Konten Situs & Kontak ---
+    Admin -->|teks hero & about, alamat,<br/>nomor WhatsApp, tautan sosial| P4
+    P4 -->|pasangan key-value konten,<br/>data kontak & tautan| D7
+    D7 -->|konten & kontak tersimpan| P4
+    P4 -->|status simpan| Admin
+
+    %% --- 5.0 Moderasi ---
+    D4 -->|FAQ berstatus pending| P5
+    D5 -->|testimoni berstatus pending| P5
+    P5 -->|antrian moderasi| Admin
+    Admin -->|keputusan approve/reject,<br/>teks jawaban FAQ,<br/>entri manual FAQ/testimoni| P5
+    P5 -->|status, jawaban, penjawab, waktu jawab| D4
+    P5 -->|status & urutan tampil| D5
+    P5 -->|konfirmasi moderasi| Admin
+
+    %% --- 6.0 Publik ---
+    Client -->|kata kunci, filter kategori,<br/>slug produk| P6
+    D2 -->|produk & foto dengan hidden = false| P6
+    D1 -->|daftar kategori untuk filter| P6
+    D3 -->|portofolio dengan hidden = false| P6
+    D4 -->|FAQ berstatus approved| P6
+    D5 -->|testimoni berstatus approved| P6
+    D7 -->|konten hero, about, info kontak| P6
+    P6 -->|katalog, detail produk, portofolio,<br/>FAQ, testimoni, kontak| Client
+    P6 -->|nomor tujuan & konteks produk| WA
+
+    %% --- 7.0 Pengajuan publik ---
+    Client -->|isi pertanyaan FAQ| P7
+    Client -->|nama, konteks, isi testimoni| P7
+    P7 -->|FAQ baru berstatus pending| D4
+    P7 -->|testimoni baru berstatus pending| D5
+    P7 -->|tanda terima pengajuan| Client
+
+    %% --- 8.0 Dukungan ---
+    Client -->|id testimoni| P8
+    P8 -->|id testimoni & hash IP| D6
+    D6 -->|status dukungan sudah ada / belum| P8
+    P8 -->|jumlah dukungan terbaru| D5
+    P8 -->|konfirmasi & jumlah dukungan| Client
+
+    %% --- 9.0 Dashboard ---
+    D2 -->|jumlah produk tampil & tersembunyi| P9
+    D4 -->|jumlah FAQ pending| P9
+    D5 -->|jumlah testimoni pending| P9
+    P9 -->|ringkasan dashboard| Admin

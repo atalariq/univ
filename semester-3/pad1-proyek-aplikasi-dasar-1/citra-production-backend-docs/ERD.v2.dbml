@@ -1,0 +1,225 @@
+// Sistem Katalog Souvenir - Citra Production
+// ERD v1 | 2026-09-18
+//
+// Aturan bisnis (BR-xx) mengacu ke PROJECT-CONTEXT.md section 5.
+// Konvensi: snake_case, semua tabel punya created_at/updated_at (D-06).
+
+Project citra_production {
+  database_type: 'PostgreSQL'
+  Note: '''
+    Katalog souvenir Citra Production.
+    Skala: 15-20 produk. Jaga tetap sederhana.
+    Source of truth aturan bisnis: PROJECT-CONTEXT.md
+  '''
+}
+
+// ============================================================
+// AUTH
+// ============================================================
+
+Table admin {
+  id            int          [pk, increment]
+  username      varchar(50)  [unique, not null]
+  password_hash varchar(255) [not null]
+  full_name     varchar(100)
+  created_at    timestamp    [not null, default: `now()`]
+  updated_at    timestamp    [not null, default: `now()`]
+
+  Note: 'Satu level admin saja. Tidak ada role bertingkat (section 2).'
+}
+
+// ============================================================
+// KATALOG PRODUK  (MP-01, MP-02, PU-02, PU-03)
+// ============================================================
+
+Table category {
+  id         int          [pk, increment]
+  title      varchar(100) [not null]
+  slug       varchar(120) [unique, not null, note: 'D-07']
+  sort_order int          [not null, default: 0]
+  created_at timestamp    [not null, default: `now()`]
+  updated_at timestamp    [not null, default: `now()`]
+
+  Note: 'Contoh dari RG: samir, medali, plakat, souvenir, pin, trofi & piala.'
+}
+
+Table package {
+  id          int          [pk, increment]
+  title       varchar(100) [not null]
+  description text
+  image_uri   varchar(255)
+  created_at  timestamp    [not null, default: `now()`]
+  updated_at  timestamp    [not null, default: `now()`]
+
+  Note: 'Jenis pilihan packaging. Dipilih per produk lewat product_package (BR-04).'
+}
+
+Table product {
+  id          int          [pk, increment]
+  category_id int          [null, note: 'BR-08: nullable supaya draft bisa disimpan sebelum kategori siap']
+  title       varchar(150) [not null]
+  slug        varchar(180) [unique, not null, note: 'D-07']
+  description text
+  price_min   int          [note: 'BR-03: rupiah, rentang bawah']
+  price_max   int          [note: 'BR-03: rupiah, rentang atas']
+  hidden      boolean      [not null, default: true, note: 'BR-01: draft sampai admin publish']
+  created_at  timestamp    [not null, default: `now()`]
+  updated_at  timestamp    [not null, default: `now()`]
+
+  indexes {
+    (hidden, category_id) [name: 'idx_product_public_filter']
+    slug
+  }
+
+  Note: 'CHECK di level app: price_max >= price_min.'
+}
+
+// BR-04, D-03: satu produk boleh punya banyak pilihan packaging, boleh juga nol.
+Table product_package {
+  product_id int [not null]
+  package_id int [not null]
+
+  indexes {
+    (product_id, package_id) [pk]
+    package_id
+  }
+}
+
+Table product_photo {
+  id                int          [pk, increment]
+  product_id        int          [not null]
+  image_uri         varchar(255) [not null]
+  image_description varchar(255) [not null, note: 'BR-06: alt text, diminta eksplisit di RG']
+  is_primary        boolean      [not null, default: false, note: 'BR-05: cover di product card']
+  sort_order        int          [not null, default: 0, note: 'BR-05: urutan carousel']
+  created_at        timestamp    [not null, default: `now()`]
+
+  indexes {
+    (product_id, sort_order)
+  }
+
+  Note: 'BR-05: tepat satu is_primary per produk, dijaga logika aplikasi.'
+}
+
+// ============================================================
+// PORTOFOLIO  (MK-01, PU-04)
+// ============================================================
+
+Table portfolio {
+  id          int          [pk, increment]
+  title       varchar(150) [not null]
+  description text
+  file_uri    varchar(255) [not null, note: 'Q-02: diasumsikan satu foto per entri']
+  hidden      boolean      [not null, default: true]
+  sort_order  int          [not null, default: 0]
+  created_at  timestamp    [not null, default: `now()`]
+  updated_at  timestamp    [not null, default: `now()`]
+
+  Note: 'Tidak punya alur moderasi, jadi pakai hidden (bukan status). Bandingkan BR-13.'
+}
+
+// ============================================================
+// MODERASI  (MK-02, PU-05)
+// ============================================================
+
+Table faq {
+  id          int          [pk, increment]
+  question    varchar(500) [not null, note: 'Q-04: batas 500 karakter, belum dikonfirmasi']
+  answer      text         [null, note: 'BR-12: null selama pending, wajib terisi sebelum approved']
+  status      varchar(20)  [not null, default: 'pending', note: 'BR-10, BR-11: pending | approved | rejected']
+  source      varchar(20)  [not null, default: 'public', note: 'BR-09: public | admin']
+  answered_by int          [null]
+  answered_at timestamp    [null]
+  created_at  timestamp    [not null, default: `now()`]
+  updated_at  timestamp    [not null, default: `now()`]
+
+  indexes {
+    (status, created_at) [name: 'idx_faq_moderation_queue']
+  }
+
+  Note: 'BR-09: dua pintu masuk. Publik submit -> pending. Admin input -> langsung approved.'
+}
+
+Table testimony {
+  id             int          [pk, increment]
+  author_name    varchar(100) [not null, note: 'BR-14: wajib, tanpa atribusi testimoni tak bernilai']
+  author_context varchar(150) [null, note: 'instansi / nama acara, opsional']
+  content        text         [not null]
+  status         varchar(20)  [not null, default: 'pending', note: 'BR-10, BR-11: pending | approved | rejected']
+  source         varchar(20)  [not null, default: 'public', note: 'BR-09: public | admin']
+  upvote_count   int          [not null, default: 0, note: 'BR-17: cache denormalisasi, sumber kebenaran = testimony_upvote']
+  sort_order     int          [not null, default: 0]
+  created_at     timestamp    [not null, default: `now()`]
+  updated_at     timestamp    [not null, default: `now()`]
+
+  indexes {
+    (status, sort_order) [name: 'idx_testimony_public']
+  }
+
+  Note: 'D-02: dua pintu masuk, sama seperti FAQ. D-05: tanpa kolom hidden.'
+}
+
+Table testimony_upvote {
+  testimony_id int         [not null]
+  ip_hash      varchar(64) [not null, note: 'BR-16: hash, bukan IP plaintext']
+  created_at   timestamp   [not null, default: `now()`]
+
+  indexes {
+    (testimony_id, ip_hash) [pk, name: 'pk_one_upvote_per_ip']
+  }
+
+  Note: 'BR-15: PK komposit = satu IP satu dukungan. Dijaga constraint, bukan logika app.'
+}
+
+// ============================================================
+// KONTEN SITUS & KONTAK  (MK-03, PU-01, PU-06)
+// ============================================================
+
+Table site_content {
+  key        varchar(64) [pk, note: 'hero_title, hero_subtitle, hero_image_uri, about_text, ...']
+  value      text
+  updated_at timestamp   [not null, default: `now()`]
+
+  Note: '''
+    D-04, BR-21: key-value, bukan kolom bertipe.
+    Trade-off sadar: kehilangan type safety, dapat kebebasan ubah copywriting
+    tanpa migrasi. JANGAN pakai pola ini untuk produk/katalog.
+  '''
+}
+
+Table contact {
+  id              int          [pk, increment]
+  address         text
+  phone           varchar(30)
+  whatsapp_number varchar(30)  [note: 'BR-20: sumber CTA WhatsApp, jangan hardcode di FE']
+  email           varchar(120)
+  updated_at      timestamp    [not null, default: `now()`]
+
+  Note: 'Singleton. Hanya ada satu baris (id = 1).'
+}
+
+Table contact_link {
+  id         int          [pk, increment]
+  contact_id int          [not null]
+  platform   varchar(50)  [not null, note: 'instagram, tiktok — placeholder per RG']
+  url        varchar(255)
+  sort_order int          [not null, default: 0]
+}
+
+// ============================================================
+// RELASI
+// ============================================================
+
+Ref: product.category_id > category.id [delete: restrict]
+// BR-07: kategori yang masih dipakai produk tidak bisa dihapus.
+
+Ref: product_package.product_id > product.id [delete: cascade]
+Ref: product_package.package_id > package.id [delete: restrict]
+
+Ref: product_photo.product_id > product.id [delete: cascade]
+
+Ref: faq.answered_by > admin.id [delete: set null]
+
+Ref: testimony_upvote.testimony_id > testimony.id [delete: cascade]
+
+Ref: contact_link.contact_id > contact.id [delete: cascade]

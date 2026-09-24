@@ -1,0 +1,19 @@
+%% DFD Level 0 - Context Diagram
+%% Sistem Katalog Souvenir - Citra Production | 2026-09-18
+%% Semua panah berarah dan berlabel nama data.
+
+%%{ init: { 'flowchart': { 'curve': 'linear' } } }%%
+flowchart LR
+    Client[Client]
+    Admin[Admin]
+    WA[WhatsApp]
+
+    S((0<br/>Sistem Katalog<br/>Souvenir))
+
+    Client -->|kata kunci pencarian, filter kategori,<br/>pertanyaan FAQ, testimoni,<br/>dukungan testimoni| S
+    S -->|daftar & detail produk, portofolio,<br/>FAQ tayang, testimoni tayang,<br/>konten hero & info kontak| Client
+
+    Admin -->|kredensial login,<br/>data produk kategori packaging foto,<br/>data portofolio,<br/>keputusan moderasi & jawaban FAQ,<br/>konten hero & data kontak| S
+    S -->|token sesi, ringkasan dashboard,<br/>antrian moderasi,<br/>konfirmasi penyimpanan| Admin
+
+    S -->|tautan CTA berisi nomor tujuan<br/>& konteks produk| WA

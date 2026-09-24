@@ -1,7 +1,0 @@
-[package]
-name = "report"
-version = "1.0.0"
-entrypoint = "template.typ"
-authors = ["atalariq <https://github.com/atalariq>"]
-license = "MIT"
-description = "Lab report template for Software Engineering Major Student at UGM"

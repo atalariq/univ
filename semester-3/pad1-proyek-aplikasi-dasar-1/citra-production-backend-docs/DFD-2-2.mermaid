@@ -1,0 +1,47 @@
+%% DFD Level 2 - Sistem Katalog Souvenir - Citra Production | 2026-09-18
+%% Dekomposisi proses 2.0 dan 5.0 dari DFD-1.
+%% Dua diagram terpisah. Render satu per satu.
+
+%% ============================================================
+%% DIAGRAM A - Dekomposisi 2.0 Kelola Produk, Kategori, Packaging
+%% ============================================================
+
+%%{ init: { 'flowchart': { 'curve': 'linear' } } }%%
+flowchart TB
+    Admin[Admin]
+
+    P21((2.1<br/>Kelola<br/>Kategori))
+    P22((2.2<br/>Kelola<br/>Packaging))
+    P23((2.3<br/>Kelola Data<br/>Produk))
+    P24((2.4<br/>Kelola Foto<br/>Produk))
+    P25((2.5<br/>Atur Publikasi<br/>Produk))
+
+    D1a[(D1 Kategori & Packaging)]
+    D2a[(D2 Produk & Foto Produk)]
+
+    Admin -->|judul kategori, urutan tampil| P21
+    P21 -->|data kategori| D1a
+    D1a -->|daftar kategori terpakai| P21
+    P21 -->|status simpan atau penolakan hapus| Admin
+
+    Admin -->|judul, deskripsi, foto packaging| P22
+    P22 -->|data packaging| D1a
+    D1a -->|daftar packaging| P22
+    P22 -->|status simpan| Admin
+
+    Admin -->|judul, deskripsi,<br/>harga minimum & maksimum,<br/>pilihan kategori & packaging| P23
+    D1a -->|opsi kategori & packaging| P23
+    P23 -->|data produk & relasi packaging| D2a
+    D2a -->|data produk tersimpan| P23
+    P23 -->|status simpan & pesan validasi| Admin
+
+    Admin -->|berkas foto, alt text,<br/>penanda foto utama, urutan| P24
+    P24 -->|metadata foto & lokasi berkas| D2a
+    D2a -->|daftar foto produk| P24
+    P24 -->|status unggah| Admin
+
+    Admin -->|perintah tampilkan atau sembunyikan| P25
+    P25 -->|nilai hidden| D2a
+    P25 -->|status publikasi terbaru| Admin
+
+

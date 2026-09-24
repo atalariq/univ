@@ -46,7 +46,6 @@ __pycache__/
 *.local.*
 *.local/
 00_Bank_Soal/
-.templates/report.docx
 .archive/
 
 # ----------------------------------------------------------------------
@@ -71,56 +70,6 @@ Thumbs.db
 .worktrees/
 
 # ── Compiled typst / own-work PDFs (regenerate from .typ source) ──
-avm-aljabar-vektor-dan-matriks/2025-06-07-catatan-sebelum-uas/cheatsheet.pdf
-pbd-praktikum-basis-data/p11-subquery_dan_view/PBDB2_P11_557554_Atalariq Barra Hadinugraha.pdf
-pbd-praktikum-basis-data/p12-trigger/PBDB2_P12_557554_Atalariq Barra Hadinugraha.pdf
-pbd-praktikum-basis-data/p13-plsql_function/PBDB2_P13_557554_Atalariq Barra Hadinugraha.pdf
-pbd-praktikum-basis-data/p3-erd/PDBB2_Pertemuan-3_557554_Atalariq Barra Hadinugraha.pdf
-pbd-praktikum-basis-data/p4-instalasi_rdbms/PBDB2_P4_557554_Atalariq Barra Hadinugraha.pdf
-pbd-praktikum-basis-data/p7-sql/PBDB2_P7_557554_Atalariq Barra Hadinugraha.pdf
-pbd-praktikum-basis-data/p8-ddl/PBDB2_P8_557554_Atalariq Barra Hadinugraha.pdf
-pbd-praktikum-basis-data/p9-dml_dql/PBDB2_P9_557554_Atalariq Barra Hadinugraha.pdf
-pbd-praktikum-basis-data/uts/UTS-PBDB2-557554-AtalariqBarraHadinugraha.pdf
-pbo-pemrograman-berorientasi-objek/2026-03-xx-p6-tugas-pengganti/PBOBB_P5_557554_Atalariq Barra Hadinugraha.pdf
-pbo-pemrograman-berorientasi-objek/2026-04-xx-p7-quiz-pra-uts/PBOBB_P7_557554_Atalariq Barra Hadinugraha.pdf
-pbo-pemrograman-berorientasi-objek/2026-06-09-cheatsheet-uas/cheatsheet.final.pdf
-pbo-pemrograman-berorientasi-objek/2026-06-09-cheatsheet-uas/cheatsheet.pdf
-ppbo-praktikum-pemrograman-berorientasi-objek/p2-pengenalan_java/report/PPBOB2_Laprak1_557554_Atalariq Barra Hadinugraha.pdf
-ppbo-praktikum-pemrograman-berorientasi-objek/p3-array/report/PPBOB2_Pertemuan-3_557554_Atalariq Barra Hadinugraha.pdf
-ppbo-praktikum-pemrograman-berorientasi-objek/p4-class/report/PPBOB2_P4_557554_Atalariq Barra Hadinugraha.pdf
-ppbo-praktikum-pemrograman-berorientasi-objek/p5-modifier/report/PPBOB2_P5_557554_Atalariq Barra Hadinugraha.pdf
-ppk-praktikum-pemrograman-komputer/p10-fungsi/report/PPKB2-Tugas-8-557554-AtalariqBarraHadinugraha.pdf
-ppk-praktikum-pemrograman-komputer/p11-sorting_searching_file_error_handling/report/PPKB2-Tugas-9-557554-AtalariqBarraHadinugraha.pdf
-ppk-praktikum-pemrograman-komputer/p6-percabangan/report/PPKB2-Tugas-5-557554-AtalariqBarraHadinugra.pdf
-ppk-praktikum-pemrograman-komputer/p8-perulangan/report/PPKB2-Tugas-6-557554-AtalariqBarraHadinugraha.pdf
-ppk-praktikum-pemrograman-komputer/p9-list_dan_string/report/PPKB2-Tugas-7-557554-AtalariqBarraHadinugraha.pdf
-ppw1-praktikum-pemrograman-web-1/p10-javascript/PPW1B2_P10_557554_Atalariq Barra Hadinugraha.pdf
-ppw1-praktikum-pemrograman-web-1/p11-php/PPW1B2_P11_557554_Atalariq Barra Hadinugraha.pdf
-ppw1-praktikum-pemrograman-web-1/p12-php_crud/artifacts/PPW1B2_P12_557554_Atalariq Barra Hadinugraha.pdf
-ppw1-praktikum-pemrograman-web-1/p13-repo_submission/PPW1B2_P13_557554_Atalariq Barra Hadinugraha.pdf
-ppw1-praktikum-pemrograman-web-1/p2-dasar_dasar_html/report/PPW1B2_Laprak1_557554_Atalariq Barra Hadinugraha.pdf
-ppw1-praktikum-pemrograman-web-1/p3-link_frame_table_semantic/report/PPW1B2_Pertemuan-3_557554_Atalariq Barra Hadinugraha.pdf
-ppw1-praktikum-pemrograman-web-1/p4-form/report/PPW1B2_Laprak3_557554_Atalariq Barra Hadinugraha.pdf
-ppw1-praktikum-pemrograman-web-1/p7-stylesheet_ii/PPW1B2_P7_Atalariq Barra Hadinugraha.pdf
-ppw1-praktikum-pemrograman-web-1/p7-stylesheet_ii/report.pdf
-ppw1-praktikum-pemrograman-web-1/p8-bootstrap/PPW1B2_P8_Atalariq Barra Hadinugraha.pdf
-psd-praktikum-struktur-data/cheatsheet-code.pdf
-psd-praktikum-struktur-data/cheatsheet-term.pdf
-psd-praktikum-struktur-data/p10-hashtable/PSDB2_P10_Atalariq Barra Hadinugraha.pdf
-psd-praktikum-struktur-data/p11-binary_search_tree/PSDB2_P11_557554_Atalariq Barra Hadinugraha.pdf
-psd-praktikum-struktur-data/p2-function/report/PSDB2_Pertemuan-2_557554_AtalariqBarraHadinugraha.pdf
-psd-praktikum-struktur-data/p3-sorting/report/PSDB2_Pertemuan-3_557554_AtalariqBarraHadinugraha.pdf
-psd-praktikum-struktur-data/p4-stack/report/PSDB2_P4_557554_Atalariq Barra Hadinugraha.pdf
-psd-praktikum-struktur-data/p5-queue/report/PSDB2_P5_557554_Atalariq Barra Hadinugraha.pdf
-psd-praktikum-struktur-data/p8-tree/PSDB2_P8_557554_Atalariq Barra Hadinugraha.pdf
-psd-praktikum-struktur-data/p9-map_function/PSDB2_P9_557554_Atalariq Barra Hadinugraha.pdf
-ptiik-praktikum-teknologi-informasi-dan-instalasi-komputer/p10-ms_word_ii/report/PTIIKB2_Laprak9_557554_AtalariqBarraHadinugraha.pdf
-ptiik-praktikum-teknologi-informasi-dan-instalasi-komputer/p11-ms_excel_i/report/PTIIKB2_Laprak10_557554_AtalariqBarraHadinugraha.pdf
-ptiik-praktikum-teknologi-informasi-dan-instalasi-komputer/p12-ms_excel_ii/report/PTIIKB2_Laprak11_557554_AtalariqBarraHadinugraha.pdf
-ptiik-praktikum-teknologi-informasi-dan-instalasi-komputer/p5-virtualbox_dan_ubuntu/report/PTIIKB2_Laprak5_557554_AtalariqBarraHadinugraha_compressed.pdf
-ptiik-praktikum-teknologi-informasi-dan-instalasi-komputer/p7-instalasi_ubuntu/report/PTIIKB2_Laprak6_557554_AtalariqBarraHadinugraha_compressed.pdf
-ptiik-praktikum-teknologi-informasi-dan-instalasi-komputer/p8-clonezilla/report/PTIIKB2_Laprak7_557554_AtalariqBarraHadinugraha.pdf
-ptiik-praktikum-teknologi-informasi-dan-instalasi-komputer/p9-ms_word_i/report/PTIIKB2_Laprak8_557554_AtalariqBarraHadinugraha.pdf
-statistika/2026-06-10-persiapan-uas/2026-06-xx-rangkuman-materi.pdf
-statistika/2026-06-10-persiapan-uas/2026-06-xx-soal-latihan-statistik.pdf
-statistika/2026-06-10-persiapan-uas/cheatsheet.pdf
+**/report.pdf
+**/cheatsheet.pdf
+**/cheatsheet*.pdf
