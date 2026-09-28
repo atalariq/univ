@@ -26,12 +26,9 @@ Simpan seluruh file di `ppwl-pertemuan-5/assets/` dengan nama persis seperti ber
 
 | File                        | Isi                                                                                        |
 | --------------------------- | ------------------------------------------------------------------------------------------ |
-| `make-artisan.png`          | Output `make:model Project --migration` dan `make:controller ProjectController --resource` |
-| `migrate.png`               | Output `php artisan migrate`                                                               |
-| `db-projects-table.png`     | Struktur tabel `projects` (`DESCRIBE projects;` atau phpMyAdmin)                           |
 | `route-list-projects.png`   | `php artisan route:list` bagian `projects.*`                                               |
 | `page-projects-index.png`   | Halaman daftar `/projects`                                                                 |
 | `page-project-show.png`     | Halaman detail `/projects/1`                                                               |
 | `page-project-create.png`   | Form insert `/projects/create`                                                             |
 | `form-validation-error.png` | Form dikirim kosong, pesan error tampil                                                    |
-| `views-structure-p5.png`    | Struktur folder `resources/views` dengan folder `projects/`                                |
+| `views-folder-structure.png`    | Struktur folder `resources/views` dengan folder `projects/`                                |

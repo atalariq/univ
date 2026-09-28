@@ -6,10 +6,13 @@ dist/
 build/
 *.exe
 *.out
-.vscode/
-.idea/
 .claude/
+.codex/
+.gemini/
+.idea/
+.obsidian/
 .opencode/
+.vscode/
 .bak
 
 # Python
