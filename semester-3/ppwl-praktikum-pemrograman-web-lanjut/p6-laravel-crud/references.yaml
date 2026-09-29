@@ -1,0 +1,143 @@
+laravel_routing:
+  type: web
+  title: "Routing - Documentation"
+  author: "Laravel,"
+  date: 2026-09-28
+  url:
+    value: https://laravel.com/docs/routing
+    date: 2026-09-28
+
+laravel_controllers:
+  type: web
+  title: "Controllers - Documentation"
+  author: "Laravel,"
+  date: 2026-09-29
+  url:
+    value: https://laravel.com/docs/controllers
+    date: 2026-09-29
+
+laravel_blade:
+  type: web
+  title: "Blade Templates - Documentation"
+  author: "Laravel,"
+  date: 2026-09-29
+  url:
+    value: https://laravel.com/docs/blade
+    date: 2026-09-29
+
+laravel_responses:
+  type: web
+  title: "HTTP Responses - Documentation"
+  author: "Laravel,"
+  date: 2026-09-29
+  url:
+    value: https://laravel.com/docs/responses#redirecting-with-flashed-session-data
+    date: 2026-09-29
+
+laravel_validation:
+  type: web
+  title: "Validation - Documentation"
+  author: "Laravel,"
+  date: 2026-09-28
+  url:
+    value: https://laravel.com/docs/validation
+    date: 2026-09-28
+
+laravel_csrf:
+  type: web
+  title: "CSRF Protection - Documentation"
+  author: "Laravel,"
+  date: 2026-09-28
+  url:
+    value: https://laravel.com/docs/csrf
+    date: 2026-09-28
+
+laravel_eloquent:
+  type: web
+  title: "Eloquent: Getting Started - Documentation"
+  author: "Laravel,"
+  date: 2026-09-28
+  url:
+    value: https://laravel.com/docs/eloquent
+    date: 2026-09-28
+
+laravel_session:
+  type: web
+  title: "HTTP Session - Documentation"
+  author: "Laravel,"
+  date: 2026-09-28
+  url:
+    value: https://laravel.com/docs/session#flash-data
+    date: 2026-09-28
+
+rfc9110:
+  type: web
+  title: "RFC 9110: HTTP Semantics, Section 9.2 (Common Method Properties)"
+  author: "IETF,"
+  date: 2022-06-01
+  url:
+    value: https://www.rfc-editor.org/rfc/rfc9110#section-9.2
+    date: 2026-09-29
+
+owasp_csrf:
+  type: web
+  title: "Cross-Site Request Forgery Prevention Cheat Sheet"
+  author: "OWASP Foundation,"
+  date: 2026-09-29
+  url:
+    value: https://cheatsheetseries.owasp.org/cheatsheets/Cross-Site_Request_Forgery_Prevention_Cheat_Sheet.html
+    date: 2026-09-29
+
+mdn_samesite:
+  type: web
+  title: "Set-Cookie: SameSite - HTTP"
+  author: "Mozilla Developer Network,"
+  date: 2026-09-29
+  url:
+    value: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie/SameSite
+    date: 2026-09-29
+
+mdn_minlength:
+  type: web
+  title: "input: minlength attribute - HTML"
+  author: "Mozilla Developer Network,"
+  date: 2026-09-29
+  url:
+    value: https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/input#minlength
+    date: 2026-09-29
+
+mdn_http:
+  type: web
+  title: "HTTP request methods"
+  author: "Mozilla Developer Network,"
+  date: 2026-09-28
+  url:
+    value: https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods
+    date: 2026-09-28
+
+mdn_window_confirm:
+  type: web
+  title: "Window: confirm() method"
+  author: "Mozilla Developer Network,"
+  date: 2026-09-28
+  url:
+    value: https://developer.mozilla.org/en-US/docs/Web/API/Window/confirm
+    date: 2026-09-28
+
+mdn_prevent_default:
+  type: web
+  title: "Event: preventDefault() method"
+  author: "Mozilla Developer Network,"
+  date: 2026-09-28
+  url:
+    value: https://developer.mozilla.org/en-US/docs/Web/API/Event/preventDefault
+    date: 2026-09-28
+
+prg:
+  type: web
+  title: "Post/Redirect/Get"
+  author: "Wikipedia contributors,"
+  date: 2026-09-29
+  url:
+    value: https://en.wikipedia.org/wiki/Post/Redirect/Get
+    date: 2026-09-29
