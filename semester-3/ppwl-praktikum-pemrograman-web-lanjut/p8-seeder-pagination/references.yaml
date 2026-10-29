@@ -1,0 +1,48 @@
+module_p8:
+  type: misc
+  title: "Seeder dan Pagination: Praktikum Pemrograman Web 2 Pertemuan 8"
+  author: "Achmad Choirudin Emcha, S.Kom., M.Eng."
+  note: "Slide modul praktikum PPWL pertemuan 8, 28 halaman, berkas penugasan"
+  date: 2026-10-27
+
+repo_p8:
+  type: web
+  title: "PPWL My Portfolio — kode praktikum Pertemuan 8"
+  url: "https://github.com/atalariq/PPWL-my-portfolio/tree/3b0ed22ec31f80bb184028067e06d4a02ae39f5e"
+  urldate: 2026-10-29
+
+laravel_seeding:
+  type: web
+  title: "Database: Seeding"
+  url: "https://laravel.com/docs/13.x/seeding"
+  urldate: 2026-10-29
+
+laravel_pagination:
+  type: web
+  title: "Database: Pagination"
+  url: "https://laravel.com/docs/13.x/pagination"
+  urldate: 2026-10-29
+
+laravel_eloquent:
+  type: web
+  title: "Eloquent: Getting Started"
+  url: "https://laravel.com/docs/13.x/eloquent"
+  urldate: 2026-10-29
+
+laravel_queries:
+  type: web
+  title: "Database: Query Builder — Where Clauses"
+  url: "https://laravel.com/docs/13.x/queries#where-clauses"
+  urldate: 2026-10-29
+
+faker:
+  type: web
+  title: "FakerPHP Documentation"
+  url: "https://fakerphp.org/"
+  urldate: 2026-10-29
+
+rfc3986:
+  type: web
+  title: "RFC 3986: Uniform Resource Identifier (URI): Generic Syntax"
+  url: "https://www.rfc-editor.org/rfc/rfc3986"
+  urldate: 2026-10-29
