@@ -1,0 +1,48 @@
+module_p9:
+  type: misc
+  title: "Authentication: Praktikum Pemrograman Web 2 Pertemuan 9"
+  author: "Achmad Choirudin Emcha, S.Kom., M.Eng."
+  note: "Slide modul praktikum PPWL pertemuan 9, berkas penugasan"
+  date: 2026-10-27
+
+repo_p9:
+  type: web
+  title: "PPWL My Portfolio — kode praktikum Pertemuan 9"
+  url: "https://github.com/atalariq/PPWL-my-portfolio/tree/add137ea6a27da2d57a10963dc51fb7383710479"
+  urldate: 2026-10-29
+
+laravel_authentication:
+  type: web
+  title: "Authentication — Laravel Documentation"
+  url: "https://laravel.com/docs/13.x/authentication"
+  urldate: 2026-10-29
+
+laravel_middleware:
+  type: web
+  title: "Middleware — Laravel Documentation"
+  url: "https://laravel.com/docs/13.x/middleware"
+  urldate: 2026-10-29
+
+laravel_validation:
+  type: web
+  title: "Validation — Laravel Documentation"
+  url: "https://laravel.com/docs/13.x/validation"
+  urldate: 2026-10-29
+
+laravel_hashing:
+  type: web
+  title: "Hashing — Laravel Documentation"
+  url: "https://laravel.com/docs/13.x/hashing"
+  urldate: 2026-10-29
+
+laravel_session:
+  type: web
+  title: "Session — Laravel Documentation"
+  url: "https://laravel.com/docs/13.x/session"
+  urldate: 2026-10-29
+
+owasp_session:
+  type: web
+  title: "OWASP Session Management Cheat Sheet"
+  url: "https://cheatsheetseries.owasp.org/cheatsheets/Session_Management_Cheat_Sheet.html"
+  urldate: 2026-10-29
