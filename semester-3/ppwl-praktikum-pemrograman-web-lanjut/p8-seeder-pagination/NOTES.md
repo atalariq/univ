@@ -45,14 +45,14 @@
 | 2026-10-29 | `GET /projects?search=Menu&per_page=5` | 1 data, 5 per halaman, kata kunci tetap di formulir | `page-projects-search-per-page.png` |
 | 2026-10-29 | `composer test` | 9 test lulus (termasuk `ProjectCrudTest`) | `.runs/devenv/validate-full.txt` |
 | 2026-10-29 | `npm run build` | build sukses (css 56.63 kB) | `.runs/devenv/validate-full.txt` |
-| 2026-10-29 | `typst compile report.typ report.pdf` | PDF 14 halaman A4, 818 KB | report.pdf |
+| 2026-10-29 | `typst compile report.typ report.pdf` | PDF 16 halaman A4, 814 KB | report.pdf |
 
 ## Rubric self-review
 
 | # | Criterion | Score | Note |
 |---|---|---|---|
 | 1† | Build | 2 | Compile bersih (satu warning font `menlo` dari paket zebraw, bukan error) |
-| 2† | Front matter | 2 | Cover, toc, tof, tot, discovery table, repo line, Sebelum mulai lengkap |
+| 2† | Front matter | 2 | Cover, Daftar Isi saja (tanpa daftar gambar/tabel), discovery table, repo line; Sebelum mulai ada di dalam Hasil dan Pembahasan sesuai permintaan reviewer |
 | 3 | Version disclosure | 2 | Versi di tabel + dari perintah nyata |
 | 4† | Starter kit | 2 | clone + checkout SHA + perintah setup |
 | 5† | Step granularity | 2 | 6 langkah dengan checkpoint; blok kode berlabel |

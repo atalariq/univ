@@ -29,8 +29,6 @@
 #cover(..metadata)
 
 #toc()
-#tof()
-#tot()
 
 = Tujuan Praktikum
 
@@ -38,41 +36,7 @@
 + Mahasiswa mampu mengganti `get()` menjadi `paginate()` dan menampilkan informasi halaman.
 + Mahasiswa mampu mempertahankan pencarian dan pilihan jumlah data per halaman saat berpindah halaman.
 
-== Sebelum mulai
-
-*Prasyarat.* PHP 8.5.12, Composer 2.10.3, Node.js 24.21.0 + npm 11.19.0, dan MariaDB
-11 di `127.0.0.1:33060` (lingkungan devenv bersama). Aplikasi adalah portofolio
-Laravel 13.32 dari pertemuan 4--6: route `projects` dengan resource controller,
-model `Project` yang sudah memiliki `$fillable`, serta flash message dan konfirmasi
-hapus dari pertemuan 6 @repo_p8.
-
-*Starter kit.* Mulai dari kondisi pertemuan 6:
-
-```sh
-git clone https://github.com/atalariq/PPWL-my-portfolio.git
-cd PPWL-my-portfolio
-git checkout 3b0ed22ec31f80bb184028067e06d4a02ae39f5e
-composer install && npm install
-```
-
-*Hasil akhir.* Halaman `/projects` menampilkan 10 data per halaman dengan nomor urut
-yang berlanjut (halaman 2 mulai dari 11), formulir pencarian judul, pilihan 5/10/25
-data per halaman, serta tautan pagination. Dua seeder mengisi 5 data kurasi dan 25
-data acak yang dapat dijalankan ulang tanpa duplikasi.
-
-*Batas cakupan.* Latihan pertemuan 7 (kolom `status`, scope `published()`, soft
-delete + Trash) tidak termasuk dalam laporan ini; `$fillable` yang sudah ada dipakai
-apa adanya. Laporan ini tidak mengklaim fitur di luar yang diperiksa pada langkah 4.
-
-*Modul.* Laporan mengikuti urutan modul "Seeder dan Pagination" @module_p8, dengan
-satu perbedaan wajib: seluruh contoh `Post` diterapkan pada model `Project` karena
-portofolio pertemuan 4--6 sudah memakai `projects`.
-
-*Tentang kode dan gambar.* Kode akhir mengacu pada commit
-`3b0ed22ec31f80bb184028067e06d4a02ae39f5e`. Seluruh gambar pada laporan ini adalah
-screenshot ulang dari aplikasi yang dijalankan pada lingkungan di atas, kecuali
-logo UGM. Versi perangkat lunak diukur dari `php -v`, `composer --version`,
-`node -v`, dan `npm -v` pada sesi yang sama.
+#pagebreak()
 
 = Dasar Teori
 
@@ -111,7 +75,45 @@ tidak hilang saat pengguna menekan tautan halaman, Laravel menyediakan
 halaman @laravel_pagination. Query string sendiri adalah bagian URL setelah `?`
 sesuai RFC 3986 @rfc3986, sehingga nilai yang mengandung spasi perlu di-encode.
 
-= Hasil dan Langkah Praktikum
+#pagebreak()
+
+= Hasil dan Pembahasan
+
+== Sebelum mulai
+
+*Prasyarat.* PHP 8.5.12, Composer 2.10.3, Node.js 24.21.0 + npm 11.19.0, dan MariaDB
+11 di `127.0.0.1:33060` (lingkungan devenv bersama). Aplikasi adalah portofolio
+Laravel 13.32 dari pertemuan 4--6: route `projects` dengan resource controller,
+model `Project` yang sudah memiliki `$fillable`, serta flash message dan konfirmasi
+hapus dari pertemuan 6 @repo_p8.
+
+*Starter kit.* Mulai dari kondisi pertemuan 6:
+
+```sh
+git clone https://github.com/atalariq/PPWL-my-portfolio.git
+cd PPWL-my-portfolio
+git checkout 3b0ed22ec31f80bb184028067e06d4a02ae39f5e
+composer install && npm install
+```
+
+*Hasil akhir.* Halaman `/projects` menampilkan 10 data per halaman dengan nomor urut
+yang berlanjut (halaman 2 mulai dari 11), formulir pencarian judul, pilihan 5/10/25
+data per halaman, serta tautan pagination. Dua seeder mengisi 5 data kurasi dan 25
+data acak yang dapat dijalankan ulang tanpa duplikasi.
+
+*Batas cakupan.* Latihan pertemuan 7 (kolom `status`, scope `published()`, soft
+delete + Trash) tidak termasuk dalam laporan ini; `$fillable` yang sudah ada dipakai
+apa adanya. Laporan ini tidak mengklaim fitur di luar yang diperiksa pada langkah 4.
+
+*Modul.* Laporan mengikuti urutan modul "Seeder dan Pagination" @module_p8, dengan
+satu perbedaan wajib: seluruh contoh `Post` diterapkan pada model `Project` karena
+portofolio pertemuan 4--6 sudah memakai `projects`.
+
+*Tentang kode dan gambar.* Kode akhir mengacu pada commit
+`3b0ed22ec31f80bb184028067e06d4a02ae39f5e`. Seluruh gambar pada laporan ini adalah
+screenshot ulang dari aplikasi yang dijalankan pada lingkungan di atas, kecuali
+logo UGM. Versi perangkat lunak diukur dari `php -v`, `composer --version`,
+`node -v`, dan `npm -v` pada sesi yang sama.
 
 == 1. Menambahkan scope pencarian pada model
 
@@ -247,6 +249,8 @@ data yang cocok, dan pilihan 5 data per halaman tetap terpilih.
 #check[Mengubah URL menjadi `/projects?page=99` menampilkan halaman kosong tanpa
 galat, dan mengosongkan pencarian mengembalikan 30 data.]
 
+#pagebreak()
+
 = Cocokkan kode akhir
 
 Tiga berkas berikut adalah inti perubahan pertemuan ini. Bandingkan hasil Anda dengan
@@ -256,6 +260,8 @@ isi berkas pada commit `3b0ed22`:
 - `database/seeders/DatabaseSeeder.php` — memanggil `ProjectSeeder` lalu `ProjectTableSeeder`.
 - `app/Http/Controllers/ProjectController.php` — `paginate()`, `search`, `per_page`,
   dan `withQueryString()`.
+
+#pagebreak()
 
 = Ringkasan penugasan
 
@@ -269,6 +275,8 @@ isi berkas pada commit `3b0ed22`:
   [Jumlah data 5/10/25], [Whitelist `in_array($perPage, [5,10,25])` + `<select>`], [Langkah 4--6, Gambar 3],
 )
 
+#pagebreak()
+
 = Adaptasi modul dan batas hasil
 
 - Modul memakai contoh `Post`; praktikum menerapkan semua langkah pada `Project`
@@ -281,6 +289,8 @@ isi berkas pada commit `3b0ed22`:
   pendekatan ini tetap benar meskipun data difilter pencarian.
 - Gambar pada laporan ini adalah screenshot ulang aplikasi yang berjalan; laporan
   tidak mengklaim pengujian yang tidak dilakukan.
+
+#pagebreak()
 
 = Kesimpulan
 
