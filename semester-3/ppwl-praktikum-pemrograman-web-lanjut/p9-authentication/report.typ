@@ -30,6 +30,22 @@
 
 #toc()
 
+= Lingkungan Pengerjaan
+
+#tbl(
+  caption: [Lingkungan yang dipakai untuk menghasilkan laporan ini; semua nilai berasal dari keluaran perintah pada sesi yang sama.],
+  columns: (auto, 1fr),
+  [Nama project], [PPWL My Portfolio],
+  [Repository], [github.com/atalariq/PPWL-my-portfolio],
+  [Commit], [`add137ea6a27da2d57a10963dc51fb7383710479`],
+  [PHP], [8.5.12],
+  [Laravel], [13.32.0 (`composer.lock`)],
+  [Node.js / npm], [24.21.0 / 11.19.0],
+  [Basis data], [MariaDB 11, `127.0.0.1:33060`],
+  [Lingkungan], [devenv (NixOS)],
+  [Typst / lab-report], [0.15.1 / 3.0.0],
+)
+
 #pagebreak()
 
 = Tujuan Praktikum
