@@ -89,12 +89,15 @@ hapus dari pertemuan 6 @repo_p8.
 
 *Starter kit.* Mulai dari kondisi pertemuan 6:
 
+#codeblock(
 ```sh
 git clone https://github.com/atalariq/PPWL-my-portfolio.git
 cd PPWL-my-portfolio
 git checkout 3b0ed22ec31f80bb184028067e06d4a02ae39f5e
 composer install && npm install
-```
+```,
+  header: [terminal],
+)
 
 *Hasil akhir.* Halaman `/projects` menampilkan 10 data per halaman dengan nomor urut
 yang berlanjut (halaman 2 mulai dari 11), formulir pencarian judul, pilihan 5/10/25
@@ -121,12 +124,15 @@ Buka `app/Models/Project.php`. Tambahkan `use Illuminate\Database\Eloquent\Build
 dan satu local scope berikut. Scope menjaga logika pencarian tetap di model, sehingga
 controller tinggal memanggil `->search(...)`.
 
+#codeblock(
 ```php
 public function scopeSearch(Builder $query, string $keyword): Builder
 {
     return $query->where('title', 'like', "%{$keyword}%");
 }
-```
+```,
+  header: [app/Models/Project.php],
+)
 
 #check[`php artisan tinker` lalu `App\Models\Project::search('Menu')->count();`
 mengembalikan angka, bukan error.]
@@ -136,6 +142,7 @@ mengembalikan angka, bukan error.]
 Buat berkas `database/seeders/ProjectTableSeeder.php` dengan
 `php artisan make:seeder ProjectTableSeeder`, lalu isi:
 
+#codeblock(
 ```php
 for ($i = 1; $i <= 25; $i++) {
     $title = fake()->unique()->sentence(3);
@@ -146,18 +153,23 @@ for ($i = 1; $i <= 25; $i++) {
         'description' => fake()->paragraph(),
     ]);
 }
-```
+```,
+  header: [database/seeders/ProjectTableSeeder.php],
+)
 
 Seeder pertama (`ProjectSeeder`) tetap memuat 5 proyek kurasi; tambahkan
 `Project::truncate();` di awal `run()` seeder tersebut agar rangkaian seed dapat
 dijalankan ulang tanpa menumpuk data. Daftarkan keduanya di `DatabaseSeeder`:
 
+#codeblock(
 ```php
 $this->call([
     ProjectSeeder::class,
     ProjectTableSeeder::class,
 ]);
-```
+```,
+  header: [database/seeders/DatabaseSeeder.php],
+)
 
 #check[`php artisan db:seed` dua kali berturut-turut menghasilkan tepat 30 baris
 (`Project::count()`), bukan 35 atau 60.]
@@ -168,11 +180,14 @@ Perintah `php artisan migrate:fresh --seed` menghapus seluruh tabel, menjalankan
 migrasi, lalu mengisi data. Perintah ini hanya dipakai pada basis data pengembangan
 yang data aslinya sudah tercakup seeder.
 
+#codeblock(
 ```text
 INFO  Seeding database.
 Database\Seeders\ProjectSeeder ...... DONE
 Database\Seeders\ProjectTableSeeder . DONE
-```
+```,
+  header: [terminal],
+)
 
 #check[`php artisan tinker --execute='echo App\Models\Project::count();'` mencetak
 `30`, dan `Project::latest()->first()->title` berupa kalimat acak.]
@@ -182,6 +197,7 @@ Database\Seeders\ProjectTableSeeder . DONE
 Pada `ProjectController@index`, baca parameter `per_page` (hanya 5/10/25 yang
 diizinkan), terapkan scope pencarian bila ada, lalu paginate:
 
+#codeblock(
 ```php
 $perPage = (int) $request->integer('per_page', 10);
 $perPage = in_array($perPage, [5, 10, 25], true) ? $perPage : 10;
@@ -192,7 +208,9 @@ if ($request->filled('search')) {
 }
 
 $projects = $query->latest()->paginate($perPage)->withQueryString();
-```
+```,
+  header: [app/Http/Controllers/ProjectController.php],
+)
 
 `withQueryString()` menyalin `search` dan `per_page` ke setiap tautan halaman,
 sehingga pencarian tetap aktif di halaman 2.
@@ -206,6 +224,7 @@ Pada `resources/views/projects/index.blade.php`, bungkus kartu dengan nomor urut
 yang melanjutkan posisi item. Formulir pencarian dan pilihan jumlah data dikirim
 dengan `GET` agar nilainya muncul di URL dan dapat dipertahankan paginator:
 
+#codeblock(
 ```blade
 @forelse($projects as $index => $project)
     <span>{{ $projects->firstItem() + $index }}.</span>
@@ -213,14 +232,19 @@ dengan `GET` agar nilainya muncul di URL dan dapat dipertahankan paginator:
 @empty
     <p>There is no projects yet.</p>
 @endforelse
-```
+```,
+  header: [resources/views/projects/index.blade.php],
+)
 
+#codeblock(
 ```blade
 Halaman : {{ $projects->currentPage() }}
 Jumlah Data : {{ $projects->total() }}
 Data Per Halaman : {{ $projects->perPage() }}
 {{ $projects->links() }}
-```
+```,
+  header: [resources/views/projects/index.blade.php],
+)
 
 #check[Di `/projects`, baris terakhir halaman 1 bernomor 10 dan halaman 2 dimulai
 dari nomor 11; URL halaman 2 memuat `?page=2`.]
@@ -248,47 +272,6 @@ data yang cocok, dan pilihan 5 data per halaman tetap terpilih.
 
 #check[Mengubah URL menjadi `/projects?page=99` menampilkan halaman kosong tanpa
 galat, dan mengosongkan pencarian mengembalikan 30 data.]
-
-#pagebreak()
-
-= Cocokkan kode akhir
-
-Tiga berkas berikut adalah inti perubahan pertemuan ini. Bandingkan hasil Anda dengan
-isi berkas pada commit `3b0ed22`:
-
-- `database/seeders/ProjectTableSeeder.php` — 25 data acak dengan `fake()->unique()`.
-- `database/seeders/DatabaseSeeder.php` — memanggil `ProjectSeeder` lalu `ProjectTableSeeder`.
-- `app/Http/Controllers/ProjectController.php` — `paginate()`, `search`, `per_page`,
-  dan `withQueryString()`.
-
-#pagebreak()
-
-= Ringkasan penugasan
-
-#tbl(
-  caption: [Latihan modul dan bukti pemenuhannya pada laporan ini.],
-  columns: (auto, 1fr, auto),
-  [*Latihan*], [*Implementasi*], [*Bukti*],
-  [Seeder kedua 25 judul acak], [`ProjectTableSeeder` + `fake()->unique()`], [Langkah 2--3],
-  [Nomor urut berlanjut antar halaman], [`firstItem() + $index`], [Langkah 5, Gambar 2],
-  [Pencarian tetap aktif saat pindah halaman], [`withQueryString()` + form GET], [Langkah 4, 6],
-  [Jumlah data 5/10/25], [Whitelist `in_array($perPage, [5,10,25])` + `<select>`], [Langkah 4--6, Gambar 3],
-)
-
-#pagebreak()
-
-= Adaptasi modul dan batas hasil
-
-- Modul memakai contoh `Post`; praktikum menerapkan semua langkah pada `Project`
-  sesuai kesinambungan portofolio pertemuan 4--6.
-- Slide menyebut Laravel 10 pada modul lain; aplikasi ini memakai Laravel 13.32.
-  Tidak ada API yang berubah untuk materi ini: `paginate()`, `withQueryString()`,
-  `firstItem()`, dan seeder bekerja sama. Perbedaan versi dicatat pada tabel
-  lingkungan di bagian awal.
-- Nomor urut dihitung di view dari `firstItem()`, bukan dari kolom basis data;
-  pendekatan ini tetap benar meskipun data difilter pencarian.
-- Gambar pada laporan ini adalah screenshot ulang aplikasi yang berjalan; laporan
-  tidak mengklaim pengujian yang tidak dilakukan.
 
 #pagebreak()
 

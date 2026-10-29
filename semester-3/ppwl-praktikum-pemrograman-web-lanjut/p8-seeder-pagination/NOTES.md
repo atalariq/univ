@@ -45,7 +45,7 @@
 | 2026-10-29 | `GET /projects?search=Menu&per_page=5` | 1 data, 5 per halaman, kata kunci tetap di formulir | `page-projects-search-per-page.png` |
 | 2026-10-29 | `composer test` | 9 test lulus (termasuk `ProjectCrudTest`) | `.runs/devenv/validate-full.txt` |
 | 2026-10-29 | `npm run build` | build sukses (css 56.63 kB) | `.runs/devenv/validate-full.txt` |
-| 2026-10-29 | `typst compile report.typ report.pdf` | PDF 16 halaman A4, 814 KB | report.pdf |
+| 2026-10-29 | `typst compile report.typ report.pdf` | PDF 13 halaman A4, 821 KB | report.pdf |
 
 ## Rubric self-review
 
@@ -60,8 +60,8 @@
 | 7† | Citations | 2 | `module_p8`, `repo_p8` (SHA penuh), 6 sumber resmi |
 | 8 | Figure discipline | 2 | 3 screenshot ulang, nama kebab-case, caption lengkap |
 | 9† | Module-vs-reality | 2 | Post→Project, Laravel 10→13, truncate idempoten |
-| 10 | Ringkasan penugasan | 2 | Tabel latihan → implementasi → bukti |
-| 11† | Honest limits | 2 | Batas cakupan + batas hasil eksplisit |
+| 10 | Ringkasan penugasan | 2 | Dihapus atas permintaan reviewer (gaya P6); latihan dibahas di langkah 2--6 |
+| 11† | Honest limits | 2 | Batas cakupan tetap ada di Sebelum mulai (satu paragraf); bagian Adaptasi dihapus atas permintaan reviewer |
 | 12† | Code–repo fidelity | 2 | Commit `3b0ed22`; isi laporan dicocokkan |
 | 13 | Structure & hygiene | 2 | Tidak ada TODO/dead code |
 | 14 | Bibliography hygiene | 2 | Satu `references.yaml`, key snake_case, tanggal akses |
