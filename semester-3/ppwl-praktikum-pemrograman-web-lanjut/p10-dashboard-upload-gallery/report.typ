@@ -1020,10 +1020,10 @@ Skenario manual yang dijalankan pada browser dicatat pada tabel berikut.
 #appendix[
   == Daftar route
 
-  #text(size: 8pt)[
+  #text(size: 7.5pt)[
   #tbl(
     caption: [Route utama aplikasi setelah pertemuan 10.],
-    columns: (0.55fr, 1.55fr, 1.7fr, 0.9fr),
+    columns: (0.45fr, 1.15fr, 2.2fr, 0.8fr),
     [Method], [URI], [Name], [Middleware],
     [`GET`], [`/projects`], [`projects.index`], [`web`],
     [`GET`], [`/projects/{project}`], [`projects.show`], [`web`],
