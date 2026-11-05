@@ -66,7 +66,7 @@
 | 2026-11-05 | Admin membuka `/post/projects` | 200, sidebar dan aksi tampil | `page-projects-admin.png` |
 | 2026-11-05 | `GET /register` | 404 | `AuthTest` |
 | 2026-11-05 | `/post/profile-saya` | 200 untuk pengguna login | `page-profile.png` |
-| 2026-11-05 | `typst compile report.typ report.pdf` | 18 halaman A4 | `report.pdf` |
+| 2026-11-05 | `typst compile report.typ report.pdf` | 17 halaman A4 | `report.pdf` |
 
 ## Rubric self-review (v3)
 
