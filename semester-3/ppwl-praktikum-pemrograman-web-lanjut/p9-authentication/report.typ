@@ -788,10 +788,10 @@ yang sama seperti pertemuan 8, tetapi tombol pengelolaan tidak lagi muncul untuk
 #appendix[
   == Daftar route
 
-  #text(size: 8pt)[
+  #text(size: 7.5pt)[
   #tbl(
     caption: [Route utama aplikasi setelah pertemuan 9.],
-    columns: (0.55fr, 1.55fr, 1.7fr, 0.9fr),
+    columns: (0.45fr, 1.15fr, 2.2fr, 0.8fr),
     [Method], [URI], [Name], [Middleware],
     [`GET`], [`/login`], [`login`], [`guest`],
     [`POST`], [`/login`], [`-`], [`guest`],
