@@ -96,7 +96,7 @@
 | 2† | Struktur | 2 | Cover, ToC/LoF/LoT, Tujuan, Dasar Teori, Hasil, Kesimpulan, Lampiran, Daftar Pustaka; pagebreak hanya di batas bagian |
 | 3 | Kontinuitas | 2 | Satu paragraf kelanjutan P9 + commit `cc227ab`; tanpa tabel lingkungan/discovery |
 | 4† | Kelengkapan langkah | 2 | Semua command `make:*`, migrasi, seeder, `storage:link`, `migrate`, `test`, `build` ditulis |
-| 5† | Kode–repo | 2 | Kode dari commit `0deccd2`; blok kode diberi path |
+| 5† | Kode–repo | 2 | Kode dari commit `ce6fa44`; blok kode diberi path |
 | 6 | Gambar | 2 | Enam screenshot ulang, PNG, caption lengkap; tanpa placeholder |
 | 7† | Sitasi | 2 | `module_p10`, `repo_p10`, dokumentasi Laravel, OWASP |
 | 8† | Modul vs realita | 2 | `/post`, `Project`, kategori/teknologi, experience/education dijelaskan |

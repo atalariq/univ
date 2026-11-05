@@ -84,7 +84,7 @@ tamu menerima 404.
 = Hasil dan Pembahasan
 
 Laporan ini menjelaskan fitur pertemuan 10 pada kode akhir portofolio. Kode acuan
-adalah commit `0deccd2`; kondisi awal adalah aplikasi pertemuan 9. Lingkungan
+adalah commit `ce6fa44`; kondisi awal adalah aplikasi pertemuan 9. Lingkungan
 pengujian memakai PHP 8.5.12, Laravel 13.32.0, Node.js 24, MariaDB 11 pada
 `127.0.0.1:3306`, dan `mise` + Podman.
 

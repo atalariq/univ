@@ -74,9 +74,9 @@
 |---|---|---|---|
 | 1† | Build | 2 | Compile bersih; warning font `menlo` dari paket zebraw |
 | 2† | Struktur | 2 | Cover, ToC/LoF/LoT, Tujuan, Dasar Teori, Hasil, Kesimpulan, Lampiran, Daftar Pustaka |
-| 3 | Kontinuitas | 2 | Paragraf lanjutan P8 + commit `0deccd2` |
+| 3 | Kontinuitas | 2 | Paragraf lanjutan P8 + commit `ce6fa44` |
 | 4† | Kelengkapan langkah | 2 | Semua command Breeze, migrasi, seeder, middleware, route, test ditulis |
-| 5† | Kode–repo | 2 | Kode dari commit `0deccd2`; path pada setiap blok |
+| 5† | Kode–repo | 2 | Kode dari commit `ce6fa44`; path pada setiap blok |
 | 6 | Gambar | 2 | Enam screenshot ulang, PNG, caption lengkap |
 | 7† | Sitasi | 2 | `module_p9`, `repo_p9`, Laravel, OWASP |
 | 8† | Modul vs realita | 2 | Breeze, Tailwind 4, `/post`, role, profile dijelaskan |
