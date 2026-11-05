@@ -84,7 +84,7 @@ tamu menerima 404.
 = Hasil dan Pembahasan
 
 Laporan ini menjelaskan fitur pertemuan 10 pada kode akhir portofolio. Kode acuan
-adalah commit `7cf1456`; kondisi awal adalah aplikasi pertemuan 9. Lingkungan
+adalah commit `d78b48b`; kondisi awal adalah aplikasi pertemuan 9. Lingkungan
 pengujian memakai PHP 8.5.12, Laravel 13.32.0, Node.js 24, MariaDB 11 pada
 `127.0.0.1:3306`, dan `mise` + Podman.
 
@@ -254,8 +254,9 @@ php artisan db:seed
   header: [terminal],
 )
 
-Hasil yang diharapkan: 30 project, 4 kategori, 8 teknologi, 6 skill. Kolom `slug`
-tidak kosong; published ditambah draft sama dengan total project.
+Hasil yang diharapkan: 5 project kurasi, 4 kategori, 8 teknologi, 6 skill. Kolom `slug`
+tidak kosong; 4 project published dan 1 project draft, sehingga published ditambah
+draft sama dengan total project. Tidak ada data project acak.
 
 == Dashboard dan komponen UI
 

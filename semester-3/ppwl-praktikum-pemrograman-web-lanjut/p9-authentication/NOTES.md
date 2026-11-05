@@ -57,7 +57,7 @@
 |---|---|---|---|
 | 2026-11-05 | `composer require laravel/breeze --dev` | Breeze 2.4.2 terpasang | `.runs/p9/composer-breeze.txt` |
 | 2026-11-05 | `php artisan breeze:install blade --no-interaction` | Scaffold Breeze + build aset | `.runs/p9/breeze-install.txt` |
-| 2026-11-05 | `php artisan migrate:fresh --seed` | 2 user, 30 project | `.runs/p9/migrate-seed.txt` |
+| 2026-11-05 | `php artisan migrate:fresh --seed` | 2 user, 5 project | `.runs/p9/migrate-seed.txt` |
 | 2026-11-05 | `composer test` | 57 passed (183 assertions) | `.runs/p9/tests.txt` |
 | 2026-11-05 | `php artisan route:list --path=post -v` | 9 route dengan `auth`, `admin` | laporan lampiran |
 | 2026-11-05 | Login admin | Dialihkan ke `/post/projects` | `page-login.png` |
@@ -74,9 +74,9 @@
 |---|---|---|---|
 | 1† | Build | 2 | Compile bersih; warning font `menlo` dari paket zebraw |
 | 2† | Struktur | 2 | Cover, ToC/LoF/LoT, Tujuan, Dasar Teori, Hasil, Kesimpulan, Lampiran, Daftar Pustaka |
-| 3 | Kontinuitas | 2 | Paragraf lanjutan P8 + commit `7cf1456` |
+| 3 | Kontinuitas | 2 | Paragraf lanjutan P8 + commit `d78b48b` |
 | 4† | Kelengkapan langkah | 2 | Semua command Breeze, migrasi, seeder, middleware, route, test ditulis |
-| 5† | Kode–repo | 2 | Kode dari commit `7cf1456`; path pada setiap blok |
+| 5† | Kode–repo | 2 | Kode dari commit `d78b48b`; path pada setiap blok |
 | 6 | Gambar | 2 | Enam screenshot ulang, PNG, caption lengkap |
 | 7† | Sitasi | 2 | `module_p9`, `repo_p9`, Laravel, OWASP |
 | 8† | Modul vs realita | 2 | Breeze, Tailwind 4, `/post`, role, profile dijelaskan |

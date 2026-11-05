@@ -71,7 +71,7 @@
 | Date | Command/scenario | Concise result | Log (outside repository) |
 |---|---|---|---|
 | 2026-11-05 | `php artisan storage:link` | `public/storage -> storage/app/public` | `.runs/p10/` |
-| 2026-11-05 | `php artisan migrate:fresh --seed` | 30 project, 4 kategori, 8 teknologi, 6 skill | `.runs/p10/` |
+| 2026-11-05 | `php artisan migrate:fresh --seed` | 5 project, 4 kategori, 8 teknologi, 6 skill | `.runs/p10/` |
 | 2026-11-05 | `composer test` | 57 passed (183 assertions) | `.runs/p10/tests-final.txt` |
 | 2026-11-05 | `npm run build` | Vite build sukses | `.runs/p10/` |
 | 2026-11-05 | `php artisan route:list --path=post` | 31 route admin | `.runs/p10/` |
@@ -96,7 +96,7 @@
 | 2† | Struktur | 2 | Cover, ToC/LoF/LoT, Tujuan, Dasar Teori, Hasil, Kesimpulan, Lampiran, Daftar Pustaka; pagebreak hanya di batas bagian |
 | 3 | Kontinuitas | 2 | Satu paragraf kelanjutan P9 + commit `cc227ab`; tanpa tabel lingkungan/discovery |
 | 4† | Kelengkapan langkah | 2 | Semua command `make:*`, migrasi, seeder, `storage:link`, `migrate`, `test`, `build` ditulis |
-| 5† | Kode–repo | 2 | Kode dari commit `7cf1456`; blok kode diberi path |
+| 5† | Kode–repo | 2 | Kode dari commit `d78b48b`; blok kode diberi path |
 | 6 | Gambar | 2 | Enam screenshot ulang, PNG, caption lengkap; tanpa placeholder |
 | 7† | Sitasi | 2 | `module_p10`, `repo_p10`, dokumentasi Laravel, OWASP |
 | 8† | Modul vs realita | 2 | `/post`, `Project`, kategori/teknologi, experience/education dijelaskan |
