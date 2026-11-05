@@ -111,7 +111,7 @@ Total 28/28 — lolos ship gate.
 
 ## Human Follow-up
 
-- [ ] Salin `report.pdf` ke `artifacts/PPWL-B2-P10-557554-AtalariqBarraHadinugraha.pdf`
+- [x] Salin `report.pdf` ke `artifacts/PPWL-B2-P10-557554-AtalariqBarraHadinugraha.pdf`
       bila slot submisi dibuka.
 - [ ] Screenshot khusus pesan “batas 10 gambar” tidak diambil karena browser
       kehilangan flash setelah redirect; perilaku diverifikasi oleh

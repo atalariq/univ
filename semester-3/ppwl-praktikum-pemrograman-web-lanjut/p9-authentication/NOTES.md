@@ -91,7 +91,7 @@ Total 28/28 — lolos ship gate.
 
 ## Human Follow-up
 
-- [ ] Salin `report.pdf` ke `artifacts/PPWL-B2-P9-557554-AtalariqBarraHadinugraha.pdf`
+- [x] Salin `report.pdf` ke `artifacts/PPWL-B2-P9-557554-AtalariqBarraHadinugraha.pdf`
       (menimpa artifact lama yang memakai auth kustom).
 - [ ] Konfirmasi apakah registrasi publik memang harus ditutup pada aplikasi
       portofolio. Saat ini `/register` 404 dan akun dibuat lewat seeder.
