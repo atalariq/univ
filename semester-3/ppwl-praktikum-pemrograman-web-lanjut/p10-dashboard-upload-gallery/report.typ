@@ -429,6 +429,10 @@ skills, categories, technologies, dan gallery. Card Published ditambah Draft sam
 dengan total project. `withCount()` menampilkan jumlah project per kategori, termasuk
 kategori yang belum memiliki project dengan nilai `0`.
 
+Pada tangkapan layar berikut, project demo Cloud Note API sudah ditambahkan pada
+langkah 5, sehingga total project menjadi 31 dan published menjadi 23. Hubungan
+Published ditambah Draft sama dengan Total tetap berlaku.
+
 #img(
   image("assets/page-dashboard.png"),
   caption: [Dashboard admin: card agregat, Skill Teratas, jumlah project per kategori, dan lima project terbaru.],
