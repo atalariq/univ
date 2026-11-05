@@ -86,7 +86,7 @@
 | 2026-11-05 | `GET /projects/{draft}` sebagai tamu | 404 | `PublicPageTest` |
 | 2026-11-05 | `GET /projects/{draft}` sebagai admin | 200 dengan label Draft preview | `PublicPageTest` |
 | 2026-11-05 | Upload gambar ke-11 | Ditolak, total tetap 10 | `ProjectGalleryTest` |
-| 2026-11-05 | `typst compile report.typ report.pdf` | 26 halaman A4 | `report.pdf` |
+| 2026-11-05 | `typst compile report.typ report.pdf` | 27 halaman A4 | `report.pdf` |
 
 ## Rubric self-review (v3)
 
