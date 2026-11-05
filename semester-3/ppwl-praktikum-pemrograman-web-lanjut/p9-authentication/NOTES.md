@@ -1,82 +1,122 @@
-# PPWL Meeting 9 — Authentication
+# PPWL Meeting 9 — Authentication dan Middleware
 
 ## Module Checklist
 
 | Module page/section | Change/file | Status | Evidence |
 |---|---|---|---|
-| Authentication: pisahkan halaman publik vs login | route groups + middleware `auth`/`guest` | Done | `routes/web.php`, verifikasi langkah 2 |
-| Custom registration & login routes | 6 route di `LoginRegisterController` group | Done | `route:list` (langkah 2) |
-| 6 method controller (register/store/login/authenticate/dashboard/logout) | `app/Http/Controllers/Auth/LoginRegisterController.php` | Done | laporan langkah 1 |
-| Middleware auth/guest (constructor pada modul; Laravel 13: route group) | `routes/web.php`, `bootstrap/app.php` | Done | langkah 2–3 |
-| Halaman home baru setelah login (modul: `RouteServiceProvider::HOME`; Laravel 13: redirect config) | `bootstrap/app.php` | Done | langkah 3 |
-| View register, login, dashboard | `resources/views/auth/*.blade.php` | Done | langkah 4–5, screenshot |
-| Tugas: menu/controller tak diakses pengguna umum | `@auth` pada Add/Edit/Delete + middleware route | Done | screenshot guest vs authed |
-| Menjalankan aplikasi `/register`, `/login` | server devenv | Done | log 2026-10-29 |
+| Slide 2 tujuan: session auth, login/logout, middleware, custom middleware | Breeze + `EnsureAdmin` | Done | laporan langkah 3–8 |
+| Slide 3 masalah route terbuka | grup `/post` dengan `auth` + `admin` | Done | `AuthTest`, `route:list` |
+| Slide 4 alur session authentication | `AuthenticatedSessionController`, `LoginRequest` | Done | laporan langkah 3 |
+| Slide 5 middleware sebagai penjaga request | `routes/web.php`, `bootstrap/app.php` | Done | `route:list` |
+| Slide 6 `composer require laravel/breeze --dev` + `breeze:install blade` + `migrate` + `npm install && npm run dev` | Breeze 2.4.2 terpasang | Done | `.runs/p9/composer-breeze.txt`, `.runs/p9/breeze-install.txt` |
+| Slide 7 user admin via seeder + `Hash::make` | `DatabaseSeeder` | Done | `2 users` setelah seed |
+| Slide 8 login (`Auth::attempt`, regenerate, intended) | `LoginRequest`, `AuthenticatedSessionController@store` | Done | `AuthTest` |
+| Slide 9 logout (`invalidate`, `regenerateToken`, POST + CSRF) | `AuthenticatedSessionController@destroy`, admin layout | Done | `AuthTest` |
+| Slide 10 proteksi `/post` | `routes/web.php` | Done | 9 route `/post` |
+| Slide 11 verifikasi `route:list --path=post` | route list | Done | laporan lampiran |
+| Slide 12 middleware custom `EnsureAdmin` | `app/Http/Middleware/EnsureAdmin.php` | Done | `AuthTest` 403 |
+| Slide 13 alias di `bootstrap/app.php` | `bootstrap/app.php` | Done | `route:list` |
+| Slide 14 pengujian login/logout/guest | `tests/Feature/AuthTest.php` | Done | 31 passed, 80 assertions |
+| Slide 15–17 troubleshooting (419, kredensial, redirect) | laporan langkah 3–6 | Done | laporan |
+| Slide 18 latihan: register ditutup | route register dihapus, `/register` 404 | Done | `AuthTest` |
+| Slide 18 latihan: nama user di navbar | `partials/navbar.blade.php`, `layouts/admin.blade.php` | Done | `page-projects-admin.png` |
+| Slide 18 latihan: `/post/profile-saya` | `ProfileController`, `post/profile/edit.blade.php` | Done | `page-profile.png` |
+| Slide 18 latihan: role-based `EnsureAdmin`, non-admin 403 | kolom `role`, middleware `admin` | Done | `page-403.png`, `AuthTest` |
 
 ## Assumptions
 
-- Modul mencontohkan Laravel 10 (`RouteServiceProvider::HOME` dan middleware di constructor controller). Aplikasi memakai Laravel 13: pengalihan di `bootstrap/app.php`, middleware di route group — dicatat sebagai kalimat adaptasi di laporan.
-- Modul memakai dashboard terpisah dari aplikasi portofolio; praktikum menerapkannya pada aplikasi yang sama (portofolio p4–p8).
-- Registrasi langsung login (auto-login) lalu diarahkan ke dashboard; modul tidak merinci perilaku setelah `store()`.
-- Lingkungan: devenv (PHP 8.5.12, Composer 2.10.3, Node 24.21.0, MariaDB 11 :33060, Laravel 13.32.0).
+- P9 dijalankan dari aplikasi akhir P8 (`74a4feb`). Breeze dipasang pada aplikasi
+  yang sudah berjalan, bukan aplikasi kosong; berkas yang tertimpa dipulihkan.
+- Breeze 2.4.2 membawa Tailwind 3, PostCSS, dan Autoprefixer. Aplikasi tetap
+  memakai Tailwind 4; hanya `alpinejs` dan `@tailwindcss/forms` yang dipakai dari
+  scaffold Breeze.
+- Registrasi publik ditutup sesuai latihan modul. Akun dibuat melalui seeder:
+  `admin@example.com` / `password123` (role admin) dan `test@example.com` /
+  `password` (role user).
+- Halaman `/post/profile-saya` memakai middleware `auth` saja, bukan `admin`,
+  sehingga pengguna non-admin tetap dapat memperbarui profilnya.
+- Redirect pengguna non-admin setelah login diarahkan ke beranda dengan pesan
+  status, bukan ke `/post/projects` yang akan menghasilkan 403.
 
 ## Research
 
 | Claim used | Supporting source | Notes/verification |
 |---|---|---|
-| Session auth: identitas disimpan di session setelah kredensial diverifikasi | Laravel docs "Authentication" @laravel_authentication | Langkah 1, 3 |
-| `Auth::attempt/login/logout`, `intended()` | docs Authentication @laravel_authentication | Langkah 1 |
-| Middleware `auth`/`guest`; redirect config di bootstrap/app.php (L12+) | docs Middleware @laravel_middleware | Langkah 2–3 |
-| Cast `hashed` + Hash bcrypt/Argon2 untuk password | docs Hashing @laravel_hashing | Langkah 1 |
-| Validasi registrasi (unique, confirmed, min 8) | docs Validation @laravel_validation | Langkah 1 |
-| Regenerasi ID session setelah login, invalidate + regenerateToken saat logout | OWASP Session Management @owasp_session + docs Session @laravel_session | Langkah 1, 3 |
-| Resource route order (`create` sebelum `{project}`) | Perilaku Laravel route registration, teruji saat implementasi | Langkah 2 |
+| Session menyimpan identitas antar-request melalui cookie | Laravel Session @laravel_session | Langkah 3–4 |
+| `Auth::attempt` mencocokkan kredensial dan memulai session | Laravel Authentication @laravel_authentication | Langkah 3 |
+| Middleware berjalan sebelum controller; `auth`/`guest` mengatur akses | Laravel Middleware @laravel_middleware | Langkah 5–6 |
+| Breeze menghasilkan controller, request, view, dan route autentikasi | Laravel Starter Kits @laravel_breeze | Langkah 1 |
+| Password di-hash dengan bcrypt/Argon2; cast `hashed` | Laravel Hashing @laravel_hashing | Langkah 2 |
+| Form mutasi memerlukan token CSRF | Laravel CSRF @laravel_csrf | Langkah 4 |
+| Session ID diregenerasi setelah login; invalidate saat logout | OWASP Session Management @owasp_session | Langkah 3–4 |
+| Otorisasi role memisahkan 403 dari redirect login | Laravel Authorization, OWASP Authorization @laravel_authorization @owasp_access_control | Langkah 6 |
 
 ## Verification
 
 | Date | Command/scenario | Concise result | Log (outside repository) |
 |---|---|---|---|
-| 2026-10-29 | `composer test` | 18 passed, 57 assertions | `.runs/devenv/validate-full.txt` |
-| 2026-10-29 | `php artisan route:list --path=projects` | 7 route; create/store/edit/update/destroy bermiddleware auth | conversation log |
-| 2026-10-29 | Guest `GET /dashboard` | 302 → `/login` (test + manual) | AuthTest |
-| 2026-10-29 | Guest `GET /projects/create` | 302 → `/login`; tidak menampilkan Add Project | screenshot `page-projects-guest.png` |
-| 2026-10-29 | Authed `GET /projects` | Add Project + Dashboard/Logout tampil | screenshot `page-projects-authed.png` |
-| 2026-10-29 | Login password salah | kembali ke `/login`, pesan "Email atau password salah." | screenshot `page-login-error.png` |
-| 2026-10-29 | Login valid `test@example.com` | dashboard: identitas, 30 project, project terbaru | screenshot `page-dashboard.png` |
-| 2026-10-29 | Logout | redirect `/` + pesan "Anda telah logout." (test) | AuthTest |
-| 2026-10-29 | `typst compile report.typ report.pdf` | 15 halaman A4 | report.pdf |
+| 2026-11-05 | `composer require laravel/breeze --dev` | Breeze 2.4.2 terpasang | `.runs/p9/composer-breeze.txt` |
+| 2026-11-05 | `php artisan breeze:install blade --no-interaction` | Scaffold Breeze + build aset | `.runs/p9/breeze-install.txt` |
+| 2026-11-05 | `php artisan migrate:fresh --seed` | 2 user, 30 project | `.runs/p9/migrate-seed.txt` |
+| 2026-11-05 | `composer test` | 31 passed (80 assertions) | `.runs/p9/tests.txt` |
+| 2026-11-05 | `php artisan route:list --path=post -v` | 9 route dengan `auth`, `admin` | laporan lampiran |
+| 2026-11-05 | Login admin | Dialihkan ke `/post/projects` | `page-login.png` |
+| 2026-11-05 | Login password salah | Pesan kredensial muncul | `page-login-error.png` |
+| 2026-11-05 | Non-admin membuka `/post/projects` | 403 `Akses ditolak.` | `page-403.png` |
+| 2026-11-05 | Admin membuka `/post/projects` | 200, sidebar dan aksi tampil | `page-projects-admin.png` |
+| 2026-11-05 | `GET /register` | 404 | `AuthTest` |
+| 2026-11-05 | `/post/profile-saya` | 200 untuk pengguna login | `page-profile.png` |
+| 2026-11-05 | `typst compile report.typ report.pdf` | 23 halaman A4 | `report.pdf` |
 
-## Rubric self-review
+## Rubric self-review (v3)
 
 | # | Criterion | Score | Note |
 |---|---|---|---|
-| 1† | Build | 2 | Compile bersih (warning font `menlo` kosmetik dari zebraw) |
-| 2† | Front matter | 2 | Cover, Daftar Isi, discovery table, repo line; Sebelum mulai di dalam Hasil dan Pembahasan (gaya p6, sesuai permintaan) |
-| 3 | Version disclosure | 2 | Versi di tabel lingkungan + prasyarat |
-| 4† | Starter kit | 2 | clone + checkout parent commit + perintah setup |
-| 5† | Step granularity | 2 | 7 langkah, checkpoint per langkah, blok kode zebraw berlabel file |
-| 6† | Checkpoints | 2 | Hasil teramati per langkah |
-| 7† | Citations | 2 | `module_p9`, `repo_p9` (SHA penuh), docs Laravel + OWASP |
-| 8 | Figure discipline | 2 | 6 screenshot ulang, PNG, caption lengkap |
-| 9† | Module-vs-reality | 2 | Laravel 10 → 13 dicatat inline (langkah 2–3) |
-| 10 | Ringkasan penugasan | 2 | Tidak ada tabel ringkasan terpisah; latihan/Tugas dibahas di langkah 2, 6, 7 (gaya p6) |
-| 11† | Honest limits | 2 | Batas cakupan di Sebelum mulai |
-| 12† | Code–repo fidelity | 2 | Commit `add137e`; kode laporan dari file repo |
-| 13 | Structure & hygiene | 2 | Tidak ada TODO/dead code |
-| 14 | Bibliography hygiene | 2 | Satu references.yaml, key snake_case, tanggal akses |
+| 1† | Build | 2 | Compile bersih; warning font `menlo` dari paket zebraw |
+| 2† | Struktur | 2 | Cover, ToC/LoF/LoT, Tujuan, Dasar Teori, Hasil, Kesimpulan, Lampiran, Daftar Pustaka |
+| 3 | Kontinuitas | 2 | Paragraf lanjutan P8 + commit `cc227ab` |
+| 4† | Kelengkapan langkah | 2 | Semua command Breeze, migrasi, seeder, middleware, route, test ditulis |
+| 5† | Kode–repo | 2 | Kode dari commit `cc227ab`; path pada setiap blok |
+| 6 | Gambar | 2 | Enam screenshot ulang, PNG, caption lengkap |
+| 7† | Sitasi | 2 | `module_p9`, `repo_p9`, Laravel, OWASP |
+| 8† | Modul vs realita | 2 | Breeze, Tailwind 4, `/post`, role, profile dijelaskan |
+| 9† | Penugasan | 2 | Registrasi ditutup, nama navbar, profil, 403 non-admin |
+| 10† | Batas hasil | 2 | Batas cakupan dan redirect non-admin ditulis |
+| 11 | Kebersihan | 2 | Tidak ada `#check`/TODO/dead code |
+| 12 | Bibliografi | 2 | Satu `references.yaml`, key snake_case |
+| 13 | Verifikasi | 2 | Semua klaim punya command/bukti |
+| 14 | Tidak ada callout | 2 | Hasil langkah memakai paragraf biasa |
 
 Total 28/28 — lolos ship gate.
 
 ## Human Follow-up
 
-- [ ] Upload `artifacts/PPWL-B2-P9-557554-AtalariqBarraHadinugraha.pdf` ketika slot submisi p9 dibuka.
-- [ ] Konfirmasi apakah registrasi sebaiknya diarahkan ke halaman login (bukan auto-login) jika dosen menuntut alur slide persis; saat ini auto-login → dashboard.
-- [ ] (Opsional) Ganti akun demo `test@example.com` di seeder dengan kredensial lokal sendiri sebelum demo lisan.
+- [ ] Salin `report.pdf` ke `artifacts/PPWL-B2-P9-557554-AtalariqBarraHadinugraha.pdf`
+      (menimpa artifact lama yang memakai auth kustom).
+- [ ] Konfirmasi apakah registrasi publik memang harus ditutup pada aplikasi
+      portofolio. Saat ini `/register` 404 dan akun dibuat lewat seeder.
+- [ ] Ganti password demo `admin@example.com` sebelum demonstrasi lisan bila
+      diperlukan.
+- [ ] Breeze membawa Tailwind 3; aplikasi mempertahankan Tailwind 4. Jika dosen
+      mensyaratkan scaffold Breeze apa adanya, konfigurasi dapat dikembalikan.
 
 ## Oral-exam Practice
 
-1. **Mengapa middleware dipasang di route, bukan constructor controller?** Laravel 13 memakai konfigurasi middleware terpusat (`bootstrap/app.php`) dan route group; constructor `$this->middleware()` sudah bukan API bawaan. Efeknya sama: `auth` menjaga dashboard/logout/aksi tulis, `guest` menjaga form login (langkah 2–3).
-2. **Apa yang terjadi pada session saat login dan logout?** Setelah login berhasil ID session diregenerasi (mencegah session fixation); saat logout session di-invalidate dan token CSRF diregenerasi (langkah 1, 3).
-3. **Mengapa password tidak perlu di-hash manual?** Model `User` memakai cast `hashed`, sehingga `User::create(['password' => ...])` otomatis menyimpan hash bcrypt/Argon2 (langkah 1, Dasar Teori).
-4. **Bagaimana tamu dihalangi, padahal daftar project tetap publik?** Hanya route mutasi (`create/store/edit/update/destroy`) memakai middleware `auth`; `index/show` tetap terbuka. Tampilan juga menyembunyikan tombol aksi dengan `@auth` (langkah 2, 6).
-5. **Apa fungsi `redirect()->intended()`?** Mengembalikan pengguna ke halaman yang ingin dibuka sebelum dialihkan ke login, dengan fallback `/dashboard` (langkah 1).
+1. **Mengapa Breeze dipakai, bukan auth kustom?** Breeze menyediakan scaffold
+   controller, request, view, dan route yang dapat dibaca dan diubah. Modul
+   memakai Breeze, sehingga alur login/logout dapat ditelusuri sampai ke
+   `AuthenticatedSessionController` dan `LoginRequest` (laporan langkah 1–3).
+2. **Apa yang terjadi pada session setelah login dan logout?** Setelah login, ID
+   session diregenerasi untuk mencegah session fixation. Saat logout, session
+   di-invalidate dan token CSRF diregenerasi (laporan langkah 3–4).
+3. **Mengapa middleware `admin` mengembalikan 403, bukan redirect ke login?**
+   Pengguna sudah terautentikasi tetapi tidak memiliki role yang cukup; 403
+   menunjukkan masalah otorisasi, sedangkan redirect login untuk tamu (laporan
+   langkah 6).
+4. **Mengapa `/post/profile-saya` tidak memakai middleware `admin`?** Profil
+   adalah data pengguna sendiri, sehingga semua pengguna login boleh
+   memperbaruinya; area project dan dashboard tetap `admin` (laporan langkah 5
+   dan 8).
+5. **Apa yang harus dilakukan jika Breeze menimpa route portofolio?** Pulihkan
+   route portofolio, tambahkan `require __DIR__.'/auth.php';`, dan pastikan
+   layout publik serta konfigurasi Tailwind 4 dipulihkan (laporan langkah 1).

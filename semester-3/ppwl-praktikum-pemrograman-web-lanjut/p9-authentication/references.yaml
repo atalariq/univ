@@ -1,48 +1,66 @@
 module_p9:
   type: misc
-  title: "Authentication: Praktikum Pemrograman Web 2 Pertemuan 9"
+  title: "Authentication dan Middleware: Praktikum Pemrograman Web 2 Pertemuan 9"
   author: "Achmad Choirudin Emcha, S.Kom., M.Eng."
-  note: "Slide modul praktikum PPWL pertemuan 9, berkas penugasan"
-  date: 2026-10-27
+  note: "Modul praktikum PPWL pertemuan 9, 18 slide"
+  date: 2026-10-29
 
 repo_p9:
   type: web
-  title: "PPWL My Portfolio — kode praktikum Pertemuan 9"
-  url: "https://github.com/atalariq/PPWL-my-portfolio/tree/add137ea6a27da2d57a10963dc51fb7383710479"
-  urldate: 2026-10-29
+  title: "PPWL My Portfolio, kode praktikum Pertemuan 9"
+  url: "https://github.com/atalariq/PPWL-my-portfolio/tree/cc227ab6414b0abd928bd33abbc8b2a53ab5b662"
+  urldate: 2026-11-05
 
 laravel_authentication:
   type: web
-  title: "Authentication — Laravel Documentation"
+  title: "Authentication, Laravel Documentation"
   url: "https://laravel.com/docs/13.x/authentication"
-  urldate: 2026-10-29
+  urldate: 2026-11-05
 
 laravel_middleware:
   type: web
-  title: "Middleware — Laravel Documentation"
+  title: "Middleware, Laravel Documentation"
   url: "https://laravel.com/docs/13.x/middleware"
-  urldate: 2026-10-29
-
-laravel_validation:
-  type: web
-  title: "Validation — Laravel Documentation"
-  url: "https://laravel.com/docs/13.x/validation"
-  urldate: 2026-10-29
-
-laravel_hashing:
-  type: web
-  title: "Hashing — Laravel Documentation"
-  url: "https://laravel.com/docs/13.x/hashing"
-  urldate: 2026-10-29
+  urldate: 2026-11-05
 
 laravel_session:
   type: web
-  title: "Session — Laravel Documentation"
+  title: "Session, Laravel Documentation"
   url: "https://laravel.com/docs/13.x/session"
-  urldate: 2026-10-29
+  urldate: 2026-11-05
+
+laravel_hashing:
+  type: web
+  title: "Hashing, Laravel Documentation"
+  url: "https://laravel.com/docs/13.x/hashing"
+  urldate: 2026-11-05
+
+laravel_csrf:
+  type: web
+  title: "CSRF Protection, Laravel Documentation"
+  url: "https://laravel.com/docs/13.x/csrf"
+  urldate: 2026-11-05
+
+laravel_breeze:
+  type: web
+  title: "Starter Kits, Laravel Documentation"
+  url: "https://laravel.com/docs/13.x/starter-kits"
+  urldate: 2026-11-05
+
+laravel_authorization:
+  type: web
+  title: "Authorization, Laravel Documentation"
+  url: "https://laravel.com/docs/13.x/authorization"
+  urldate: 2026-11-05
 
 owasp_session:
   type: web
-  title: "OWASP Session Management Cheat Sheet"
+  title: "Session Management Cheat Sheet, OWASP"
   url: "https://cheatsheetseries.owasp.org/cheatsheets/Session_Management_Cheat_Sheet.html"
-  urldate: 2026-10-29
+  urldate: 2026-11-05
+
+owasp_access_control:
+  type: web
+  title: "Authorization Cheat Sheet, OWASP"
+  url: "https://cheatsheetseries.owasp.org/cheatsheets/Authorization_Cheat_Sheet.html"
+  urldate: 2026-11-05

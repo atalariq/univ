@@ -1,0 +1,66 @@
+module_p10:
+  type: misc
+  title: "Dashboard, File Upload dan Gallery: Praktikum Pemrograman Web 2 Pertemuan 10"
+  author: "Achmad Choirudin Emcha, S.Kom., M.Eng."
+  note: "Modul praktikum PPWL pertemuan 10, 28 halaman"
+  date: 2026-11-03
+
+repo_p10:
+  type: web
+  title: "PPWL My Portfolio, kode praktikum Pertemuan 10"
+  url: "https://github.com/atalariq/PPWL-my-portfolio/tree/99b7082e31f9413843335e86da4c3d2df1f8a0c3"
+  urldate: 2026-11-05
+
+laravel_queries:
+  type: web
+  title: "Database: Query Builder, Laravel Documentation"
+  url: "https://laravel.com/docs/13.x/queries"
+  urldate: 2026-11-05
+
+laravel_eloquent:
+  type: web
+  title: "Eloquent: Relationships, Laravel Documentation"
+  url: "https://laravel.com/docs/13.x/eloquent-relationships"
+  urldate: 2026-11-05
+
+laravel_blade_components:
+  type: web
+  title: "Blade Templates, Laravel Documentation"
+  url: "https://laravel.com/docs/13.x/blade"
+  urldate: 2026-11-05
+
+laravel_filesystem:
+  type: web
+  title: "File Storage, Laravel Documentation"
+  url: "https://laravel.com/docs/13.x/filesystem"
+  urldate: 2026-11-05
+
+laravel_validation:
+  type: web
+  title: "Validation, Laravel Documentation"
+  url: "https://laravel.com/docs/13.x/validation"
+  urldate: 2026-11-05
+
+laravel_routing:
+  type: web
+  title: "Routing, Laravel Documentation"
+  url: "https://laravel.com/docs/13.x/routing"
+  urldate: 2026-11-05
+
+laravel_pagination:
+  type: web
+  title: "Database: Pagination, Laravel Documentation"
+  url: "https://laravel.com/docs/13.x/pagination"
+  urldate: 2026-11-05
+
+laravel_authorization:
+  type: web
+  title: "Authorization, Laravel Documentation"
+  url: "https://laravel.com/docs/13.x/authorization"
+  urldate: 2026-11-05
+
+owasp_file_upload:
+  type: web
+  title: "File Upload Cheat Sheet, OWASP"
+  url: "https://cheatsheetseries.owasp.org/cheatsheets/File_Upload_Cheat_Sheet.html"
+  urldate: 2026-11-05
