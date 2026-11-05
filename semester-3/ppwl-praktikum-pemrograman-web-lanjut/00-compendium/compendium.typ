@@ -319,7 +319,7 @@ Bab ini diperbarui setiap Kamis setelah modul baru dibagikan.
   [8], [`3b0ed22`, `74a4feb`], [Seeder, pagination, environment],
   [9], [`cc227ab`], [Breeze, role, middleware],
   [10], [`43a5291` … `17a64d1`], [Dashboard, upload, gallery],
-  [Final], [`ce6fa44`], [Design system, mise, container],
+  [Final], [`7cf1456`], [Design system, mise, container],
 )
 
 == Status laporan
