@@ -1,0 +1,83 @@
+module_p4:
+  type: misc
+  title: "Routing dan View: Praktikum Pemrograman Web 2 Pertemuan 4"
+  author: "Achmad Choirudin Emcha, S.Kom., M.Eng."
+  date: 2026-09-16
+
+module_p5:
+  type: misc
+  title: "Controller dan Model: Praktikum Pemrograman Web 2 Pertemuan 5"
+  author: "Achmad Choirudin Emcha, S.Kom., M.Eng."
+  date: 2026-09-24
+
+module_p6:
+  type: misc
+  title: "CRUD: Praktikum Pemrograman Web 2 Pertemuan 6"
+  author: "Achmad Choirudin Emcha, S.Kom., M.Eng."
+  date: 2026-09-28
+
+module_p7:
+  type: misc
+  title: "Eloquent ORM: Praktikum Pemrograman Web 2 Pertemuan 7"
+  author: "Achmad Choirudin Emcha, S.Kom., M.Eng."
+  date: 2026-10-01
+
+module_p8:
+  type: misc
+  title: "Seeder dan Pagination: Praktikum Pemrograman Web 2 Pertemuan 8"
+  author: "Achmad Choirudin Emcha, S.Kom., M.Eng."
+  date: 2026-10-29
+
+module_p9:
+  type: misc
+  title: "Authentication dan Middleware: Praktikum Pemrograman Web 2 Pertemuan 9"
+  author: "Achmad Choirudin Emcha, S.Kom., M.Eng."
+  date: 2026-10-29
+
+module_p10:
+  type: misc
+  title: "Dashboard, File Upload dan Gallery: Praktikum Pemrograman Web 2 Pertemuan 10"
+  author: "Achmad Choirudin Emcha, S.Kom., M.Eng."
+  date: 2026-11-03
+
+repo_p4:
+  type: web
+  title: "PPWL Portfolio, kode Pertemuan 4"
+  url: "https://github.com/atalariq/ppwl-portfolio/tree/6d4bdbd"
+  urldate: 2026-11-05
+
+repo_p5:
+  type: web
+  title: "PPWL Portfolio, kode Pertemuan 5"
+  url: "https://github.com/atalariq/ppwl-portfolio/tree/6fa9cb2"
+  urldate: 2026-11-05
+
+repo_p6:
+  type: web
+  title: "PPWL Portfolio, kode Pertemuan 6"
+  url: "https://github.com/atalariq/ppwl-portfolio/tree/38db3ed"
+  urldate: 2026-11-05
+
+repo_p8:
+  type: web
+  title: "PPWL Portfolio, kode Pertemuan 8"
+  url: "https://github.com/atalariq/ppwl-portfolio/tree/3b0ed22"
+  urldate: 2026-11-05
+
+repo_p9:
+  type: web
+  title: "PPWL Portfolio, kode Pertemuan 9"
+  url: "https://github.com/atalariq/ppwl-portfolio/tree/cc227ab"
+  urldate: 2026-11-05
+
+repo_p10:
+  type: web
+  title: "PPWL Portfolio, kode Pertemuan 10"
+  url: "https://github.com/atalariq/ppwl-portfolio/tree/17a64d1"
+  urldate: 2026-11-05
+
+repo_final:
+  type: web
+  title: "PPWL Portfolio, kode final kompendium"
+  url: "https://github.com/atalariq/ppwl-portfolio/tree/0deccd2"
+  urldate: 2026-11-05

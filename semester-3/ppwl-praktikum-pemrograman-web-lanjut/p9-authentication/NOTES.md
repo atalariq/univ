@@ -16,7 +16,7 @@
 | Slide 11 verifikasi `route:list --path=post` | route list | Done | laporan lampiran |
 | Slide 12 middleware custom `EnsureAdmin` | `app/Http/Middleware/EnsureAdmin.php` | Done | `AuthTest` 403 |
 | Slide 13 alias di `bootstrap/app.php` | `bootstrap/app.php` | Done | `route:list` |
-| Slide 14 pengujian login/logout/guest | `tests/Feature/AuthTest.php` | Done | 31 passed, 80 assertions |
+| Slide 14 pengujian login/logout/guest | `tests/Feature/AuthTest.php` | Done | 57 passed, 183 assertions |
 | Slide 15–17 troubleshooting (419, kredensial, redirect) | laporan langkah 3–6 | Done | laporan |
 | Slide 18 latihan: register ditutup | route register dihapus, `/register` 404 | Done | `AuthTest` |
 | Slide 18 latihan: nama user di navbar | `partials/navbar.blade.php`, `layouts/admin.blade.php` | Done | `page-projects-admin.png` |
@@ -58,7 +58,7 @@
 | 2026-11-05 | `composer require laravel/breeze --dev` | Breeze 2.4.2 terpasang | `.runs/p9/composer-breeze.txt` |
 | 2026-11-05 | `php artisan breeze:install blade --no-interaction` | Scaffold Breeze + build aset | `.runs/p9/breeze-install.txt` |
 | 2026-11-05 | `php artisan migrate:fresh --seed` | 2 user, 30 project | `.runs/p9/migrate-seed.txt` |
-| 2026-11-05 | `composer test` | 31 passed (80 assertions) | `.runs/p9/tests.txt` |
+| 2026-11-05 | `composer test` | 57 passed (183 assertions) | `.runs/p9/tests.txt` |
 | 2026-11-05 | `php artisan route:list --path=post -v` | 9 route dengan `auth`, `admin` | laporan lampiran |
 | 2026-11-05 | Login admin | Dialihkan ke `/post/projects` | `page-login.png` |
 | 2026-11-05 | Login password salah | Pesan kredensial muncul | `page-login-error.png` |
@@ -66,7 +66,7 @@
 | 2026-11-05 | Admin membuka `/post/projects` | 200, sidebar dan aksi tampil | `page-projects-admin.png` |
 | 2026-11-05 | `GET /register` | 404 | `AuthTest` |
 | 2026-11-05 | `/post/profile-saya` | 200 untuk pengguna login | `page-profile.png` |
-| 2026-11-05 | `typst compile report.typ report.pdf` | 23 halaman A4 | `report.pdf` |
+| 2026-11-05 | `typst compile report.typ report.pdf` | 18 halaman A4 | `report.pdf` |
 
 ## Rubric self-review (v3)
 
@@ -74,9 +74,9 @@
 |---|---|---|---|
 | 1† | Build | 2 | Compile bersih; warning font `menlo` dari paket zebraw |
 | 2† | Struktur | 2 | Cover, ToC/LoF/LoT, Tujuan, Dasar Teori, Hasil, Kesimpulan, Lampiran, Daftar Pustaka |
-| 3 | Kontinuitas | 2 | Paragraf lanjutan P8 + commit `cc227ab` |
+| 3 | Kontinuitas | 2 | Paragraf lanjutan P8 + commit `0deccd2` |
 | 4† | Kelengkapan langkah | 2 | Semua command Breeze, migrasi, seeder, middleware, route, test ditulis |
-| 5† | Kode–repo | 2 | Kode dari commit `cc227ab`; path pada setiap blok |
+| 5† | Kode–repo | 2 | Kode dari commit `0deccd2`; path pada setiap blok |
 | 6 | Gambar | 2 | Enam screenshot ulang, PNG, caption lengkap |
 | 7† | Sitasi | 2 | `module_p9`, `repo_p9`, Laravel, OWASP |
 | 8† | Modul vs realita | 2 | Breeze, Tailwind 4, `/post`, role, profile dijelaskan |

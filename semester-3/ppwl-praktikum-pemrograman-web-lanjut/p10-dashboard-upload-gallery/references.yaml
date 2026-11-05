@@ -8,7 +8,7 @@ module_p10:
 repo_p10:
   type: web
   title: "PPWL My Portfolio, kode praktikum Pertemuan 10"
-  url: "https://github.com/atalariq/PPWL-my-portfolio/tree/99b7082e31f9413843335e86da4c3d2df1f8a0c3"
+  url: "https://github.com/atalariq/ppwl-portfolio/tree/0deccd2"
   urldate: 2026-11-05
 
 laravel_queries:
