@@ -1,0 +1,66 @@
+module_p11:
+  type: misc
+  title: "Search, Filter dan Sorting: Praktikum Pemrograman Web 2 Pertemuan 11"
+  author: "Achmad Choirudin Emcha"
+  note: "Modul praktikum PPWL pertemuan 11, 32 halaman"
+  date: 2026-11-12
+
+repo_p11:
+  type: web
+  title: "PPWL My Portfolio, kode praktikum Pertemuan 11"
+  url: "https://github.com/atalariq/ppwl-portfolio/tree/051d37003e67855f2c5a79c2aba7bafafe1b8ebf"
+  urldate: 2026-11-12
+
+laravel_requests:
+  type: web
+  title: "HTTP Requests, Laravel Documentation"
+  url: "https://laravel.com/docs/13.x/requests"
+  urldate: 2026-11-12
+
+laravel_queries:
+  type: web
+  title: "Database: Query Builder, Laravel Documentation"
+  url: "https://laravel.com/docs/13.x/queries"
+  urldate: 2026-11-12
+
+laravel_eloquent:
+  type: web
+  title: "Eloquent: Relationships, Laravel Documentation"
+  url: "https://laravel.com/docs/13.x/eloquent-relationships"
+  urldate: 2026-11-12
+
+laravel_pagination:
+  type: web
+  title: "Database: Pagination, Laravel Documentation"
+  url: "https://laravel.com/docs/13.x/pagination"
+  urldate: 2026-11-12
+
+laravel_routing:
+  type: web
+  title: "Routing, Laravel Documentation"
+  url: "https://laravel.com/docs/13.x/routing"
+  urldate: 2026-11-12
+
+laravel_validation:
+  type: web
+  title: "Validation, Laravel Documentation"
+  url: "https://laravel.com/docs/13.x/validation"
+  urldate: 2026-11-12
+
+laravel_blade:
+  type: web
+  title: "Blade Templates, Laravel Documentation"
+  url: "https://laravel.com/docs/13.x/blade"
+  urldate: 2026-11-12
+
+laravel_strings:
+  type: web
+  title: "Strings, Laravel Documentation"
+  url: "https://laravel.com/docs/13.x/strings"
+  urldate: 2026-11-12
+
+mysql_like:
+  type: web
+  title: "MySQL 8.4 Reference Manual: String Comparison Functions and Operators"
+  url: "https://dev.mysql.com/doc/refman/8.4/en/string-comparison-functions.html"
+  urldate: 2026-11-12
