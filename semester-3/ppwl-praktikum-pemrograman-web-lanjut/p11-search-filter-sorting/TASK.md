@@ -58,3 +58,10 @@ Filter Sorting").
 ## Kode acuan
 
 Commit final: `051d37003e67855f2c5a79c2aba7bafafe1b8ebf`.
+
+## Catatan laporan
+
+- Laporan ditulis sebagai laporan praktikum, bukan checklist penyelesaian modul.
+- Mapping modul tetap di `NOTES.md`; section meta tidak masuk PDF.
+- Format mengikuti template dosen; istilah teknis dipertahankan bila lebih
+  natural daripada terjemahan paksa.
