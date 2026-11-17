@@ -1,4 +1,5 @@
 #import "@atalariq/lab-report:4.0.0": *
+#import "diagrams.typ": request-flow, erd, query-pipeline
 
 #let labels = (
   cover-title: "LAPORAN PERTEMUAN",
@@ -159,7 +160,7 @@
   heading-numbering: "bab",
   heading-align: center,
   heading-size: 20pt,
-  code-theme: "clean",
+  code-theme: "thesis",
   code-size: 9pt,
   code-padding: 4pt,
   code-numbering: "",
@@ -226,6 +227,8 @@ implementasi tersebut pada aplikasi portofolio, dengan kode acuan commit
 + Memverifikasi perilaku pencarian, filter, sorting, pagination, dan detail
   melalui feature test.
 
+#pagebreak()
+
 = Dasar Teori
 
 == PHP dan Pemrograman Server-Side
@@ -287,6 +290,12 @@ mempermudah akses database, Blade mempermudah template, dan Artisan
 menyediakan perintah untuk migration, seeding, testing, dan diagnostik
 @laravel. Pada aplikasi ini, Laravel dipakai karena seluruh portofolio sudah
 dibangun di atasnya dan karena ekosistemnya mendukung kebutuhan pertemuan ini.
+
+#fig(
+  request-flow(),
+  caption: [Alur satu request pencarian dari browser sampai database.],
+)
+
 
 Request masuk melalui `public/index.php`, melewati bootstrap
 aplikasi, HTTP kernel, middleware, router, lalu diteruskan ke controller.
@@ -361,6 +370,12 @@ key, foreign key, dan constraint. SQL menyediakan cara standar untuk membaca,
 menyaring, mengurutkan, dan menggabungkan data. MariaDB dipakai karena
 kompatibel dengan MySQL, open source, dan mendukung fitur yang dibutuhkan
 Laravel @mariadb.
+
+#fig(
+  erd(),
+  caption: [Relasi tabel proyek, kategori, dan teknologi pada aplikasi portofolio.],
+)
+
 
 Perintah SQL yang relevan adalah `SELECT` untuk membaca kolom,
 `WHERE` untuk menyaring baris, `LIKE` untuk mencocokkan pola teks, `JOIN` untuk
@@ -451,6 +466,12 @@ urutan terbaru, terlama, judul A–Z, dan `project_date`. Pagination memakai
 `paginate(9)` dengan pilihan 9, 18, atau 27 item per halaman; `links()` merender
 navigasi, dan `withQueryString()` mempertahankan filter pada tautan halaman
 berikutnya. Jika tidak ada hasil, view menampilkan empty state dan tombol
+
+#fig(
+  query-pipeline(),
+  caption: [Pipeline query dari pencarian sampai pagination.],
+)
+
 Reset.
 
 Jika filter hilang saat pindah halaman, periksa
@@ -1208,7 +1229,7 @@ menampilkan proyek dengan status yang tidak dipilih.
 
 #pagebreak()
 
-= Kesimpulan dan Saran
+= Penutup
 
 == Kesimpulan
 
