@@ -446,7 +446,7 @@ alur state lebih mudah dibaca karena layar, state, dan aksi berada berdekatan.
   file: "terminal",
 )
 
-Versi yang dipakai: JDK 25, Gradle 9.9.0, AGP 9.5.1, Kotlin 2.4.21, Compose BOM
+Kode acuan pada commit `c7223a8` @repo_p11. Versi yang dipakai: JDK 25, Gradle 9.9.0, AGP 9.5.1, Kotlin 2.4.21, Compose BOM
 2026.09.00, Navigation 2.10.2, dan Lifecycle 2.11.0. Proyek dapat dibuka di
 Android Studio dan dijalankan pada emulator API 24 atau lebih.
 
