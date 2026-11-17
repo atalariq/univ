@@ -33,7 +33,7 @@ import com.example.mycomposeapp.ui.theme.MyComposeAppTheme
 @Composable
 fun CounterApp(
     modifier: Modifier = Modifier,
-    onNavigate: () -> Unit,
+    onNavigateToMyData: () -> Unit,
     viewModel: CounterViewModel = viewModel()
 ) {
 
@@ -44,7 +44,7 @@ fun CounterApp(
         onIncrement = { viewModel.increment() },
         onDecrement = { viewModel.decrement() },
         onReset = { viewModel.reset() },
-        onNavigate = onNavigate,
+        onNavigateToMyData = onNavigateToMyData,
         modifier = modifier
     )
 }
@@ -54,7 +54,7 @@ fun CounterScreen(
     onIncrement: () -> Unit,
     onDecrement: () -> Unit,
     onReset: () -> Unit,
-    onNavigate: () -> Unit,
+    onNavigateToMyData: () -> Unit,
     modifier: Modifier = Modifier
 ) {
     Column(
@@ -78,7 +78,7 @@ fun CounterScreen(
             onDecrement = onDecrement,
             onIncrement = onIncrement,
             onReset = onReset,
-            onNavigate = onNavigate
+            onNavigateToMyData = onNavigateToMyData
         )
     }
 }
@@ -91,7 +91,7 @@ fun CounterScreenPreview() {
             onIncrement = {},
             onDecrement = {},
             onReset = {},
-            onNavigate = {}
+            onNavigateToMyData = {}
         )
     }
 }
@@ -124,7 +124,7 @@ fun CounterButtons(
     onDecrement: () -> Unit = {},
     onIncrement: () -> Unit = {},
     onReset: () -> Unit = {},
-    onNavigate: () -> Unit = {}
+    onNavigateToMyData: () -> Unit = {}
 ) {
     Column(modifier = Modifier.fillMaxWidth()) {
         Row(
@@ -181,10 +181,10 @@ fun CounterButtons(
         }
         Spacer(modifier = Modifier.height(8.dp))
         Button(
-            onClick = onNavigate,
+            onClick = onNavigateToMyData,
             modifier = Modifier.fillMaxWidth(),
             colors = ButtonDefaults.buttonColors(
-                containerColor = Color(0xFF9A9A9A)
+                containerColor = Color(0xFF673AB7)
             )
         ) {
             Icon(
@@ -195,6 +195,5 @@ fun CounterButtons(
             Spacer(Modifier.width(ButtonDefaults.IconSpacing))
             Text("ABOUT ME")
         }
-        Spacer(modifier = Modifier.height(4.dp))
     }
 }

@@ -1,21 +1,7 @@
-module_p11:
-  type: misc
-  title: "Modul Praktikum PPPBD Pertemuan 11: Layout, State & SharedPreferences dengan UI Jetpack Compose"
-  author: "Tim Praktikum PPPBD"
-  date: 2026-11-17
-  note: "18 halaman; studi kasus Counter Compose"
-
-slides_p11:
-  type: misc
-  title: "Jetpack Compose Basics"
-  author: "Tim Praktikum PPPBD"
-  date: 2026-11-17
-  note: "21 slide; XML vs Jetpack Compose"
-
 repo_p11:
   type: web
   title: "PPPBD P11 Counter Compose: source code"
-  url: "https://github.com/atalariq/pppbd-p11/tree/6b7be3be5f4119cf4934140e7e5cc49ba90e0e1f"
+  url: "https://github.com/atalariq/pppbd-p11/tree/c7223a8"
   urldate: 2026-11-17
 
 android_compose:
@@ -48,10 +34,16 @@ android_navigation:
   url: "https://developer.android.com/develop/ui/compose/navigation"
   urldate: 2026-11-17
 
-kotlin:
+kotlin_flow:
   type: web
-  title: "Kotlin Documentation"
-  url: "https://kotlinlang.org/docs/home.html"
+  title: "StateFlow and SharedFlow, Kotlin Documentation"
+  url: "https://kotlinlang.org/api/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines.flow/-state-flow/"
+  urldate: 2026-11-17
+
+material3:
+  type: web
+  title: "Material 3 in Compose, Android Developers"
+  url: "https://developer.android.com/develop/ui/compose/designsystems/material3"
   urldate: 2026-11-17
 
 gradle:
