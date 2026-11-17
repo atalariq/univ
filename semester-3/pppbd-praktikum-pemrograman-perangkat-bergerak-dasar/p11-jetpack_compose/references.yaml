@@ -1,0 +1,61 @@
+module_p11:
+  type: misc
+  title: "Modul Praktikum PPPBD Pertemuan 11: Layout, State & SharedPreferences dengan UI Jetpack Compose"
+  author: "Tim Praktikum PPPBD"
+  date: 2026-11-17
+  note: "18 halaman; studi kasus Counter Compose"
+
+slides_p11:
+  type: misc
+  title: "Jetpack Compose Basics"
+  author: "Tim Praktikum PPPBD"
+  date: 2026-11-17
+  note: "21 slide; XML vs Jetpack Compose"
+
+repo_p11:
+  type: web
+  title: "PPPBD P11 Counter Compose: source code"
+  url: "https://github.com/atalariq/pppbd-p11/tree/6b7be3be5f4119cf4934140e7e5cc49ba90e0e1f"
+  urldate: 2026-11-17
+
+android_compose:
+  type: web
+  title: "Jetpack Compose, Android Developers"
+  url: "https://developer.android.com/develop/ui/compose"
+  urldate: 2026-11-17
+
+android_state:
+  type: web
+  title: "State and Jetpack Compose, Android Developers"
+  url: "https://developer.android.com/develop/ui/compose/state"
+  urldate: 2026-11-17
+
+android_viewmodel:
+  type: web
+  title: "ViewModel overview, Android Developers"
+  url: "https://developer.android.com/topic/libraries/architecture/viewmodel"
+  urldate: 2026-11-17
+
+android_sharedprefs:
+  type: web
+  title: "Save simple data with SharedPreferences, Android Developers"
+  url: "https://developer.android.com/training/data-storage/shared-preferences"
+  urldate: 2026-11-17
+
+android_navigation:
+  type: web
+  title: "Navigation with Compose, Android Developers"
+  url: "https://developer.android.com/develop/ui/compose/navigation"
+  urldate: 2026-11-17
+
+kotlin:
+  type: web
+  title: "Kotlin Documentation"
+  url: "https://kotlinlang.org/docs/home.html"
+  urldate: 2026-11-17
+
+gradle:
+  type: web
+  title: "Gradle User Manual"
+  url: "https://docs.gradle.org/current/userguide/userguide.html"
+  urldate: 2026-11-17
