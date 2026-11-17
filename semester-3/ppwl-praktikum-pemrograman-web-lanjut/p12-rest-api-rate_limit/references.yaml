@@ -1,0 +1,51 @@
+repo_p12:
+  type: web
+  title: "PPWL Portfolio: REST API dan rate limiting"
+  url: "https://github.com/atalariq/ppwl-portfolio/tree/93d08334b570022f5138bc590e88f167acdbe572"
+  urldate: 2026-11-18
+
+fielding_rest:
+  type: web
+  title: "Architectural Styles and the Design of Network-based Software Architectures"
+  author: "Roy Thomas Fielding"
+  date: 2000
+  url: "https://ics.uci.edu/~fielding/pubs/dissertation/top.htm"
+  urldate: 2026-11-18
+
+laravel_resources:
+  type: web
+  title: "Eloquent: API Resources, Laravel 13.x Documentation"
+  url: "https://laravel.com/docs/13.x/eloquent-resources"
+  urldate: 2026-11-18
+
+laravel_rate_limiting:
+  type: web
+  title: "Rate Limiting, Laravel 13.x Documentation"
+  url: "https://laravel.com/docs/13.x/routing#rate-limiting"
+  urldate: 2026-11-18
+
+laravel_middleware:
+  type: web
+  title: "Middleware, Laravel 13.x Documentation"
+  url: "https://laravel.com/docs/13.x/middleware"
+  urldate: 2026-11-18
+
+laravel_validation:
+  type: web
+  title: "Validation, Laravel 13.x Documentation"
+  url: "https://laravel.com/docs/13.x/validation"
+  urldate: 2026-11-18
+
+rfc6585:
+  type: web
+  title: "RFC 6585: Additional HTTP Status Codes"
+  author: "M. Nottingham and R. Fielding"
+  date: 2012
+  url: "https://www.rfc-editor.org/rfc/rfc6585"
+  urldate: 2026-11-18
+
+mdn_429:
+  type: web
+  title: "429 Too Many Requests, MDN Web Docs"
+  url: "https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429"
+  urldate: 2026-11-18
