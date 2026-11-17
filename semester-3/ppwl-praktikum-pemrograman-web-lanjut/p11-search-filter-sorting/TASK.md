@@ -61,7 +61,11 @@ Commit final: `051d37003e67855f2c5a79c2aba7bafafe1b8ebf`.
 
 ## Catatan laporan
 
-- Laporan ditulis sebagai laporan praktikum, bukan checklist penyelesaian modul.
-- Mapping modul tetap di `NOTES.md`; section meta tidak masuk PDF.
-- Format mengikuti template dosen; istilah teknis dipertahankan bila lebih
-  natural daripada terjemahan paksa.
+- Laporan ditulis sebagai paper-style report, bukan checklist penyelesaian modul.
+- PDF self-contained: tidak menyebut modul atau Latihan; semua konsep
+  dijelaskan di Dasar Teori dan Lampiran.
+- Mapping modul tetap di `NOTES.md`.
+- Format: cover 3.0.0, tanpa header/footer/nomor halaman, tabel booktabs,
+  code block codly `thesis` 9.5pt, gambar 70–80%, Lampiran setelah Daftar
+  Pustaka.
+- Istilah teknis dipertahankan bila lebih natural daripada terjemahan paksa.

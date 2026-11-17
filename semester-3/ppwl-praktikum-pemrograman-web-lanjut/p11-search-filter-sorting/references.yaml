@@ -1,66 +1,191 @@
-module_p11:
-  type: misc
-  title: "Search, Filter dan Sorting: Praktikum Pemrograman Web 2 Pertemuan 11"
-  author: "Achmad Choirudin Emcha"
-  note: "Modul praktikum PPWL pertemuan 11, 32 halaman"
-  date: 2026-11-12
-
 repo_p11:
   type: web
-  title: "PPWL My Portfolio, kode praktikum Pertemuan 11"
+  title: "PPWL Portfolio: source code at commit 051d370"
   url: "https://github.com/atalariq/ppwl-portfolio/tree/051d37003e67855f2c5a79c2aba7bafafe1b8ebf"
-  urldate: 2026-11-12
+  urldate: 2026-11-17
+
+php_manual:
+  type: web
+  title: "PHP Manual"
+  url: "https://www.php.net/manual/en/"
+  urldate: 2026-11-17
+
+php_language:
+  type: web
+  title: "PHP Language Reference"
+  url: "https://www.php.net/manual/en/langref.php"
+  urldate: 2026-11-17
+
+composer:
+  type: web
+  title: "Composer Documentation"
+  url: "https://getcomposer.org/doc/"
+  urldate: 2026-11-17
+
+laravel:
+  type: web
+  title: "Laravel Documentation"
+  url: "https://laravel.com/docs/13.x"
+  urldate: 2026-11-17
+
+laravel_lifecycle:
+  type: web
+  title: "Request Lifecycle, Laravel Documentation"
+  url: "https://laravel.com/docs/13.x/lifecycle"
+  urldate: 2026-11-17
+
+laravel_artisan:
+  type: web
+  title: "Artisan Console, Laravel Documentation"
+  url: "https://laravel.com/docs/13.x/artisan"
+  urldate: 2026-11-17
+
+laravel_controllers:
+  type: web
+  title: "Controllers, Laravel Documentation"
+  url: "https://laravel.com/docs/13.x/controllers"
+  urldate: 2026-11-17
+
+laravel_views:
+  type: web
+  title: "Views, Laravel Documentation"
+  url: "https://laravel.com/docs/13.x/views"
+  urldate: 2026-11-17
+
+laravel_migrations:
+  type: web
+  title: "Database: Migrations, Laravel Documentation"
+  url: "https://laravel.com/docs/13.x/migrations"
+  urldate: 2026-11-17
+
+laravel_seeding:
+  type: web
+  title: "Database: Seeding, Laravel Documentation"
+  url: "https://laravel.com/docs/13.x/seeding"
+  urldate: 2026-11-17
+
+laravel_testing:
+  type: web
+  title: "Testing: Getting Started, Laravel Documentation"
+  url: "https://laravel.com/docs/13.x/testing"
+  urldate: 2026-11-17
 
 laravel_requests:
   type: web
   title: "HTTP Requests, Laravel Documentation"
   url: "https://laravel.com/docs/13.x/requests"
-  urldate: 2026-11-12
+  urldate: 2026-11-17
 
 laravel_queries:
   type: web
   title: "Database: Query Builder, Laravel Documentation"
   url: "https://laravel.com/docs/13.x/queries"
-  urldate: 2026-11-12
+  urldate: 2026-11-17
 
 laravel_eloquent:
   type: web
   title: "Eloquent: Relationships, Laravel Documentation"
   url: "https://laravel.com/docs/13.x/eloquent-relationships"
-  urldate: 2026-11-12
+  urldate: 2026-11-17
 
 laravel_pagination:
   type: web
   title: "Database: Pagination, Laravel Documentation"
   url: "https://laravel.com/docs/13.x/pagination"
-  urldate: 2026-11-12
+  urldate: 2026-11-17
 
 laravel_routing:
   type: web
   title: "Routing, Laravel Documentation"
   url: "https://laravel.com/docs/13.x/routing"
-  urldate: 2026-11-12
+  urldate: 2026-11-17
 
 laravel_validation:
   type: web
   title: "Validation, Laravel Documentation"
   url: "https://laravel.com/docs/13.x/validation"
-  urldate: 2026-11-12
+  urldate: 2026-11-17
 
 laravel_blade:
   type: web
   title: "Blade Templates, Laravel Documentation"
   url: "https://laravel.com/docs/13.x/blade"
-  urldate: 2026-11-12
+  urldate: 2026-11-17
 
 laravel_strings:
   type: web
   title: "Strings, Laravel Documentation"
   url: "https://laravel.com/docs/13.x/strings"
-  urldate: 2026-11-12
+  urldate: 2026-11-17
+
+mdn_http:
+  type: web
+  title: "HTTP: Overview, MDN Web Docs"
+  url: "https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview"
+  urldate: 2026-11-17
+
+mdn_url:
+  type: web
+  title: "URL, MDN Web Docs"
+  url: "https://developer.mozilla.org/en-US/docs/Web/API/URL"
+  urldate: 2026-11-17
+
+mdn_http_methods:
+  type: web
+  title: "HTTP request methods, MDN Web Docs"
+  url: "https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods"
+  urldate: 2026-11-17
+
+mysql_select:
+  type: web
+  title: "MySQL 8.4 Reference Manual: SELECT Statement"
+  url: "https://dev.mysql.com/doc/refman/8.4/en/select.html"
+  urldate: 2026-11-17
+
+mysql_join:
+  type: web
+  title: "MySQL 8.4 Reference Manual: JOIN Clause"
+  url: "https://dev.mysql.com/doc/refman/8.4/en/join.html"
+  urldate: 2026-11-17
 
 mysql_like:
   type: web
   title: "MySQL 8.4 Reference Manual: String Comparison Functions and Operators"
   url: "https://dev.mysql.com/doc/refman/8.4/en/string-comparison-functions.html"
-  urldate: 2026-11-12
+  urldate: 2026-11-17
+
+mise:
+  type: web
+  title: "Mise Documentation"
+  url: "https://mise.jdx.dev/"
+  urldate: 2026-11-17
+
+podman:
+  type: web
+  title: "Podman Documentation"
+  url: "https://docs.podman.io/"
+  urldate: 2026-11-17
+
+node:
+  type: web
+  title: "Node.js Documentation"
+  url: "https://nodejs.org/docs/latest/api/"
+  urldate: 2026-11-17
+
+vite:
+  type: web
+  title: "Vite Documentation"
+  url: "https://vite.dev/guide/"
+  urldate: 2026-11-17
+
+mariadb:
+  type: web
+  title: "MariaDB Documentation"
+  url: "https://mariadb.com/kb/en/documentation/"
+  urldate: 2026-11-17
+
+phpunit:
+  type: web
+  title: "PHPUnit Documentation"
+  url: "https://docs.phpunit.de/"
+  urldate: 2026-11-17
