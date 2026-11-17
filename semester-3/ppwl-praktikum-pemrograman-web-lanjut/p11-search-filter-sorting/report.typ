@@ -23,31 +23,31 @@
 #let appendix-content = appendix(title: [Lampiran])[
   == Mise
 
-  *Apa itu.* Mise adalah version manager dan task runner yang dapat mengelola
+  Mise adalah version manager dan task runner yang dapat mengelola
   beberapa bahasa sekaligus. Berkas `.mise.toml` mendefinisikan versi PHP,
   Node.js, dan tool lain yang dipakai proyek; perintah `mise install` membaca
   berkas tersebut dan memasang versi yang sesuai @mise.
 
-  *Mengapa.* Versi PHP dan Node.js yang berbeda dapat menghasilkan perilaku
+  Versi PHP dan Node.js yang berbeda dapat menghasilkan perilaku
   yang berbeda. Mise menyimpan versi tool di dalam repositori, sehingga mesin
   pengembang, CI, dan server memakai versi yang sama. Dengan satu berkas,
   proyek tidak bergantung pada instalasi global yang mungkin berbeda di setiap
   mesin. Alternatifnya adalah asdf, nvm, phpenv, atau instalasi manual, tetapi
   Mise menangani PHP dan Node.js dalam satu konfigurasi.
 
-  *Bagaimana.* `mise install` memasang tool sesuai `.mise.toml`; `mise
+  `mise install` memasang tool sesuai `.mise.toml`; `mise
   current` menampilkan versi aktif; `mise exec -- php artisan test` menjalankan
   perintah dengan versi yang sudah dipin. Jika terjadi masalah, `mise doctor`
   memeriksa konfigurasi dan integrasi shell.
 
   == Podman
 
-  *Apa itu.* Podman adalah container engine yang menjalankan container OCI
+  Podman adalah container engine yang menjalankan container OCI
   tanpa daemon dan dapat berjalan tanpa hak root. Podman menyediakan perintah
   yang kompatibel dengan Docker CLI dan dapat membaca `compose.yaml`
   @podman.
 
-  *Mengapa.* Database MariaDB dapat dijalankan sebagai container terisolasi
+  Database MariaDB dapat dijalankan sebagai container terisolasi
   tanpa memasang server database di host. Container membuat lingkungan database
   mudah dibuat ulang, dihentikan, dan dihapus. Karena Podman dapat berjalan
   tanpa root, risiko keamanan dan konflik dengan layanan host lebih kecil.
@@ -55,7 +55,7 @@
   dipilih karena tersedia di lingkungan pengembangan dan tidak membutuhkan
   daemon.
 
-  *Bagaimana.* `podman-compose -f compose.yaml up -d db` menjalankan service
+  `podman-compose -f compose.yaml up -d db` menjalankan service
   `db`; `podman ps` menampilkan container; `podman logs` membaca log; dan
   `podman-compose down` menghentikan container. Laravel terhubung ke database
   melalui `DB_HOST`, `DB_PORT`, `DB_DATABASE`, `DB_USERNAME`, dan `DB_PASSWORD`
@@ -64,17 +64,17 @@
 
   == PHP dan Laravel
 
-  *Apa itu.* PHP adalah bahasa server-side yang menjalankan aplikasi; Laravel
+  PHP adalah bahasa server-side yang menjalankan aplikasi; Laravel
   adalah framework PHP yang menyediakan routing, controller, model, view,
   migration, validasi, dan testing @php_manual. Composer adalah dependency
   manager PHP yang memasang paket dan menghasilkan autoload @composer.
 
-  *Mengapa.* PHP dan Laravel dipakai karena seluruh portofolio dibangun di
+  PHP dan Laravel dipakai karena seluruh portofolio dibangun di
   atas stack tersebut. Laravel memberi struktur MVC, Eloquent untuk database,
   Blade untuk view, dan Artisan untuk perintah pengembangan. Composer membuat
   dependensi dapat direproduksi melalui `composer.json` dan `composer.lock`.
 
-  *Bagaimana.* `composer install` memasang dependensi; `php artisan
+  `composer install` memasang dependensi; `php artisan
   key:generate` membuat application key; `php artisan migrate --seed`
   menjalankan migration dan seeder; `php artisan serve` menjalankan server
   pengembangan; `php artisan test` menjalankan test @laravel. Jika terjadi
@@ -83,37 +83,37 @@
 
   == Node.js dan Vite
 
-  *Apa itu.* Node.js adalah runtime JavaScript yang juga menyediakan npm
+  Node.js adalah runtime JavaScript yang juga menyediakan npm
   untuk mengelola paket frontend. Vite adalah build tool yang menyediakan dev
   server dan bundling produksi @node. Pada aplikasi ini, Vite membangun CSS
   dan JavaScript, termasuk Tailwind CSS.
 
-  *Mengapa.* Frontend modern membutuhkan proses build untuk menggabungkan
+  Frontend modern membutuhkan proses build untuk menggabungkan
   CSS, JavaScript, dan aset. Vite cepat saat pengembangan karena memakai dev
   server berbasis ES modules, dan menghasilkan bundle produksi yang
   dioptimalkan. Alternatifnya adalah Webpack, Parcel, atau CSS polos; Vite
   dipilih karena terintegrasi dengan Laravel dan konfigurasinya ringkas
   @vite.
 
-  *Bagaimana.* `npm ci` memasang dependensi dari `package-lock.json`;
+  `npm ci` memasang dependensi dari `package-lock.json`;
   `npm run dev` menjalankan dev server; `npm run build` menghasilkan aset
   produksi di `public/build/`. Berkas `vite.config.js` menghubungkan Vite
   dengan `resources/css/app.css` dan `resources/js/app.js`.
 
   == MariaDB
 
-  *Apa itu.* MariaDB adalah database relasional open source yang kompatibel
+  MariaDB adalah database relasional open source yang kompatibel
   dengan MySQL. MariaDB mendukung SQL, transaksi, foreign key, index, dan
   collation `utf8mb4` @mariadb.
 
-  *Mengapa.* Data portofolio bersifat relasional: proyek memiliki kategori,
+  Data portofolio bersifat relasional: proyek memiliki kategori,
   teknologi, dan gambar. MariaDB menjaga integritas data melalui primary key
   dan foreign key, serta mendukung query yang dibutuhkan untuk search, filter,
   sorting, dan pagination. Alternatifnya adalah MySQL, PostgreSQL, atau SQLite;
   MariaDB dipilih karena kompatibel dengan stack praktikum dan mudah dijalankan
   di Podman.
 
-  *Bagaimana.* `php artisan migrate` membentuk skema; `php artisan db:seed`
+  `php artisan migrate` membentuk skema; `php artisan db:seed`
   mengisi data; `php artisan migrate:status` memeriksa status migration.
   Collation `utf8mb4_unicode_ci` membuat pencarian `LIKE` tidak membedakan
   huruf besar-kecil. Jika terjadi masalah, periksa koneksi `.env`, log
@@ -159,8 +159,10 @@
   heading-numbering: "bab",
   heading-align: center,
   heading-size: 20pt,
-  code-theme: "thesis",
-  code-size: 9.5pt,
+  code-theme: "clean",
+  code-size: 9pt,
+  code-padding: 4pt,
+  code-numbering: "",
   bib: bibliography("references.yaml", style: "ieee"),
   bib-title: [Daftar Pustaka],
   appendix: appendix-content,
@@ -205,9 +207,8 @@ berdasarkan kategori atau teknologi.
 
 Pertemuan 11 menambahkan kemampuan discovery: pencarian teks, filter kategori
 dan teknologi, sorting, pagination, serta halaman detail yang dapat dibuka
-melalui slug. Perubahan ini bukan sekadar menambah kontrol pada view; query
-yang dibangun harus tetap efisien, filter harus bertahan saat berpindah
-halaman, dan hasilnya harus dapat direproduksi dari URL. Laporan ini membahas
+melalui slug. Perubahan ini menuntut query yang efisien, filter yang bertahan saat
+berpindah halaman, dan hasil yang dapat direproduksi dari URL. Laporan ini membahas
 implementasi tersebut pada aplikasi portofolio, dengan kode acuan commit
 `051d370` @repo_p11.
 
@@ -229,14 +230,14 @@ implementasi tersebut pada aplikasi portofolio, dengan kode acuan commit
 
 == PHP dan Pemrograman Server-Side
 
-*Apa itu.* PHP (PHP: Hypertext Preprocessor) adalah bahasa pemrograman
+PHP (PHP: Hypertext Preprocessor) adalah bahasa pemrograman
 server-side yang dieksekusi di server web. Kode PHP dapat disisipkan ke dalam
 HTML dengan tag `<?php ... ?>`; server menjalankan kode tersebut, lalu mengirim
 HTML, CSS, dan JavaScript hasilnya ke browser @php_manual. Karena eksekusinya
 terjadi di server, pengguna tidak melihat kode PHP, hanya output yang
 dihasilkan.
 
-*Mengapa.* PHP dipakai untuk menghasilkan halaman dinamis, memproses form,
+PHP dipakai untuk menghasilkan halaman dinamis, memproses form,
 membaca dan menulis database, mengelola sesi dan autentikasi, serta menangani
 upload file. Pada aplikasi ini, PHP menjadi bahasa runtime untuk Laravel:
 setiap request masuk ke `public/index.php`, diproses oleh Laravel, lalu
@@ -244,7 +245,7 @@ dikembalikan sebagai respons HTTP @php_language. PHP juga memiliki ekosistem
 paket yang besar melalui Composer, sehingga dependensi seperti Laravel dapat
 dipasang dan diperbarui secara terkelola @composer.
 
-*Bagaimana.* Browser mengirim request ke web server, web server meneruskan
+Browser mengirim request ke web server, web server meneruskan
 request ke PHP (misalnya melalui PHP-FPM), PHP menjalankan kode aplikasi, dan
 hasilnya dikirim kembali sebagai respons. Di dalam kode, PHP menyediakan
 variabel (`$request`), array (`$data`), fungsi (`function`), closure
@@ -262,7 +263,7 @@ menghentikan request dengan status 404; dan `view(...)->load(...)` memuat view
 beserta relasi yang dibutuhkan. Memahami konstruksi ini penting karena kode
 Laravel adalah kode PHP biasa yang dijalankan di server.
 
-*Troubleshooting.* Masalah PHP yang umum adalah versi yang tidak sesuai,
+Masalah PHP yang umum adalah versi yang tidak sesuai,
 ekstensi yang hilang, dan autoload Composer yang rusak. Perintah `php -v`
 menampilkan versi, `php -m` menampilkan ekstensi, dan `composer diagnose`
 memeriksa konfigurasi Composer. Ekstensi yang dibutuhkan Laravel antara lain
@@ -272,14 +273,14 @@ halaman atau saat menjalankan migration.
 
 == Laravel dan Arsitektur MVC
 
-*Apa itu.* Laravel adalah framework PHP yang menyediakan routing, controller,
+Laravel adalah framework PHP yang menyediakan routing, controller,
 model, view, migration, validasi, autentikasi, testing, dan berbagai komponen
 lain. Laravel menganut pola MVC: model mengelola data dan aturan bisnis, view
 menangani presentasi, dan controller menghubungkan request dengan model serta
 view @laravel_lifecycle. Laravel tidak memaksa MVC secara kaku, tetapi struktur
 defaultnya mengarah ke pemisahan tanggung jawab tersebut.
 
-*Mengapa.* Framework memberi struktur yang konsisten untuk aplikasi yang
+Framework memberi struktur yang konsisten untuk aplikasi yang
 bertambah besar. Routing, validasi, keamanan, dan testing sudah disediakan,
 sehingga pengembang tidak perlu membangun semuanya dari nol. Eloquent
 mempermudah akses database, Blade mempermudah template, dan Artisan
@@ -287,7 +288,7 @@ menyediakan perintah untuk migration, seeding, testing, dan diagnostik
 @laravel. Pada aplikasi ini, Laravel dipakai karena seluruh portofolio sudah
 dibangun di atasnya dan karena ekosistemnya mendukung kebutuhan pertemuan ini.
 
-*Bagaimana.* Request masuk melalui `public/index.php`, melewati bootstrap
+Request masuk melalui `public/index.php`, melewati bootstrap
 aplikasi, HTTP kernel, middleware, router, lalu diteruskan ke controller.
 Controller dapat memanggil model Eloquent, menyiapkan data, dan mengembalikan
 view Blade atau respons JSON @laravel_lifecycle. Service container menangani
@@ -303,7 +304,7 @@ migrate` menjalankan migration, `php artisan db:seed` menjalankan seeder, dan
 `php artisan test` menjalankan test @laravel_artisan. Perintah-perintah ini
 dipakai pada bagian hasil dan pembahasan.
 
-*Troubleshooting.* Jika halaman menampilkan error 500, periksa
+Jika halaman menampilkan error 500, periksa
 `storage/logs/laravel.log`, nilai `APP_DEBUG`, dan permission direktori
 `storage` serta `bootstrap/cache`. Jika perubahan konfigurasi atau view tidak
 terbaca, jalankan `php artisan config:clear`, `php artisan view:clear`, atau
@@ -312,14 +313,14 @@ Laravel, dan driver database yang aktif @laravel.
 
 == HTTP, URL, dan Query String
 
-*Apa itu.* HTTP adalah protokol request-response yang dipakai browser dan
+HTTP adalah protokol request-response yang dipakai browser dan
 server untuk bertukar data. Browser mengirim request dengan method, URL,
 header, dan kadang body; server mengembalikan respons dengan status code,
 header, dan body @mdn_http. URL terdiri atas scheme, host, path, query string,
 dan fragment. Query string adalah bagian setelah tanda tanya yang berisi
 pasangan kunci-nilai, misalnya `?search=laravel&category=web` @mdn_url.
 
-*Mengapa.* Method `GET` dipakai untuk membaca data karena bersifat safe dan
+Method `GET` dipakai untuk membaca data karena bersifat safe dan
 idempotent: request yang sama dapat diulang tanpa mengubah state server, dan
 URL-nya dapat dibagikan, di-bookmark, serta dimuat ulang @mdn_http_methods.
 Method `POST` dipakai untuk mengubah data, misalnya membuat atau memperbarui
@@ -327,7 +328,7 @@ proyek. Karena pencarian, filter, sorting, dan pagination hanya membaca data,
 seluruh kontrolnya memakai `GET`. Konsekuensinya, state halaman terlihat di URL
 dan dapat direproduksi.
 
-*Bagaimana.* Browser mengirim `GET /projects?search=laravel&category=web`.
+Browser mengirim `GET /projects?search=laravel&category=web`.
 Laravel membaca query string melalui objek request: `$request->query('search')`,
 `$request->string('search')`, `$request->integer('per_page')`, dan
 `$request->filled('search')` @laravel_requests. Nilai query string di-encode:
@@ -336,7 +337,7 @@ bertabrakan dengan pemisah `&` atau `=`. Server merespons dengan status code
 seperti 200 (OK), 302 (redirect), 404 (tidak ditemukan), atau 500 (error
 server). Status 419 muncul ketika token CSRF tidak cocok pada request `POST`.
 
-*Troubleshooting.* Status 404 biasanya berarti route tidak cocok atau model
+Status 404 biasanya berarti route tidak cocok atau model
 tidak ditemukan; status 419 berarti token CSRF hilang atau kedaluwarsa; status
 500 berarti ada exception di server. Jika query string hilang, periksa nama
 input pada form, method form, dan pemanggilan `request()` di controller. Jika
@@ -346,14 +347,14 @@ oleh parameter @laravel_routing.
 
 == Database Relasional dan SQL
 
-*Apa itu.* Database relasional menyimpan data dalam tabel yang terdiri atas
+Database relasional menyimpan data dalam tabel yang terdiri atas
 baris dan kolom. Setiap baris adalah satu record, setiap kolom memiliki tipe
 data, dan setiap tabel memiliki primary key yang membedakan baris. Foreign key
 menghubungkan baris di satu tabel dengan baris di tabel lain. Relasi
 one-to-many menghubungkan satu baris dengan banyak baris; relasi many-to-many
 membutuhkan tabel pivot yang berisi dua foreign key @mariadb.
 
-*Mengapa.* Data portofolio bersifat relasional: satu proyek memiliki satu
+Data portofolio bersifat relasional: satu proyek memiliki satu
 kategori, banyak teknologi, dan banyak gambar; satu teknologi dapat dipakai
 oleh banyak proyek. Database relasional menjaga integritas data melalui primary
 key, foreign key, dan constraint. SQL menyediakan cara standar untuk membaca,
@@ -361,7 +362,7 @@ menyaring, mengurutkan, dan menggabungkan data. MariaDB dipakai karena
 kompatibel dengan MySQL, open source, dan mendukung fitur yang dibutuhkan
 Laravel @mariadb.
 
-*Bagaimana.* Perintah SQL yang relevan adalah `SELECT` untuk membaca kolom,
+Perintah SQL yang relevan adalah `SELECT` untuk membaca kolom,
 `WHERE` untuk menyaring baris, `LIKE` untuk mencocokkan pola teks, `JOIN` untuk
 menggabungkan tabel, `EXISTS` untuk memeriksa keberadaan baris pada subquery,
 `ORDER BY` untuk mengurutkan, serta `LIMIT` dan `OFFSET` untuk mengambil satu
@@ -377,7 +378,7 @@ MariaDB dengan `utf8mb4_unicode_ci` tidak membedakan huruf besar-kecil,
 sedangkan collation yang berakhiran `_bin` membedakannya @mysql_like. Hal ini
 menjelaskan mengapa pencarian `laravel` dapat menemukan `Laravel` pada data uji.
 
-*Troubleshooting.* Error `Unknown column` berarti nama kolom tidak ada atau
+Error `Unknown column` berarti nama kolom tidak ada atau
 migration belum dijalankan. `SQLSTATE` dengan kode tertentu menunjukkan masalah
 constraint, misalnya foreign key atau duplicate entry. Jika hasil query
 berganda, periksa `JOIN` yang menghasilkan baris ganda dan pertimbangkan
@@ -387,21 +388,21 @@ urutan migration dan apakah kolom baru bersifat `nullable`.
 
 == Eloquent ORM dan Query Builder
 
-*Apa itu.* ORM (Object-Relational Mapping) memetakan tabel database ke class.
+ORM (Object-Relational Mapping) memetakan tabel database ke class.
 Setiap instance class mewakili satu baris, dan setiap atribut mewakili kolom.
 Eloquent adalah ORM Laravel; model seperti `Project` mewarisi `Model` dan
 menyediakan method untuk membaca, menyimpan, serta menghubungkan data
 @laravel_eloquent. Query builder adalah API fluent untuk membangun query SQL
 tanpa menulis SQL mentah. Eloquent memakai query builder di belakang layar.
 
-*Mengapa.* Eloquent membuat kode lebih terbaca dan aman karena nilai di-bind
+Eloquent membuat kode lebih terbaca dan aman karena nilai di-bind
 sebagai parameter, bukan disisipkan langsung ke string SQL. Relasi seperti
 `belongsTo`, `hasMany`, dan `belongsToMany` mempermudah navigasi data. Scope
 mengemas constraint yang sering dipakai, sehingga controller tidak berisi query
 panjang. Query builder juga menyediakan `when()`, `whereHas()`, dan `with()`
 yang menjaga query tetap ekspresif @laravel_queries.
 
-*Bagaimana.* `Project::query()` memulai query builder untuk model `Project`.
+`Project::query()` memulai query builder untuk model `Project`.
 `where()` menambahkan kondisi, `when($condition, $callback)` hanya menambahkan
 kondisi jika `$condition` benar, dan `whereHas('relation', $callback)`
 menambahkan subquery `exists` untuk memfilter berdasarkan relasi
@@ -419,7 +420,7 @@ kolom yang dipakai untuk route model binding. Relasi many-to-many memakai
 `belongsToMany`, dan `sync()` memperbarui daftar relasi dengan menambahkan atau
 menghapus baris pivot sesuai pilihan.
 
-*Troubleshooting.* Jika kolom baru tidak tersimpan, periksa `$fillable`. Jika
+Jika kolom baru tidak tersimpan, periksa `$fillable`. Jika
 halaman memicu banyak query, periksa relasi yang belum dimuat dengan `with()`.
 Jika filter relasi menggandakan baris, gunakan `whereHas()` alih-alih `join`.
 Jika `links()` tidak tersedia, pastikan controller mengembalikan paginator dari
@@ -428,20 +429,20 @@ halaman, periksa `withQueryString()` sebelum `links()`.
 
 == Search, Filter, Sorting, dan Pagination
 
-*Apa itu.* Search mencari record yang teksnya cocok dengan kata kunci. Filter
+Search mencari record yang teksnya cocok dengan kata kunci. Filter
 membatasi hasil berdasarkan atribut atau relasi, misalnya kategori dan
 teknologi. Sorting menentukan urutan hasil, misalnya berdasarkan tanggal atau
 judul. Pagination membagi hasil menjadi beberapa halaman agar tidak semua baris
 dimuat sekaligus @laravel_pagination.
 
-*Mengapa.* Ketika jumlah proyek bertambah, daftar tunggal menjadi sulit
+Ketika jumlah proyek bertambah, daftar tunggal menjadi sulit
 ditelusuri. Search dan filter membantu pengguna menemukan proyek yang relevan;
 sorting membantu melihat proyek terbaru atau terlama; pagination menjaga waktu
 muat dan jumlah data yang dikirim ke browser. Karena state disimpan di query
 string, pengguna dapat membagikan URL hasil pencarian dan kembali ke halaman
 yang sama.
 
-*Bagaimana.* Search memakai `LIKE` pada `title`, `short_description`, dan
+Search memakai `LIKE` pada `title`, `short_description`, dan
 `description`; ketiganya dikelompokkan dalam closure agar kondisi `OR` tidak
 bocor ke kondisi lain. Filter kategori dan teknologi memakai `whereHas()` pada
 relasi, sehingga database memeriksa keberadaan relasi tanpa menggandakan baris
@@ -452,7 +453,7 @@ navigasi, dan `withQueryString()` mempertahankan filter pada tautan halaman
 berikutnya. Jika tidak ada hasil, view menampilkan empty state dan tombol
 Reset.
 
-*Troubleshooting.* Jika filter hilang saat pindah halaman, periksa
+Jika filter hilang saat pindah halaman, periksa
 `withQueryString()`. Jika `links does not exist`, ganti `get()` dengan
 `paginate()`. Jika jumlah hasil tidak sesuai, periksa `total()` pada paginator
 dan kondisi query. Jika pencarian tidak menemukan huruf besar, periksa
@@ -461,20 +462,20 @@ data.
 
 == Route, Controller, dan Route Model Binding
 
-*Apa itu.* Route memetakan URL dan method HTTP ke handler. Controller adalah
+Route memetakan URL dan method HTTP ke handler. Controller adalah
 class yang menangani request dan mengembalikan respons atau view. Route model
 binding adalah fitur Laravel yang mengubah parameter route menjadi instance
 model secara otomatis @laravel_routing. Jika parameter route adalah
 `{project:slug}`, Laravel mencari `Project` berdasarkan kolom `slug`.
 
-*Mengapa.* Pemisahan route, controller, dan model menjaga kode tetap
+Pemisahan route, controller, dan model menjaga kode tetap
 terorganisasi. Route mendefinisikan antarmuka URL; controller mengatur alur
 request; model mengelola data. Route model binding mengurangi boilerplate
 karena controller tidak perlu memanggil `Project::where('slug', $slug)->first()`
 secara manual. Jika model tidak ditemukan, Laravel otomatis mengembalikan 404
 @laravel_controllers.
 
-*Bagaimana.* Route publik dideklarasikan di `routes/web.php`:
+Route publik dideklarasikan di `routes/web.php`:
 `Route::get('/projects', [ProjectController::class, 'publicIndex'])` dan
 `Route::get('/projects/{project:slug}', [ProjectController::class, 'show'])`.
 Method `show(Project $project)` menerima instance `Project` yang sudah dicari
@@ -486,7 +487,7 @@ view `portfolio.project`. Nilai slug dibentuk dengan `Str::slug()`
 key default, sehingga route juga dapat memakai `{project}` tanpa menulis
 `:slug`.
 
-*Troubleshooting.* Jika muncul `Missing required parameter`, periksa nama
+Jika muncul `Missing required parameter`, periksa nama
 parameter route dan pemanggilan `route()`. Jika slug `null`, isi slug untuk data
 lama dan pastikan model membentuk slug saat menyimpan. Jika proyek draft selalu
 404, periksa status dan hak admin. Jika route lama masih memakai ID, periksa
@@ -495,19 +496,19 @@ lama dan pastikan model membentuk slug saat menyimpan. Jika proyek draft selalu
 
 == Blade, Form, dan View
 
-*Apa itu.* Blade adalah template engine Laravel. File `.blade.php` berisi HTML
+Blade adalah template engine Laravel. File `.blade.php` berisi HTML
 dan directive Blade yang dikompilasi menjadi PHP. Blade menyediakan escape
 output, kondisi, loop, komponen, dan slot @laravel_blade. View adalah tampilan
 yang dikembalikan controller; komponen memecah UI menjadi bagian yang dapat
 dipakai ulang.
 
-*Mengapa.* Blade memisahkan presentasi dari logika controller. Escape `{{ }}`
+Blade memisahkan presentasi dari logika controller. Escape `{{ }}`
 membantu mencegah XSS, directive seperti `@foreach` dan `@if` membuat template
 lebih ringkas, dan komponen seperti `x-project-card` mengurangi duplikasi. Form
 `GET` mempertahankan nilai filter di URL, sehingga pengguna dapat melihat dan
 membagikan state halaman @laravel_views.
 
-*Bagaimana.* Form filter memakai `method="GET"`, `action` ke route
+Form filter memakai `method="GET"`, `action` ke route
 `projects.index`, dan input dengan nama `search`, `category`, `technology`,
 `sort`, serta `per_page`. Nilai input diisi dengan `request('search')` agar
 tetap terlihat setelah submit. Select memakai `@selected(request('category') ===
@@ -516,7 +517,7 @@ $category->slug)` untuk menandai pilihan aktif. Hasil pencarian dirender dengan
 state. `{{ $projects->links() }}` merender navigasi pagination. Untuk form
 `POST`, Blade menyediakan `@csrf` dan `@method` untuk metode spoofing.
 
-*Troubleshooting.* Jika variabel tidak dikenal, periksa nama variabel yang
+Jika variabel tidak dikenal, periksa nama variabel yang
 dikirim controller. Jika HTML ter-escape dua kali, periksa penggunaan `{{ }}`
 dan `{!! !!}`. Jika form `POST` menghasilkan 419, periksa `@csrf`. Jika metode
 form tidak sesuai, periksa `@method`. Jika komponen tidak ditemukan, periksa
@@ -524,19 +525,19 @@ nama file di `resources/views/components/` dan namespace komponen.
 
 == Validasi, Migration, dan Seeder
 
-*Apa itu.* Validasi memeriksa input sebelum disimpan. Migration adalah
+Validasi memeriksa input sebelum disimpan. Migration adalah
 perubahan skema database yang tercatat dan dapat dijalankan ulang. Seeder
 mengisi database dengan data awal atau data uji @laravel_validation. Ketiganya
 bekerja bersama: migration membentuk tabel, seeder mengisi data, dan validasi
 menjaga input agar sesuai dengan skema.
 
-*Mengapa.* Validasi di sisi server mencegah data tidak valid masuk ke
+Validasi di sisi server mencegah data tidak valid masuk ke
 database, meskipun validasi di sisi klien dilewati. Migration membuat skema
 dapat direproduksi di mesin lain dan memudahkan rollback. Seeder menyediakan
 data uji yang konsisten, sehingga pencarian, filter, sorting, dan pagination
 dapat diuji dengan jumlah data yang cukup @laravel_migrations.
 
-*Bagaimana.* `$request->validate([...])` mengembalikan array data yang sudah
+`$request->validate([...])` mengembalikan array data yang sudah
 divalidasi atau melempar exception validasi. Aturan yang dipakai pada aplikasi
 ini antara lain `required`, `nullable`, `string`, `max`, `in`, `url`, `exists`,
 `image`, `mimes`, dan `dimensions`. Migration memakai `Schema::table` untuk
@@ -547,7 +548,7 @@ mengubah tabel yang sudah ada: `$table->string(...)->nullable()->after(...)`,
 `php artisan migrate`, `php artisan migrate:status`, dan `php artisan db:seed`
 menjalankan serta memeriksa proses tersebut @laravel_seeding.
 
-*Troubleshooting.* Jika kolom baru tidak tersimpan, periksa `$fillable`. Jika
+Jika kolom baru tidak tersimpan, periksa `$fillable`. Jika
 migration gagal karena kolom sudah ada, periksa urutan migration dan gunakan
 migration baru, bukan mengubah migration lama. Jika muncul `SQLSTATE 1075`,
 periksa primary key gabungan pada tabel pivot dan hapus `id()`/`timestamps()`
@@ -557,18 +558,18 @@ database yang berisi data penting karena keduanya menghapus data.
 
 == Testing dan Debugging
 
-*Apa itu.* Feature test adalah test yang mensimulasikan request HTTP ke
+Feature test adalah test yang mensimulasikan request HTTP ke
 aplikasi dan memeriksa responsnya. Test dapat memeriksa status code, isi HTML,
 redirect, dan keberadaan data di database @laravel_testing. Debugging adalah
 proses menemukan penyebab perilaku yang tidak sesuai, baik melalui log,
 inspector, maupun perintah diagnostik.
 
-*Mengapa.* Test memberi jaminan bahwa perubahan tidak merusak perilaku yang
+Test memberi jaminan bahwa perubahan tidak merusak perilaku yang
 sudah ada. Test juga menjadi dokumentasi hidup: test search, filter, sorting,
 pagination, dan detail menunjukkan perilaku yang diharapkan. Debugging yang
 terarah mengurangi waktu perbaikan dan mencegah perubahan yang tidak perlu.
 
-*Bagaimana.* Test dijalankan dengan `php artisan test`. `RefreshDatabase`
+Test dijalankan dengan `php artisan test`. `RefreshDatabase`
 membuat database test bersih untuk setiap test. Helper seperti `$this->get()`
 mengirim request, sedangkan `assertOk()`, `assertSee()`, `assertDontSee()`,
 `assertNotFound()`, dan `assertRedirect()` memeriksa respons. Factory atau
@@ -578,7 +579,7 @@ dan `view:clear` membersihkan cache, serta `storage/logs/laravel.log` menyimpan
 error. `dd()` dan `dump()` dapat menghentikan eksekusi untuk memeriksa nilai,
 tetapi tidak boleh ditinggalkan di kode produksi @phpunit.
 
-*Troubleshooting.* Jika test gagal karena database, periksa koneksi test dan
+Jika test gagal karena database, periksa koneksi test dan
 `RefreshDatabase`. Jika assertion tidak menemukan teks, periksa escape HTML dan
 nama route. Jika test mendapatkan 419, periksa middleware CSRF dan
 `withoutMiddleware()` bila perlu. Jika perubahan tidak terbaca, bersihkan cache
@@ -910,12 +911,18 @@ Filter relasi memakai `whereHas()`:
   <?php
   public function scopeCategorySlug(Builder $query, string $slug): Builder
   {
-      return $query->whereHas('category', fn (Builder $query) => $query->where('slug', $slug));
+      return $query->whereHas(
+          'category',
+          fn (Builder $query) => $query->where('slug', $slug)
+      );
   }
 
   public function scopeTechnologySlug(Builder $query, string $slug): Builder
   {
-      return $query->whereHas('technologies', fn (Builder $query) => $query->where('slug', $slug));
+      return $query->whereHas(
+          'technologies',
+          fn (Builder $query) => $query->where('slug', $slug)
+      );
   }
   ```,
   file: "Project.php",
@@ -1058,10 +1065,16 @@ Sorting dipusatkan pada scope `sorted()`. Urutan default memakai
   public function scopeSorted(Builder $query, ?string $sort): Builder
   {
       return match ($sort) {
-          'oldest' => $query->orderBy('project_date')->orderBy('id'),
+          'oldest' => $query
+              ->orderBy('project_date')
+              ->orderBy('id'),
           'title' => $query->orderBy('title'),
-          'project_date' => $query->orderByDesc('project_date')->orderByDesc('id'),
-          default => $query->orderByDesc('project_date')->orderByDesc('id'),
+          'project_date' => $query
+              ->orderByDesc('project_date')
+              ->orderByDesc('id'),
+          default => $query
+              ->orderByDesc('project_date')
+              ->orderByDesc('id'),
       };
   }
   ```,
@@ -1104,8 +1117,10 @@ tamu.
 #codeblock(
   ```php
   <?php
-  Route::get('/projects', [ProjectController::class, 'publicIndex'])->name('projects.index');
-  Route::get('/projects/{project:slug}', [ProjectController::class, 'show'])->name('projects.show');
+  Route::get('/projects', [ProjectController::class, 'publicIndex'])
+      ->name('projects.index');
+  Route::get('/projects/{project:slug}', [ProjectController::class, 'show'])
+      ->name('projects.show');
   ```,
   file: "web.php",
 )
@@ -1197,8 +1212,8 @@ menampilkan proyek dengan status yang tidak dipilih.
 
 == Kesimpulan
 
-Pekerjaan ini menunjukkan bagaimana pencarian, filter, sorting, pagination, dan
-halaman detail dibangun di atas aplikasi portofolio yang sudah ada. Masalah
+Pencarian, filter, sorting, pagination, dan halaman detail dibangun di atas
+aplikasi portofolio yang sudah ada. Masalah
 utamanya adalah daftar proyek yang semakin panjang dan sulit ditelusuri.
 Pendekatan yang dipakai adalah memindahkan state pencarian ke query string,
 membangun query secara bertahap di controller, dan mempertahankan filter pada
@@ -1223,9 +1238,8 @@ mencakup pencarian, filter kategori, filter teknologi, sorting, batas
 Bukti visual juga tersedia untuk pencarian, kombinasi filter, halaman kedua,
 empty state, detail, dan halaman admin.
 
-Dari pekerjaan ini, dapat disimpulkan bahwa query yang baik bukan hanya query
-yang menghasilkan data yang benar, tetapi juga query yang menjaga konteks
-pengguna, tetap terbaca, dan dapat diuji. Pemisahan antara route, controller,
+Query yang baik menghasilkan data yang benar, menjaga konteks pengguna,
+tetap terbaca, dan dapat diuji. Pemisahan antara route, controller,
 model, dan view membuat perubahan pada satu bagian tidak langsung merusak
 bagian lain.
 
