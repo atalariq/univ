@@ -89,6 +89,8 @@ bank-soal.local/
 *.docx
 *.ppt
 *.pptx
+*.zip
+*.apk
 # Dependency and build output from code projects
 **/vendor/
 **/node_modules/
