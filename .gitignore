@@ -76,3 +76,21 @@ Thumbs.db
 **/report.pdf
 **/cheatsheet.pdf
 **/cheatsheet*.pdf
+
+# ----------------------------------------------------------------------
+# Public repo policy (see LICENSE and .pre-commit-config.yaml)
+# ----------------------------------------------------------------------
+# Third-party course material and exam papers never go public
+**/modules/
+bank-soal.local/
+# Generated reports and office documents are rebuilt, not stored
+*.pdf
+*.doc
+*.docx
+*.ppt
+*.pptx
+# Dependency and build output from code projects
+**/vendor/
+**/node_modules/
+**/.gradle/
+**/dist/

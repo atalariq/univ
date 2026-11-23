@@ -1,0 +1,23 @@
+# Gate repo publik.
+# Menolak dokumen pihak ketiga, biner besar, dan rahasia sebelum masuk commit.
+# Pasang sekali: pre-commit install
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.6.0
+    hooks:
+      - id: check-added-large-files
+        args: ["--maxkb=2048"]
+      - id: check-merge-conflict
+
+  - repo: https://github.com/gitleaks/gitleaks
+    rev: v8.18.4
+    hooks:
+      - id: gitleaks
+
+  - repo: local
+    hooks:
+      - id: blocked-file-types
+        name: tolak pdf, office, arsip, dan video
+        entry: scripts/check-blocked-paths.sh
+        language: script
+        types: [file]
