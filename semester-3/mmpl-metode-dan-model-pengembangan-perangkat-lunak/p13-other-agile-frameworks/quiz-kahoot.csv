@@ -1,0 +1,11 @@
+Question,Answer 1,Answer 2,Answer 3,Answer 4,Time limit,Correct answer
+"Pola nama fitur FDD adalah action result object. Mana yang sesuai pola itu?","Calculate the total of a sale","Modul perhitungan penjualan","Fitur laporan penjualan","SalesReport.java",20,1
+"Menurut FDD, apa yang dilakukan bila satu fitur butuh lebih dari dua minggu?","Menambah anggota feature team","Memindahkannya ke siklus berikutnya","Memecah fitur menjadi lebih kecil","Menurunkan prioritas business value",30,3
+"Urutan tiga proses pertama FDD yang benar adalah?","Build a Features List, Develop an Overall Model, Plan by Feature","Develop an Overall Model, Build a Features List, Plan by Feature","Develop an Overall Model, Plan by Feature, Build a Features List","Plan by Feature, Design by Feature, Build a Features List",30,2
+"Dua proses FDD yang berulang pada setiap fitur adalah?","Develop an Overall Model dan Build a Features List","Build a Features List dan Plan by Feature","Plan by Feature dan Develop an Overall Model","Design by Feature dan Build by Feature",20,4
+"Keluaran Develop an Overall Model adalah model domain per subject area ditambah apa?","Feature list berjenjang beserta prioritas business value","Struktur dasar sistem dan rancangan awal basis data","Development plan berisi urutan fitur dan pemiliknya","Design package berisi sequence diagram dan method prologue",30,2
+"Pada Plan by Feature, siapa yang menetapkan feature set owner dan class owner?","Domain expert","Chief architect","Chief programmer","Seluruh feature team lewat voting",20,3
+"Fitur dihitung sekitar 44 persen selesai ketika?","Design inspection lulus","Domain walkthrough selesai","Unit test lulus","Code inspection lulus",20,1
+"Pemeriksaan yang menutup Build by Feature sebelum kode masuk main build adalah?","Design inspection","Peer review model domain","Code inspection","Retrospektif tim",20,3
+"Pembeda desain FDD dibanding Scrum adalah?","FDD tidak memakai siklus pendek per fitur","FDD mengandalkan pair programming dan TDD","FDD memakai sprint dua sampai empat minggu","FDD menyusun model domain di awal, Scrum emergent",30,4
+"FDD paling tepat dipakai pada proyek seperti apa?","Tim tiga orang dengan kebutuhan berubah cepat","Produk baru tanpa domain expert","Proyek besar 15 sampai 50 developer dengan aturan bisnis kaya","Pekerjaan maintenance dengan permintaan harian",20,3
