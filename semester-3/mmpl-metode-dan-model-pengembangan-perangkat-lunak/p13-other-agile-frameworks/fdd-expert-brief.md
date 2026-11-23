@@ -83,6 +83,25 @@ FDD sebaiknya dihindari untuk tim kecil, produk baru dengan kebutuhan yang berub
 | Kualitas | Inspection, persentase fitur | Review, retrospective, DoD | Lead time, CFD | Pair programming, TDD, CI |
 | Cocok untuk | Proyek besar, domain kompleks | Tim kecil, kebutuhan berubah | Maintenance, support | Tim kecil, perubahan cepat |
 
+## Peran dan tanggung jawab
+
+FDD memakai struktur peran yang hierarkis karena proyeknya besar dan banyak orang menyentuh class yang sama. Pada proyek 50 orang, keputusan desain yang tersebar ke semua orang akan saling bertabrakan. Karena itu FDD menetapkan pemilik class, pemilik feature set, dan satu chief programmer yang memimpin tiap batch fitur, sehingga setiap perubahan punya pemilik yang jelas dan jalur keputusan pendek.
+
+| Peran | Tugas utama | Keluaran yang bisa dilihat |
+| --- | --- | --- |
+| Chief Architect | Memandu Develop an Overall Model, menjaga conceptual integrity seluruh model, dan menyetujui perubahan pada overall model | Overall model per subject area dan struktur layer sistem |
+| Chief Programmer | Developer senior yang mengambil satu batch fitur, membentuk feature team, memimpin Design by Feature, menjadi titik integrasi, dan membina class owner | Chief programmer workpackage, design package, dan laporan progres mingguan |
+| Class Owner | Memegang satu class, mengimplementasikan perubahan untuk fitur yang menyentuh class itu, menulis unit test, dan menjaga konsistensi interface serta implementasinya | Kode dan unit test untuk class yang dipegangnya |
+| Feature Team | Kelompok kecil 3 sampai 5 developer berisi class owner dari class yang tersentuh sebuah fitur, bekerja bersama menyusun sequence diagram lalu membangun fitur | Sequence diagram, hasil design inspection, dan fitur yang lolos code inspection |
+| Domain Expert | Menjelaskan aturan bisnis, mengisi domain walkthrough, dan meninjau feature list | Penjelasan scope, klarifikasi aturan bisnis, dan feature list yang sudah ditinjau |
+| Project Manager | Menjaga jadwal, anggaran, dan staffing, menetapkan prioritas, serta menyalurkan fitur dari feature list ke chief programmer | Development plan, jadwal, dan laporan status ke pemilik bisnis |
+
+Peran pendukung bersifat opsional dan biasanya baru muncul saat proyek cukup besar: Language Lawyer menjaga penggunaan bahasa, library, dan konvensi kode; Build Engineer memelihara build script dan build harian; Release Manager mengatur pengemasan dan pengiriman rilis; Technical Writer menulis dokumentasi teknis dan dokumentasi pengguna; Tester menguji di luar unit test yang ditulis class owner.
+
+Struktur ini menjaga kualitas dan konsistensi: satu class dijaga satu orang, inspection berlapis, dan keputusan arsitektur berada di satu tangan. Konsekuensinya, keputusan menumpuk pada chief architect dan chief programmer, sehingga keduanya menjadi bottleneck saat banyak fitur berjalan bersamaan. Class ownership juga bisa memunculkan silo pengetahuan karena pemahaman satu class berhenti pada pemiliknya. Pada sebagian sumber, Development Manager muncul sebagai peran primer keenam dan feature team dihitung sebagai cara kerja, jadi batas keduanya perlu dicek.
+
+Pembahasan kenapa struktur ini hierarkis, plus kritiknya, ada di [fdd-suplemen.md](fdd-suplemen.md).
+
 ## Alur menjelaskan 5 menit
 
 Mulai dari masalahnya: proyek besar dan aturan bisnis rumit membuat iterasi cepat kehilangan arah. Tunjukkan posisi FDD yang tetap memodelkan gambaran besar di awal, lalu jelaskan lima proses berurutan dengan penekanan bahwa tiga proses pertama membentuk fondasi dan dua terakhir berulang per fitur. Tutup dengan batasan dan kapan FDD masuk akal dipakai.
@@ -125,6 +144,8 @@ Sketsa peta lima proses:
                     v
         laporan progres mingguan chief programmer
 ```
+
+Lanjutan soal ukuran fitur, alasan struktur hierarkis, praktik lapangan, dan studi kasus ada di [fdd-suplemen.md](fdd-suplemen.md).
 
 ## Referensi
 

@@ -62,6 +62,8 @@ Yang masih mengganjal di pikiran saya:
 
 butuh lebih banyak waktu lagi untuk riset terkait FDD.
 
+Tiga pertanyaan di atas sudah dijawab di [fdd-suplemen.md](p13-other-agile-frameworks/fdd-suplemen.md), termasuk studi kasus industri dan analoginya.
+
 [^harness-fdd]: <https://www.harness.io/harness-devops-academy/getting-started-with-feature-driven-development-a-comprehensive-guide>
 [^wikipedia-fdd]: <https://en.wikipedia.org/wiki/Feature-driven_development>
 [^umbrex-fdd]: <https://umbrex.com/resources/frameworks/project-management-frameworks/feature-driven-development-fdd/>
