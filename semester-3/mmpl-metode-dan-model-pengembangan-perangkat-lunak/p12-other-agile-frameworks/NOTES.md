@@ -18,7 +18,7 @@ Lima proses inti:
 4. Design by Feature: domain walkthrough, sequence diagram, dan design inspection sampai menghasilkan design package.
 5. Build by Feature: class owner menulis kode dan unit test, lalu code inspection sebelum promosi ke main build.
 
-Tiga proses pertama berjalan sekali di awal inisiatif, sedangkan dua terakhir berulang untuk setiap fitur. Versi lengkap beserta tabel perbandingan dan alur penjelasan lima menit ada di [fdd-expert-brief.md](p13-other-agile-frameworks/fdd-expert-brief.md).
+Tiga proses pertama berjalan sekali di awal inisiatif, sedangkan dua terakhir berulang untuk setiap fitur. Versi lengkap beserta tabel perbandingan dan alur penjelasan lima menit ada di [fdd-expert-brief.md](../p13-other-agile-frameworks/fdd-expert-brief.md).
 
 ## Perbandingan lima framework
 
@@ -32,13 +32,13 @@ Tiga proses pertama berjalan sekali di awal inisiatif, sedangkan dua terakhir be
 
 ## Berkas pendukung
 
-- [crystal-method.md](p13-other-agile-frameworks/crystal-method.md): keluarga metodologi Crystal, tujuh properti Crystal Clear, peran, dan batas pemakaiannya.
-- [dsdm.md](p13-other-agile-frameworks/dsdm.md): asal DSDM, lima fase, timebox, MoSCoW, delapan prinsip, dan peran kunci.
-- [fdd-expert-brief.md](p13-other-agile-frameworks/fdd-expert-brief.md): brief lengkap FDD, lima proses secara rinci, perbandingan dengan Scrum, Kanban, dan XP.
-- [nexus.md](p13-other-agile-frameworks/nexus.md): Scrum yang diperluas untuk 3 sampai 9 tim, peran Nexus Integration Team, dan event lintas tim.
-- [safe.md](p13-other-agile-frameworks/safe.md): SAFe 6.0, empat level, irama PI, dan kondisi yang membuatnya masuk akal.
-- [quiz-kahoot.csv](p13-other-agile-frameworks/quiz-kahoot.csv): sepuluh soal pilihan ganda FDD siap diimpor ke Kahoot.
-- [quiz-answer-key.md](p13-other-agile-frameworks/quiz-answer-key.md): kunci jawaban sepuluh soal beserta alasan dan rujukan bagian brief.
+- [crystal-method.md](../p13-other-agile-frameworks/crystal-method.md): keluarga metodologi Crystal, tujuh properti Crystal Clear, peran, dan batas pemakaiannya.
+- [dsdm.md](../p13-other-agile-frameworks/dsdm.md): asal DSDM, lima fase, timebox, MoSCoW, delapan prinsip, dan peran kunci.
+- [fdd-expert-brief.md](../p13-other-agile-frameworks/fdd-expert-brief.md): brief lengkap FDD, lima proses secara rinci, perbandingan dengan Scrum, Kanban, dan XP.
+- [nexus.md](../p13-other-agile-frameworks/nexus.md): Scrum yang diperluas untuk 3 sampai 9 tim, peran Nexus Integration Team, dan event lintas tim.
+- [safe.md](../p13-other-agile-frameworks/safe.md): SAFe 6.0, empat level, irama PI, dan kondisi yang membuatnya masuk akal.
+- [quiz-kahoot.csv](../p13-other-agile-frameworks/quiz/quiz-kahoot.csv): sepuluh soal pilihan ganda FDD siap diimpor ke Kahoot.
+- [quiz-answer-key.md](../p13-other-agile-frameworks/quiz/quiz-answer-key.md): kunci jawaban sepuluh soal beserta alasan dan rujukan bagian brief.
 
 ## Expert Brief
 
@@ -62,7 +62,7 @@ Yang masih mengganjal di pikiran saya:
 
 butuh lebih banyak waktu lagi untuk riset terkait FDD.
 
-Tiga pertanyaan di atas sudah dijawab di [fdd-suplemen.md](p13-other-agile-frameworks/fdd-suplemen.md), termasuk studi kasus industri dan analoginya.
+Tiga pertanyaan di atas sudah dijawab di [fdd-suplemen.md](../p13-other-agile-frameworks/fdd-suplemen.md), termasuk studi kasus industri dan analoginya.
 
 [^harness-fdd]: <https://www.harness.io/harness-devops-academy/getting-started-with-feature-driven-development-a-comprehensive-guide>
 [^wikipedia-fdd]: <https://en.wikipedia.org/wiki/Feature-driven_development>
