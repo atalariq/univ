@@ -16,7 +16,7 @@ Folder p13 memuat berkas pendukung per framework (`crystal-method.md`, `dsdm.md`
 | --- | --- | --- | --- |
 | 1 | Kontrak kuliah | catatan | 2026-11-24 iirc |
 | 2 | Software engineering process | catatan | 2026-11-24 iirc |
-| 3 | Waterfall model | stub | 2026-09-07 iirc |
+| 3 | Waterfall model | catatan | 2026-09-07 iirc |
 | 6 | Incremental, iterative, dan spiral | catatan | 2026-11-24 iirc |
 | 7 | RAD dan Agile | catatan | 2026-11-24 iirc |
 | 12 | Other agile frameworks | catatan | 2026-11-24 iirc |
@@ -32,4 +32,5 @@ Folder p13 memuat berkas pendukung per framework (`crystal-method.md`, `dsdm.md`
 
 ## Status
 
-Ada tujuh folder pertemuan. Enam sudah berisi catatan dan satu (p03) masih stub. p13 tidak punya `NOTES.md`, isinya tersebar di enam berkas markdown bertopik; p12 memuat catatan induknya. Nomor 4, 5, serta 8 sampai 11 tidak punya folder, catatan, maupun materi, jadi nomornya dilewati.
+Dari 7 pertemuan, 6 sudah punya catatan dan 1 masih berupa stub. Materi sepanjang semester ada di `00-materials/`, 5 berkas.
+

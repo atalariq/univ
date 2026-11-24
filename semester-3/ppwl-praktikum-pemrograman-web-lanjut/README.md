@@ -14,17 +14,17 @@ Materi dosen dikumpulkan di `00-materials.local/` dalam bentuk modul dan slide d
 
 | Nomor | Topik | Status | Tanggal |
 | --- | --- | --- | --- |
-| 2 | Instalasi Laravel | stub | 2026-09-03 iirc |
-| 3 | CRUD PHP | stub | 2026-09-02 iirc |
+| 2 | Instalasi Laravel | catatan | 2026-09-03 iirc |
+| 3 | CRUD PHP | catatan | 2026-09-02 iirc |
 | 4 | Routing dan view Blade | catatan | 2026-09-15 iirc |
 | 5 | Controller dan model | catatan | 2026-09-16 iirc |
 | 6 | CRUD Laravel | catatan | 2026-09-27 iirc |
-| 7 | Eloquent ORM | stub | 2026-10-06 iirc |
+| 7 | Eloquent ORM | catatan | 2026-10-06 iirc |
 | 8 | Seeder dan pagination | catatan | 2026-10-27 iirc |
 | 9 | Authentication dan middleware | catatan | 2026-10-29 iirc |
 | 10 | Dashboard, unggah berkas, dan galeri | catatan | 2026-11-03 iirc |
-| 11 | Search, filter, dan sorting | stub | 2026-11-12 iirc |
-| 12 | REST API dan rate limit | stub | 2026-11-17 iirc |
+| 11 | Search, filter, dan sorting | catatan | 2026-11-12 iirc |
+| 12 | REST API dan rate limit | catatan | 2026-11-17 iirc |
 
 ## Materi
 
@@ -54,4 +54,5 @@ Isi `00-materials.local/`:
 
 ## Status
 
-Dari sebelas folder pertemuan, enam sudah punya catatan (p04 sampai p06, p08 sampai p10) dan lima masih stub (p02, p03, p07, p11, p12). Catatan p07 semula berupa berkas kosong. Materi untuk pertemuan 13 dan 14 hanya ada di `00-materials.local/` tanpa folder pertemuan, catatan, atau laporan, dan topik modul pertemuan 11 dan 12 di sana berbeda dari topik folder p11 dan p12, jadi kedua nomor itu tidak dibuatkan folder.
+Dari 11 pertemuan, semuanya sudah punya catatan.
+

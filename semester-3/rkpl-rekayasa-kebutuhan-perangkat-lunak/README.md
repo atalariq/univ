@@ -14,13 +14,13 @@ Folder p09 berisi tugas validasi kebutuhan berupa studi kasus dan draft laporan.
 
 | Nomor | Topik | Status | Tanggal |
 | --- | --- | --- | --- |
-| 2 | Introduction to requirements engineering | stub | 2026-10-01 iirc |
-| 3 | Elicitation 1 | stub | 2026-10-01 iirc |
-| 5 | Elicitation 2 | stub | 2026-10-01 iirc |
-| 6 | Requirements analysis and modeling | stub | 2026-10-01 iirc |
+| 2 | Introduction to requirements engineering | catatan | 2026-10-01 iirc |
+| 3 | Elicitation 1 | catatan | 2026-10-01 iirc |
+| 5 | Elicitation 2 | catatan | 2026-10-01 iirc |
+| 6 | Requirements analysis and modeling | catatan | 2026-10-01 iirc |
 | 7 | VORD | catatan | 2026-10-11 iirc |
 | 8 | Requirement validation | catatan | 2026-10-29 iirc |
-| 9 | Requirement validation: tugas | stub | 2026-10-29 iirc |
+| 9 | Requirement validation: tugas | catatan | 2026-10-29 iirc |
 
 ## Materi
 
@@ -29,4 +29,5 @@ Folder p09 berisi tugas validasi kebutuhan berupa studi kasus dan draft laporan.
 
 ## Status
 
-Dari tujuh folder pertemuan, dua sudah punya catatan (p07 dan p08) dan lima masih stub (p02, p03, p05, p06, p09). Nomor 1 hanya berupa rencana pembelajaran di `00-materials/` tanpa folder pertemuan, sedangkan nomor 4 tidak punya folder maupun materi, jadi keduanya tidak dibuatkan baris tersendiri.
+Dari 7 pertemuan, semuanya sudah punya catatan. Materi sepanjang semester ada di `00-materials/`, 2 berkas.
+

@@ -1,4 +1,4 @@
-# PPWL Meeting 10 — Dashboard, File Upload, dan Gallery
+# PPWL Meeting 10: Dashboard, File Upload, dan Gallery
 
 ## Module Checklist
 
@@ -107,7 +107,7 @@
 | 13 | Verifikasi | 2 | Semua hasil punya command/bukti di tabel Verifikasi |
 | 14 | Tidak ada callout | 2 | Hasil langkah memakai paragraf biasa |
 
-Total 28/28 — lolos ship gate.
+Total 28/28: lolos ship gate.
 
 ## Human Follow-up
 

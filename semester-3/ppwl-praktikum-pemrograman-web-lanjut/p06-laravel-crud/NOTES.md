@@ -3,9 +3,9 @@
 ## Resume
 
 Di pertemuan 5 [^p5] kita sudah membuat:
-- index() — menampilkan daftar
-- create() — menampilkan form
-- store() — menyimpan data (sebagian, perlu dilengkapi)
+- index(): menampilkan daftar
+- create(): menampilkan form
+- store(): menyimpan data (sebagian, perlu dilengkapi)
 Pertemuan ini kita lengkapi dengan show(), edit(), update(), destroy().
 
 ## Tugas

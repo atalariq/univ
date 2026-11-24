@@ -1,4 +1,4 @@
-# PPWL Meeting 8 — Seeder dan Pagination
+# PPWL Meeting 8: Seeder dan Pagination
 
 ## Module Checklist
 
@@ -16,9 +16,9 @@
 
 ## Assumptions
 
-- Slide memakai entitas `Post`; aplikasi portofolio (p4–p6) memakai `Project` — semua langkah diterapkan pada `Project` (kesinambungan modul, lihat TASK.md).
+- Slide memakai entitas `Post`; aplikasi portofolio (p4–p6) memakai `Project`: semua langkah diterapkan pada `Project` (kesinambungan modul, lihat TASK.md).
 - Latihan pertemuan 7 (status enum, scope `published()`, soft delete/Trash) tidak dikumpulkan (tidak ada submission p7); `$fillable` dari p5/p6 dipakai apa adanya.
-- Lingkungan verifikasi: devenv di root repo `code/` — PHP 8.5.12, Composer 2.10.3, Node 24.21.0, MariaDB 11 di 127.0.0.1:33060, Laravel 13.32.0.
+- Lingkungan verifikasi: devenv di root repo `code/`: PHP 8.5.12, Composer 2.10.3, Node 24.21.0, MariaDB 11 di 127.0.0.1:33060, Laravel 13.32.0.
 
 ## Research
 
@@ -66,7 +66,7 @@
 | 13 | Structure & hygiene | 2 | Tidak ada TODO/dead code |
 | 14 | Bibliography hygiene | 2 | Satu `references.yaml`, key snake_case, tanggal akses |
 
-Total 28/28 — lolos ship gate.
+Total 28/28: lolos ship gate.
 
 ## Human Follow-up
 

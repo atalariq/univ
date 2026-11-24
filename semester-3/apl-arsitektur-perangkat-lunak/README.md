@@ -71,4 +71,5 @@ Materi berasal dari dua kumpulan deck di `00-materials/`: catatan kuliah CSSE640
 
 ## Status
 
-Tiga belas pertemuan punya folder dan semuanya berisi catatan. Catatan pertemuan 9 sampai 11 hanya menunjuk ke `p08-group-assessment-i/NOTES.md` karena tabel delapan deck disusun sekali untuk empat sesi penilaian. Materi UTS masih disimpan di `uts.local/` pada level mata kuliah karena menjadi rujukan catatan pertemuan 7.
+Dari 13 pertemuan, semuanya sudah punya catatan. Materi sepanjang semester ada di `00-materials/`, 38 berkas.
+

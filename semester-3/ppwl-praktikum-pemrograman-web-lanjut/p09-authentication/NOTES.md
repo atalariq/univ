@@ -1,4 +1,4 @@
-# PPWL Meeting 9 — Authentication dan Middleware
+# PPWL Meeting 9: Authentication dan Middleware
 
 ## Module Checklist
 
@@ -87,7 +87,7 @@
 | 13 | Verifikasi | 2 | Semua klaim punya command/bukti |
 | 14 | Tidak ada callout | 2 | Hasil langkah memakai paragraf biasa |
 
-Total 28/28 — lolos ship gate.
+Total 28/28: lolos ship gate.
 
 ## Human Follow-up
 

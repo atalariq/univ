@@ -29,4 +29,5 @@ Karena topik tiap sesi ditentukan pembicara, isi catatan bergantung pada sesi ya
 
 ## Status
 
-Dua pertemuan punya catatan, yaitu pertemuan 1 dan 2. Lima deck lain sudah tersimpan sebagai materi tetapi belum ada catatan yang menyertainya.
+Dari 2 pertemuan, semuanya sudah punya catatan. Materi sepanjang semester ada di `00-materials/`, 7 berkas.
+

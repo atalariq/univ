@@ -26,4 +26,5 @@ Belum ada materi yang berlaku sepanjang semester. Slide dan buku panduan tersimp
 
 ## Status
 
-Lima pertemuan punya folder. Dua pertemuan berisi catatan kuliah, yaitu 6 dan 7. Pertemuan 12 berisi `TASK.md` tanpa catatan kuliah. Pertemuan 5 punya `NOTES.md` yang masih kosong, dan pertemuan 2 baru berisi stub.
+Dari 5 pertemuan, 3 sudah punya catatan dan 2 masih berupa stub.
+
