@@ -5,11 +5,8 @@ poppler = "latest"
 imagemagick = "latest"
 oxipng = "latest"
 node = "24"
-python = "3.12"
 pre-commit = "latest"
-git-filter-repo = "latest"
 markdownlint-cli2 = "latest"
-"npm:@mermaid-js/mermaid-cli" = "latest"
 
 [tasks."new-session"]
 description = "Buat folder pertemuan baru beserta NOTES.md"
