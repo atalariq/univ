@@ -14,17 +14,17 @@ Bagian akhir berisi tanggap darurat dan penanggulangan kebakaran pada pertemuan 
 
 | Nomor | Topik | Status | Tanggal |
 | --- | --- | --- | --- |
-| 01 | Pengantar dan regulasi K3 | stub | 2025-10-07 iirc |
-| 02 | Konsep K3 | stub | 2025-09-07 iirc |
-| 03 | Bahaya, risiko, dan keselamatan kerja | stub | 2025-09-07 iirc |
-| 04 | Teori domino | stub | 2025-09-16 iirc |
-| 06 | HIRADC | stub | 2025-12-07 iirc |
-| 07 | Pengendalian risiko | stub | 2025-12-10 iirc |
-| 08 | PAK di bidang IT | stub | 2025-12-07 iirc |
-| 09 | JSA | stub | 2025-12-07 iirc |
-| 10 | Higiene industri | stub | 2025-12-07 iirc |
-| 12 | Tanggap darurat dan penanggulangan kebakaran | stub | 2025-12-10 iirc |
-| 13 | Ergonomi di bidang IT | stub | 2025-12-07 iirc |
+| 01 | Pengantar dan regulasi K3 | catatan | 2025-10-07 iirc |
+| 02 | Konsep K3 | catatan | 2025-09-07 iirc |
+| 03 | Bahaya, risiko, dan keselamatan kerja | catatan | 2025-09-07 iirc |
+| 04 | Teori domino | catatan | 2025-09-16 iirc |
+| 06 | HIRADC | catatan | 2025-12-07 iirc |
+| 07 | Pengendalian risiko | catatan | 2025-12-10 iirc |
+| 08 | PAK di bidang IT | catatan | 2025-12-07 iirc |
+| 09 | JSA | catatan | 2025-12-07 iirc |
+| 10 | Higiene industri | catatan | 2025-12-07 iirc |
+| 12 | Tanggap darurat dan penanggulangan kebakaran | catatan | 2025-12-10 iirc |
+| 13 | Ergonomi di bidang IT | catatan | 2025-12-07 iirc |
 
 Nomor 05 dan 11 tidak punya berkas maupun folder, jadi tidak dicantumkan. Tanggal diambil dari tanggal modifikasi berkas materi, jadi kemungkinan tanggal unduh, bukan tanggal kuliah.
 
@@ -36,4 +36,5 @@ Nomor 05 dan 11 tidak punya berkas maupun folder, jadi tidak dicantumkan. Tangga
 
 ## Status
 
-Dua belas folder pertemuan sudah ada dan semuanya masih stub, jadi belum ada catatan pertemuan yang ditulis. Tiga berkas REBA dan RULA belum dipetakan ke pertemuan tertentu karena nama berkasnya tidak menyebut nomor pertemuan.
+Dari 11 pertemuan, semuanya sudah punya catatan. Materi sepanjang semester ada di `00-materials/`, 3 berkas.
+

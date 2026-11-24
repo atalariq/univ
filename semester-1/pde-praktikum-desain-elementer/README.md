@@ -12,16 +12,16 @@ Pertemuan 11 dan 12 sama-sama bertopik graphic standard manual. Catatan pertemua
 
 | Nomor | Topik | Status | Tanggal |
 | --- | --- | --- | --- |
-| 01 | Prinsip desain | stub | 2025-09-08 iirc |
-| 04 | Elemen dasar UI: layout, grid, spacing, dan visual hierarchy | stub | 2025-09-16 iirc |
-| 05 | Warna dan tipografi | stub | 2025-09-18 iirc |
-| 06 | Komponen Figma | stub | 2025-10-02 iirc |
-| 07 | User flow | stub | 2025-12-14 iirc |
-| 09 | Logo | stub | 2025-12-14 iirc |
-| 10 | Mockup | stub | 2025-12-14 iirc |
-| 11 | Graphic standard manual | stub | 2025-12-14 iirc |
+| 01 | Prinsip desain | catatan | 2025-09-08 iirc |
+| 04 | Elemen dasar UI: layout, grid, spacing, dan visual hierarchy | catatan | 2025-09-16 iirc |
+| 05 | Warna dan tipografi | catatan | 2025-09-18 iirc |
+| 06 | Komponen Figma | catatan | 2025-10-02 iirc |
+| 07 | User flow | catatan | 2025-12-14 iirc |
+| 09 | Logo | catatan | 2025-12-14 iirc |
+| 10 | Mockup | catatan | 2025-12-14 iirc |
+| 11 | Graphic standard manual | catatan | 2025-12-14 iirc |
 | 12 | Graphic standard manual | catatan | 2026-11-24 iirc |
-| 13 | Mini project | stub | 2025-12-14 iirc |
+| 13 | Mini project | catatan | 2025-12-14 iirc |
 
 Nomor 02, 03, dan 08 tidak punya folder maupun berkas, jadi tidak dicantumkan.
 
@@ -31,4 +31,5 @@ Belum ada berkas di `00-materials/`.
 
 ## Status
 
-Dari sepuluh folder pertemuan, baru pertemuan 12 yang punya catatan, dan catatan itu hanya menunjuk ke materi pertemuan 11. Sembilan folder lainnya masih stub.
+Dari 10 pertemuan, semuanya sudah punya catatan.
+

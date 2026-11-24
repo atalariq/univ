@@ -12,16 +12,16 @@ Dua rujukan yang dipakai sepanjang semester adalah modul Bahasa Indonesia karya 
 
 | Nomor | Topik | Status | Tanggal |
 | --- | --- | --- | --- |
-| 01 | Membangun paradigma tentang bahasa Indonesia | stub | 2025-09-07 iirc |
+| 01 | Membangun paradigma tentang bahasa Indonesia | catatan | 2025-09-07 iirc |
 | 02 | Membangun paradigma tentang bahasa Indonesia | catatan | 2026-11-24 iirc |
-| 03 | Penggunaan huruf kapital, miring, dan tebal | stub | 2025-10-08 iirc |
-| 04 | Penulisan kata turunan, partikel, angka, dan bilangan | stub | 2025-10-02 iirc |
-| 05 | Penggunaan tanda baca | stub | 2025-09-23 iirc |
-| 06 | Kalimat tunggal | stub | 2025-10-02 iirc |
-| 07 | Konjungsi | stub | 2025-11-04 iirc |
-| 08 | Kalimat majemuk | stub | 2025-11-04 iirc |
-| 09 | Paragraf | stub | 2025-11-04 iirc |
-| 10 | Penulisan kutipan dan daftar pustaka | stub | 2025-11-04 iirc |
+| 03 | Penggunaan huruf kapital, miring, dan tebal | catatan | 2025-10-08 iirc |
+| 04 | Penulisan kata turunan, partikel, angka, dan bilangan | catatan | 2025-10-02 iirc |
+| 05 | Penggunaan tanda baca | catatan | 2025-09-23 iirc |
+| 06 | Kalimat tunggal | catatan | 2025-10-02 iirc |
+| 07 | Konjungsi | catatan | 2025-11-04 iirc |
+| 08 | Kalimat majemuk | catatan | 2025-11-04 iirc |
+| 09 | Paragraf | catatan | 2025-11-04 iirc |
+| 10 | Penulisan kutipan dan daftar pustaka | catatan | 2025-11-04 iirc |
 
 ## Materi
 
@@ -30,4 +30,5 @@ Dua rujukan yang dipakai sepanjang semester adalah modul Bahasa Indonesia karya 
 
 ## Status
 
-Dari sepuluh pertemuan, baru pertemuan 2 yang berisi catatan. Sembilan lainnya masih stub. Pertemuan 1 menyimpan materi sendiri, sedangkan catatan pertemuan 2 menyebut materi pertemuan itu digabung ke pertemuan 1.
+Dari 10 pertemuan, semuanya sudah punya catatan. Materi sepanjang semester ada di `00-materials/`, 2 berkas.
+

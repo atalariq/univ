@@ -14,14 +14,14 @@ Folder ini belum punya materi semester, jadi semua berkas disimpan di folder per
 
 | Nomor | Topik | Status | Tanggal |
 | --- | --- | --- | --- |
-| 03 | Pemrograman Python | stub | 2025-09-01 iirc |
-| 04 | Tipe dan struktur data | stub | 2025-09-08 iirc |
-| 05 | Input dan output | stub | 2025-09-15 iirc |
-| 06 | Percabangan | stub | 2025-09-22 iirc |
-| 08 | Perulangan | stub | 2025-10-19 iirc |
-| 09 | List dan string | stub | 2025-10-27 iirc |
-| 10 | Fungsi | stub | 2025-11-03 iirc |
-| 11 | Sorting, searching, file, dan error handling | stub | 2025-11-16 iirc |
+| 03 | Pemrograman Python | catatan | 2025-09-01 iirc |
+| 04 | Tipe dan struktur data | catatan | 2025-09-08 iirc |
+| 05 | Input dan output | catatan | 2025-09-15 iirc |
+| 06 | Percabangan | catatan | 2025-09-22 iirc |
+| 08 | Perulangan | catatan | 2025-10-19 iirc |
+| 09 | List dan string | catatan | 2025-10-27 iirc |
+| 10 | Fungsi | catatan | 2025-11-03 iirc |
+| 11 | Sorting, searching, file, dan error handling | catatan | 2025-11-16 iirc |
 
 Nomor 01, 02, 07, 12, dan 13 tidak punya folder maupun berkas, jadi tidak dicantumkan.
 
@@ -31,4 +31,5 @@ Belum ada berkas di `00-materials/`.
 
 ## Status
 
-Delapan folder pertemuan sudah ada dan semuanya masih stub. Sebagian besar isinya berupa kode dan laporan tugas, bukan catatan pertemuan. Tidak ada catatan tertulis untuk praktikum ini.
+Dari 8 pertemuan, semuanya sudah punya catatan.
+

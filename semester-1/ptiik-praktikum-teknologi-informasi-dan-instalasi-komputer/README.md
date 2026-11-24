@@ -12,16 +12,16 @@ Berkas yang berlaku sepanjang semester adalah kontrak perkuliahan dan modul gabu
 
 | Nomor | Topik | Status | Tanggal |
 | --- | --- | --- | --- |
-| 04 | Pengenalan virtual machine dan instalasi Linux | stub | 2025-09-07 iirc |
-| 05 | VirtualBox dan Ubuntu | stub | 2025-09-23 iirc |
-| 06 | VirtualBox dan Windows | stub | 2025-09-23 iirc |
-| 07 | Instalasi Ubuntu | stub | 2025-10-09 iirc |
-| 08 | Clonezilla | stub | 2025-10-28 iirc |
-| 09 | Microsoft Word I | stub | 2025-11-04 iirc |
-| 10 | Microsoft Word II | stub | 2025-11-04 iirc |
-| 11 | Microsoft Excel I | stub | 2025-11-12 iirc |
-| 12 | Microsoft Excel II | stub | 2025-11-24 iirc |
-| 13 | Modul pelatihan MS PowerPoint | stub | 2025-09-07 iirc |
+| 04 | Pengenalan virtual machine dan instalasi Linux | catatan | 2025-09-07 iirc |
+| 05 | VirtualBox dan Ubuntu | catatan | 2025-09-23 iirc |
+| 06 | VirtualBox dan Windows | catatan | 2025-09-23 iirc |
+| 07 | Instalasi Ubuntu | catatan | 2025-10-09 iirc |
+| 08 | Clonezilla | catatan | 2025-10-28 iirc |
+| 09 | Microsoft Word I | catatan | 2025-11-04 iirc |
+| 10 | Microsoft Word II | catatan | 2025-11-04 iirc |
+| 11 | Microsoft Excel I | catatan | 2025-11-12 iirc |
+| 12 | Microsoft Excel II | catatan | 2025-11-24 iirc |
+| 13 | Modul pelatihan MS PowerPoint | catatan | 2025-09-07 iirc |
 
 Nomor 01, 02, dan 03 tidak punya folder maupun berkas, jadi tidak dicantumkan.
 
@@ -32,4 +32,5 @@ Nomor 01, 02, dan 03 tidak punya folder maupun berkas, jadi tidak dicantumkan.
 
 ## Status
 
-Sepuluh folder pertemuan sudah ada dan semuanya masih stub. Isi folder didominasi laporan praktikum dan modul, bukan catatan pertemuan. Satu salinan `p12-modul-excel-lanjut.local.pdf` di root mata kuliah identik dengan modul di `p12-ms-excel-ii/` dan tidak dihapus.
+Dari 10 pertemuan, semuanya sudah punya catatan. Materi sepanjang semester ada di `00-materials/`, 2 berkas.
+
