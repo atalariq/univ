@@ -6,15 +6,15 @@ Halaman ini untuk dipindai, bukan dibaca berurutan. Isinya tiga hal: bahan mana 
 
 | Pertemuan | Topik | Berkas catatan | Deck sumber |
 | --- | --- | --- | --- |
-| 1 | Introduction | [p1-introduction/NOTES.md](p1-introduction/NOTES.md) (masih kerangka lama) | `from-elok.local/arpl-p1-introduction.pdf`, `w1a-architecture.pdf` |
-| 2 | Layered Architecture | [p2-layered-architecture/NOTES.md](p2-layered-architecture/NOTES.md) | `arpl-p2-layered.pdf`, `w1b-layered.pdf` |
-| 3 | Introduction to Patterns | [p3-architectural-patterns/NOTES.md](p3-architectural-patterns/NOTES.md) | `arpl-p3-architectural-patterns.pdf` |
-| 4 | Security | [p4-security/NOTES.md](p4-security/NOTES.md) | `arpl-p4-security.pdf`, `w2a-security.pdf` |
-| 5 | Container | [p5-containers/NOTES.md](p5-containers/NOTES.md) | `arpl-p5-containers.pdf`, `w3a-containers.pdf` |
-| 6 | Infrastructure as Code | [p6-infrastructure-as-code/NOTES.md](p6-infrastructure-as-code/NOTES.md) | `arpl-p6-iac.pdf`, `w4a-iac.pdf` |
-| 7 | Midterm test | [p7-midterm/NOTES.md](p7-midterm/NOTES.md) | `uts.local/` |
-| 8 sampai 10 | Group assessment I sampai III | [p8-p11-group-assessment/NOTES.md](p8-p11-group-assessment/NOTES.md) | `p13-evaluasi-hasil-kerja-kelompok-lain/slides.local/` |
-| 11 | Group assessment presentation | [p8-p11-group-assessment/NOTES.md](p8-p11-group-assessment/NOTES.md) | sama dengan di atas |
+| 1 | Introduction | [p1-introduction/NOTES.md](p01-introduction/NOTES.md) (masih kerangka lama) | `from-elok.local/arpl-p1-introduction.pdf`, `w1a-architecture.pdf` |
+| 2 | Layered Architecture | [p2-layered-architecture/NOTES.md](p02-layered-architecture/NOTES.md) | `arpl-p2-layered.pdf`, `w1b-layered.pdf` |
+| 3 | Introduction to Patterns | [p3-architectural-patterns/NOTES.md](p03-architectural-patterns/NOTES.md) | `arpl-p3-architectural-patterns.pdf` |
+| 4 | Security | [p4-security/NOTES.md](p04-security/NOTES.md) | `arpl-p4-security.pdf`, `w2a-security.pdf` |
+| 5 | Container | [p5-containers/NOTES.md](p05-containers/NOTES.md) | `arpl-p5-containers.pdf`, `w3a-containers.pdf` |
+| 6 | Infrastructure as Code | [p6-infrastructure-as-code/NOTES.md](p06-infrastructure-as-code/NOTES.md) | `arpl-p6-iac.pdf`, `w4a-iac.pdf` |
+| 7 | Midterm test | [p7-midterm/NOTES.md](p07-midterm/NOTES.md) | `uts.local/` |
+| 8 sampai 10 | Group assessment I sampai III | [p08-group-assessment-i/NOTES.md](p08-group-assessment-i/NOTES.md) | `p08-group-assessment-i/slides.local/` |
+| 11 | Group assessment presentation | [p11-group-assessment-presentation/NOTES.md](p11-group-assessment-presentation/NOTES.md) | sama dengan di atas |
 | 12 | Monolith dan Microservices | [p12-monolith-microservices/NOTES.md](p12-monolith-microservices/NOTES.md) | `w4b-service-based.pdf`, `w6b-microservices.slides.pdf`, `w11c-decompose-monolith.slides.pdf` |
 | 13 | Event-Driven Architecture | [p13-event-driven-architecture/NOTES.md](p13-event-driven-architecture/NOTES.md) | `w5b-event_driven_architecture.pdf` |
 

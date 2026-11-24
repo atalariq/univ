@@ -27,5 +27,5 @@ Buatlah kedalam laporan yang meliputi:
 
 ## Referensi:
 
-- [Modul Praktikum](./module.pdf)
+- Modul praktikum: materi dosen, tidak disertakan di repo.
 - [Binary Search Tree - GeeksforGeeks](https://www.geeksforgeeks.org/dsa/binary-search-tree-data-structure/)

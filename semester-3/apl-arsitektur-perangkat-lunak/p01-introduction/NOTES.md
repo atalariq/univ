@@ -38,7 +38,7 @@ Pattern berhenti sebelum kode (slide 11), jadi memilih layered atau broker tidak
 
 ## Kaitan dengan pertemuan lain
 
-Pertemuan 2 membedah layered architecture dari daftar slide 12, jawaban atas big ball of mud, di [`../p2-layered-architecture/NOTES.md`](../p2-layered-architecture/NOTES.md). Pertemuan 12 memindahkannya ke skala deployment, dari monolith modular sampai microservices, di [`../p12-monolith-microservices/NOTES.md`](../p12-monolith-microservices/NOTES.md). Pertemuan 13 mengganti arah komunikasi menjadi event, sehingga siapa tahu apa ikut jadi keputusan arsitektur, di [`../p13-event-driven-architecture/NOTES.md`](../p13-event-driven-architecture/NOTES.md).
+Pertemuan 2 membedah layered architecture dari daftar slide 12, jawaban atas big ball of mud, di [`../p2-layered-architecture/NOTES.md`](../p02-layered-architecture/NOTES.md). Pertemuan 12 memindahkannya ke skala deployment, dari monolith modular sampai microservices, di [`../p12-monolith-microservices/NOTES.md`](../p12-monolith-microservices/NOTES.md). Pertemuan 13 mengganti arah komunikasi menjadi event, sehingga siapa tahu apa ikut jadi keputusan arsitektur, di [`../p13-event-driven-architecture/NOTES.md`](../p13-event-driven-architecture/NOTES.md).
 
 ## Pertanyaan yang masih terbuka
 

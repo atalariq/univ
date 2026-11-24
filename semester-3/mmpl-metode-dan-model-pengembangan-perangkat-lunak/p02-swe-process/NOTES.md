@@ -2,8 +2,6 @@
 
 ## SE Layers
 
-![Illustration](assets/2026-08-31-09-41-07.png)
-
 ### A quality focus
 
 ### Process

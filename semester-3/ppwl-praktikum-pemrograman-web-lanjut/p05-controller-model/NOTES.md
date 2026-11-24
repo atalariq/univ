@@ -1,6 +1,6 @@
 # PPWL Pertemuan 5 - Controller dan Model
 
-- Buat Controller dan Model untuk `projects` (sesuai tugas portfolio sebelumnya). [my-portfolio](../PPWL-my-portfolio/)
+- Buat Controller dan Model untuk `projects` (sesuai tugas portfolio sebelumnya). repo `ppwl-portfolio` (lihat `../AGENTS.md`)
 - Buat halaman view untuk menampilkan daftar dan detail data project.
 - Buat form insert untuk menambah data project baru.
 - Tambahkan data dummy agar tampil di halaman web.
