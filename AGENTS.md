@@ -51,3 +51,15 @@ Baca file itu sebelum menyentuh kode. Jangan menyalin kode ke repo ini.
 ## Kebijakan repo publik
 
 Repo ini disiapkan untuk dipublikasikan. Materi pihak ketiga, soal ujian, dan dokumen hasil kompilasi tidak boleh masuk git. Aturannya ada di `.gitignore` dan ditegakkan `.pre-commit-config.yaml`. Pasang dengan `pre-commit install` setelah clone.
+
+## Perintah Nix
+
+Pakai `nix run nixpkgs#<paket>` untuk perkakas sekali pakai, bukan `nix-shell -p`
+yang sudah lama. Contoh menulis ulang riwayat:
+
+```bash
+nix run nixpkgs#git-filter-repo -- --help
+```
+
+Untuk perkakas yang sering dipakai, tambahkan ke `mise.toml` dan pasang dengan
+`mise install`. Python memakai versi sistem (`python3`), tidak dipin di mise.
