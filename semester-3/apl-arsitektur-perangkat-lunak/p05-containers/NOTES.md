@@ -66,5 +66,5 @@ Pertemuan 12 soal monolith dan microservices memakai container sebagai alat, buk
 
 ## Sumber
 
-* `from-elok.local/arpl-p5-containers.pdf`, Brae Webb dan Richard Thomas, 104 slide. Rujukan utama.
-* `csse.uq.local/w3a-containers.pdf`, catatan kuliah 6 halaman, bagian 2.1 dan 2.2 untuk namespaces dan layered filesystem.
+* `../00-materials/from-elok.local/arpl-p5-containers.pdf`, Brae Webb dan Richard Thomas, 104 slide. Rujukan utama.
+* `../00-materials/csse.uq.local/w3a-containers.pdf`, catatan kuliah 6 halaman, bagian 2.1 dan 2.2 untuk namespaces dan layered filesystem.

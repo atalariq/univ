@@ -49,7 +49,7 @@ Pertemuan 2 membedah layered architecture dari daftar slide 12, jawaban atas big
 
 ## Sumber
 
-- `from-elok.local/arpl-p1-introduction.pdf`, deck dosen, 16 slide. Klaim: slide 2, 3, 4, 5, 6, 11, 12, 13, 14, 16.
-- `csse.uq.local/w1a-architecture.pdf`, lecture notes, Brae Webb dan Richard Thomas, hlm. 1 sampai 5. Klaim: hlm. 1, 2, 3, 4.
+- `../00-materials/from-elok.local/arpl-p1-introduction.pdf`, deck dosen, 16 slide. Klaim: slide 2, 3, 4, 5, 6, 11, 12, 13, 14, 16.
+- `../00-materials/csse.uq.local/w1a-architecture.pdf`, lecture notes, Brae Webb dan Richard Thomas, hlm. 1 sampai 5. Klaim: hlm. 1, 2, 3, 4.
 
 Yang tidak terbaca: slide 7 sampai 10 hanya judul dan gambar, slide 13 dan 14 hanya butir tanpa penjelasan, slide 15 hanya penutup.

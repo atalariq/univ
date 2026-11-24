@@ -6,7 +6,7 @@ Halaman ini untuk dipindai, bukan dibaca berurutan. Isinya tiga hal: bahan mana 
 
 | Pertemuan | Topik | Berkas catatan | Deck sumber |
 | --- | --- | --- | --- |
-| 1 | Introduction | [p1-introduction/NOTES.md](p01-introduction/NOTES.md) (masih kerangka lama) | `from-elok.local/arpl-p1-introduction.pdf`, `w1a-architecture.pdf` |
+| 1 | Introduction | [p1-introduction/NOTES.md](p01-introduction/NOTES.md) (masih kerangka lama) | `00-materials/from-elok.local/arpl-p1-introduction.pdf`, `w1a-architecture.pdf` |
 | 2 | Layered Architecture | [p2-layered-architecture/NOTES.md](p02-layered-architecture/NOTES.md) | `arpl-p2-layered.pdf`, `w1b-layered.pdf` |
 | 3 | Introduction to Patterns | [p3-architectural-patterns/NOTES.md](p03-architectural-patterns/NOTES.md) | `arpl-p3-architectural-patterns.pdf` |
 | 4 | Security | [p4-security/NOTES.md](p04-security/NOTES.md) | `arpl-p4-security.pdf`, `w2a-security.pdf` |

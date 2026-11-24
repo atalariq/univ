@@ -2,7 +2,7 @@
 
 ## Cara sesi ini berjalan
 
-Pertemuan 8, 9, dan 10 dipakai untuk tiga tahap group assessment. Tiap kelompok menganalisis arsitektur satu produk nyata, lalu menyusun deck yang menjelaskan gaya arsitektur, komponen, alur request, dan trade-off yang dipilih. Pertemuan 11 berisi presentasi tiap kelompok dan diskusi, termasuk menilai hasil kerja kelompok lain. Delapan deck di `../p13-evaluasi-hasil-kerja-kelompok-lain/slides.local/` adalah objek penilaian itu: deck yang dipresentasikan, dibaca ulang untuk menilai kekuatan argumen dan bukti yang dibawa.
+Pertemuan 8, 9, dan 10 dipakai untuk tiga tahap group assessment. Tiap kelompok menganalisis arsitektur satu produk nyata, lalu menyusun deck yang menjelaskan gaya arsitektur, komponen, alur request, dan trade-off yang dipilih. Pertemuan 11 berisi presentasi tiap kelompok dan diskusi, termasuk menilai hasil kerja kelompok lain. Delapan deck di `slides.local/` adalah objek penilaian itu: deck yang dipresentasikan, dibaca ulang untuk menilai kekuatan argumen dan bukti yang dibawa.
 
 ## Delapan deck yang dinilai
 
@@ -40,4 +40,4 @@ Event-driven muncul di lima deck dengan kedalaman berbeda. Halodoc memperlakukan
 
 ## Sumber
 
-Semua deck ada di `../p13-evaluasi-hasil-kerja-kelompok-lain/slides.local/`: `01-kai.pdf`, `02-gitlab.pptx`, `03-steam.pdf`, `04-halodoc.pdf`, `05-wikipedia.pdf`, `06-wordpress.pdf`, `07-moodle.pdf`, `08-traveloka.pdf`.
+Semua deck ada di `slides.local/`: `01-kai.pdf`, `02-gitlab.pptx`, `03-steam.pdf`, `04-halodoc.pdf`, `05-wikipedia.pdf`, `06-wordpress.pdf`, `07-moodle.pdf`, `08-traveloka.pdf`.

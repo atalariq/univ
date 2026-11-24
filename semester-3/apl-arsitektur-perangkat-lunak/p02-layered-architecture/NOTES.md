@@ -58,8 +58,8 @@ Pertemuan 3 menempatkan layered architecture sebagai salah satu architectural pa
 
 ## Sumber
 
-- `from-elok.local/arpl-p2-layered.pdf`, 30 slide. Klaim: slide 3 sampai 8, 9 sampai 13, 16 sampai 20, 24 sampai 29.
-- `from-elok.local/arpl-p1-introduction.pdf`, daftar pattern (client-server terpisah dari layered).
-- `csse.uq.local/w1b-layered.pdf`, 12 hlm., lecture notes bukan slide. Klaim: hlm. 1, 3, 4 sampai 6, 7 sampai 10, 11.
+- `../00-materials/from-elok.local/arpl-p2-layered.pdf`, 30 slide. Klaim: slide 3 sampai 8, 9 sampai 13, 16 sampai 20, 24 sampai 29.
+- `../00-materials/from-elok.local/arpl-p1-introduction.pdf`, daftar pattern (client-server terpisah dari layered).
+- `../00-materials/csse.uq.local/w1b-layered.pdf`, 12 hlm., lecture notes bukan slide. Klaim: hlm. 1, 3, 4 sampai 6, 7 sampai 10, 11.
 
 Yang tidak terbaca: slide 9 sampai 13 hanya label empat lapisan dan caption gambar. Slide 22 dan 23 hanya caption figure J2EE dan PCBMER. Slide 14 dan 15 pertanyaan tanpa jawaban tertulis. Nomor definisi di slide 16 sampai 20 tercetak sebagai "Definition 0" karena counter beamer, jadi rujukannya memakai nomor slide.

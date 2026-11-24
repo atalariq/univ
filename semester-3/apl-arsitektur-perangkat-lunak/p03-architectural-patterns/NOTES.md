@@ -80,6 +80,6 @@ Hlm. 4 menempatkan microservice sebagai pola, dan `../p12-monolith-microservices
 
 ## Sumber
 
-- `from-elok.local/arpl-p3-architectural-patterns.pdf`: hlm. 2, 3, 4, 5 sampai 6, 7 sampai 8, 9 sampai 10, 11, 12, 14.
-- `csse.uq.local/w1b-layered.pdf`: hlm. 10 (biaya message passing).
-- `csse.uq.local/w2d-pipeline.pdf`: hlm. 2 sampai 3 (one direction principle).
+- `../00-materials/from-elok.local/arpl-p3-architectural-patterns.pdf`: hlm. 2, 3, 4, 5 sampai 6, 7 sampai 8, 9 sampai 10, 11, 12, 14.
+- `../00-materials/csse.uq.local/w1b-layered.pdf`: hlm. 10 (biaya message passing).
+- `../00-materials/csse.uq.local/w2d-pipeline.pdf`: hlm. 2 sampai 3 (one direction principle).

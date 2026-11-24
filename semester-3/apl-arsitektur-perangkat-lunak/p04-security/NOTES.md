@@ -1,6 +1,6 @@
 # Pertemuan 4: Security
 
-Catatan dari deck `from-elok.local/arpl-p4-security.pdf` (42 hlm., materi CSSE6400 oleh Guangdong Bai), dilengkapi `csse.uq.local/w2a-security.pdf` (8 hlm., Brae Webb). Nomor halaman mengacu ke deck kecuali disebut `w2a`.
+Catatan dari deck `../00-materials/from-elok.local/arpl-p4-security.pdf` (42 hlm., materi CSSE6400 oleh Guangdong Bai), dilengkapi `../00-materials/csse.uq.local/w2a-security.pdf` (8 hlm., Brae Webb). Nomor halaman mengacu ke deck kecuali disebut `w2a`.
 
 ## Ringkasan
 
@@ -71,7 +71,7 @@ Di `../p13-event-driven-architecture/NOTES.md`, event adalah fakta dari pihak la
 
 ## Sumber
 
-- `from-elok.local/arpl-p4-security.pdf`, deck CSSE6400 Quality attribute: Security, 42 hlm.
-- `csse.uq.local/w2a-security.pdf`, Security Principles, Brae Webb, 8 hlm.
+- `../00-materials/from-elok.local/arpl-p4-security.pdf`, deck CSSE6400 Quality attribute: Security, 42 hlm.
+- `../00-materials/csse.uq.local/w2a-security.pdf`, Security Principles, Brae Webb, 8 hlm.
 - Detail Heartbleed dan CVE tambahan di luar deck, yang hanya menyebutnya di hlm. 3.
 - Hlm. 25 dan 42 tidak menghasilkan teks; keduanya gambar tanpa keterangan.

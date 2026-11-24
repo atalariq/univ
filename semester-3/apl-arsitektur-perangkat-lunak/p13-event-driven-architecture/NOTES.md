@@ -1,6 +1,6 @@
 # Pertemuan 13: Event-Driven Architecture
 
-Catatan ini disusun dari deck `csse.uq.local/w5b-event_driven_architecture.pdf` (10 halaman, disebut "deck"). Nomor halaman dicantumkan pada tiap klaim, dan hal di luar deck ditandai sebagai tambahan.
+Catatan ini disusun dari deck `../00-materials/csse.uq.local/w5b-event_driven_architecture.pdf` (10 halaman, disebut "deck"). Nomor halaman dicantumkan pada tiap klaim, dan hal di luar deck ditandai sebagai tambahan.
 
 ## Mengapa EDA muncul
 
@@ -103,7 +103,7 @@ Perbedaannya tajam, dan itu yang membuat hooks tidak bisa dipakai sebagai contoh
 
 ## Sumber
 
-- `csse.uq.local/w5b-event_driven_architecture.pdf`, hlm. 1 sampai 10, untuk definisi dan contoh lelang (hlm. 1 sampai 2), broker topology termasuk queue dan stream (hlm. 2 sampai 6), mediator topology (hlm. 6 sampai 8), perbandingan keduanya (hlm. 9), dan kesulitan debugging (hlm. 10).
-- `csse.uq.local/w6b-microservices.slides.pdf`, bagian "Choreography & Orchestration".
-- `p13-evaluasi-hasil-kerja-kelompok-lain/slides.local/06-wordpress.pdf`, hlm. 6 sampai 10: padanan Laravel di hlm. 7, observer pattern dan implicit invocation di hlm. 8, action versus filter hook di hlm. 9, dampak arsitektural di hlm. 10.
+- `../00-materials/csse.uq.local/w5b-event_driven_architecture.pdf`, hlm. 1 sampai 10, untuk definisi dan contoh lelang (hlm. 1 sampai 2), broker topology termasuk queue dan stream (hlm. 2 sampai 6), mediator topology (hlm. 6 sampai 8), perbandingan keduanya (hlm. 9), dan kesulitan debugging (hlm. 10).
+- `../00-materials/csse.uq.local/w6b-microservices.slides.pdf`, bagian "Choreography & Orchestration".
+- `../p08-group-assessment-i/slides.local/06-wordpress.pdf`, hlm. 6 sampai 10: padanan Laravel di hlm. 7, observer pattern dan implicit invocation di hlm. 8, action versus filter hook di hlm. 9, dampak arsitektural di hlm. 10.
 - https://csse6400.uqcloud.net/ untuk posisi topik dalam jadwal (Event-Driven Architecture minggu 5, Message Queues minggu 6).
