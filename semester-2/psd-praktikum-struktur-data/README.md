@@ -20,7 +20,7 @@ pertemuan punya lembar tugas `task.md` atau catatan tambahan seperti
 
 | Nomor | Topik | Status | Tanggal |
 | --- | --- | --- | --- |
-| p01 | Pretest | stub | 2026-02-11 iirc |
+| p01 | Pretest | catatan | 2026-02-11 iirc |
 | p02 | Function | catatan | 2026-02-18 iirc |
 | p03 | Sorting | catatan | 2026-03-03 iirc |
 | p04 | Stack | catatan | 2026-03-04 iirc |
@@ -32,7 +32,7 @@ pertemuan punya lembar tugas `task.md` atau catatan tambahan seperti
 | p10 | Hash table | catatan | 2026-05-06 iirc |
 | p11 | Binary search tree | catatan | 2026-05-19 iirc |
 | p12 | Tugas kelompok | catatan | 2026-06-18 iirc |
-| p13 | Slides kelompok | materi saja | 2026-06-18 iirc |
+| p13 | Slides kelompok | catatan | 2026-06-18 iirc |
 
 ## Materi
 
@@ -43,8 +43,5 @@ pertemuan punya lembar tugas `task.md` atau catatan tambahan seperti
 
 ## Status
 
-Sebelas dari tiga belas folder pertemuan sudah punya catatan atau laporan.
-`p01-pretest` baru berisi `main.py` dan masih memakai stub, sedangkan
-`p13-slides-kelompok` berisi delapan slides kelompok tanpa catatan tertulis.
-`p03-sorting/readme.md` ada tetapi kosong; laporan pertemuan itu tetap lengkap di
-`p03-sorting/report/`.
+Dari 13 pertemuan, 2 sudah punya catatan dan 11 masih berupa stub. Materi sepanjang semester ada di `00-materials/`, 4 berkas.
+

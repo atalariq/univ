@@ -14,17 +14,17 @@ Dua pertemuan berisi tugas pengganti, yaitu pertemuan 2 dan 6, dan pertemuan 7 d
 
 | Nomor | Topik | Status | Tanggal |
 | --- | --- | --- | --- |
-| 01 | Introduction to OOP | stub | 2026-06-18 iirc |
-| 02 | Tugas pengganti | stub | 2026-06-18 iirc |
-| 03 | Class dan object | stub | 2026-06-18 iirc |
-| 04 | Abstract class dan interface | stub | 2026-06-18 iirc |
-| 05 | Encapsulation | stub | 2026-06-18 iirc |
-| 06 | Tugas pengganti | stub | 2026-06-18 iirc |
-| 07 | Quiz pra UTS | stub | 2026-06-18 iirc |
-| 08 | Inheritance | stub | 2026-06-18 iirc |
-| 09 | Polymorphism | stub | 2026-06-18 iirc |
-| 10 | Exception dan error handling | stub | 2026-06-18 iirc |
-| 11 | Package | stub | 2026-06-18 iirc |
+| 01 | Introduction to OOP | catatan | 2026-06-18 iirc |
+| 02 | Tugas pengganti | catatan | 2026-06-18 iirc |
+| 03 | Class dan object | catatan | 2026-06-18 iirc |
+| 04 | Abstract class dan interface | catatan | 2026-06-18 iirc |
+| 05 | Encapsulation | catatan | 2026-06-18 iirc |
+| 06 | Tugas pengganti | catatan | 2026-06-18 iirc |
+| 07 | Quiz pra UTS | catatan | 2026-06-18 iirc |
+| 08 | Inheritance | catatan | 2026-06-18 iirc |
+| 09 | Polymorphism | catatan | 2026-06-18 iirc |
+| 10 | Exception dan error handling | catatan | 2026-06-18 iirc |
+| 11 | Package | catatan | 2026-06-18 iirc |
 
 Tanggal diambil dari tanggal modifikasi berkas materi, jadi kemungkinan tanggal unduh, bukan tanggal kuliah. Nama berkas aslinya memakai penanda bulan `xx`, jadi tanggal kuliah tidak bisa dipastikan dari nama.
 
@@ -42,4 +42,5 @@ Tanggal diambil dari tanggal modifikasi berkas materi, jadi kemungkinan tanggal 
 
 ## Status
 
-Sebelas folder pertemuan sudah ada dan semuanya masih stub, jadi belum ada catatan pertemuan yang ditulis. Folder pertemuan 2, 6, dan 7 berisi tugas dan quiz beserta jawabannya, bukan catatan kuliah.
+Dari 11 pertemuan, semuanya sudah punya catatan. Materi sepanjang semester ada di `00-materials/`, 9 berkas.
+

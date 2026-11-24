@@ -29,7 +29,7 @@ query.
 | p07 | SQL | catatan | 2026-04-05 iirc |
 | p08 | DDL | catatan | 2026-05-02 iirc |
 | p09 | DML dan DQL | catatan | 2026-05-02 iirc |
-| p10 | DQL | stub | 2026-05-11 iirc |
+| p10 | DQL | catatan | 2026-05-11 iirc |
 | p11 | Subquery dan view | catatan | 2026-05-11 iirc |
 | p12 | Trigger | catatan | 2026-05-18 iirc |
 | p13 | PL/SQL function | catatan | 2026-05-25 iirc |
@@ -43,7 +43,5 @@ pertemuan tertentu.
 
 ## Status
 
-Delapan dari sembilan folder pertemuan sudah punya catatan atau laporan.
-`p10-dql` baru berisi `query.sql` dan masih memakai stub catatan. Nomor 1, 2, 5,
-dan 6 tidak punya folder, dan tidak ada catatan yang menyebut alasannya, jadi
-nomor itu dilewati tanpa label kosong.
+Dari 9 pertemuan, 1 sudah punya catatan dan 8 masih berupa stub.
+

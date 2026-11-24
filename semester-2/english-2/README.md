@@ -14,8 +14,8 @@ Folder `2026-06-14-essay-writing/` memuat tugas esai beserta berkas Typst, bibli
 
 | Nomor | Topik | Status | Tanggal |
 |---|---|---|---|
-| 1 | Effective Academic Presentation Skills | stub | 2026-06-18 iirc |
-| 2 | Academic Writing | stub | 2026-06-18 iirc |
+| 1 | Effective Academic Presentation Skills | catatan | 2026-06-18 iirc |
+| 2 | Academic Writing | catatan | 2026-06-18 iirc |
 
 ## Materi
 
@@ -23,4 +23,5 @@ Belum ada berkas di `00-materials/`.
 
 ## Status
 
-Belum ada pertemuan yang punya `NOTES.md` terisi. Kedua folder pertemuan masih stub, dan rangkuman yang tersedia baru mencakup materi ujian akhir secara gabungan.
+Dari 2 pertemuan, semuanya sudah punya catatan.
+

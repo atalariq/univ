@@ -53,6 +53,5 @@ dengan salinan yang sudah ada di dalam folder pertemuan terkait.
 
 ## Status
 
-Dua belas folder pertemuan semuanya sudah punya catatan atau laporan, jadi tidak
-ada stub di mata kuliah ini. Pertemuan 1 tidak punya folder, padahal modul bab 1
-tersedia di `00-materials/`.
+Dari 12 pertemuan, 0 sudah punya catatan dan 12 masih berupa stub. Materi sepanjang semester ada di `00-materials/`, 15 berkas.
+

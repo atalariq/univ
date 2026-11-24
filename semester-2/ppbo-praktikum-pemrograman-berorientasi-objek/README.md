@@ -25,7 +25,7 @@ pertemuan mana pun.
 
 | Nomor | Topik | Status | Tanggal |
 | --- | --- | --- | --- |
-| p01 | Pengantar | stub | 2026-02-12 iirc |
+| p01 | Pengantar | catatan | 2026-02-12 iirc |
 | p02 | Pengenalan Java | catatan | 2026-03-05 iirc |
 | p03 | Array | catatan | 2026-03-05 iirc |
 | p04 | Class | catatan | 2026-03-05 iirc |
@@ -40,7 +40,5 @@ semester selain dua berkas di atas yang penempatannya masih diragukan.
 
 ## Status
 
-Enam dari tujuh folder pertemuan sudah punya catatan atau laporan. `p01-pengantar`
-baru berisi latihan Java di `src/` dan memakai stub catatan. Pertemuan 8 dan
-seterusnya tidak punya folder, sementara tugas akhir praktikum disimpan di
-`px-tugas-akhir-game-runewater.local/`.
+Dari 7 pertemuan, 1 sudah punya catatan dan 6 masih berupa stub.
+

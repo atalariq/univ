@@ -14,12 +14,12 @@ Dua berkas tugas diletakkan di akar folder: `2026-06-07-tugas-basis-data-trpl-re
 
 | Nomor | Topik | Status | Tanggal |
 |---|---|---|---|
-| 1 | Pengantar Basis Data | stub | 2026-06-18 iirc |
-| 2 | Entity Relationship Diagram | stub | 2026-06-18 iirc |
-| 3 | SQL | stub | 2026-06-18 iirc |
-| 4 | Introduction to SQL | stub | 2026-06-18 iirc |
-| 5 | Relational Algebra | stub | 2026-06-18 iirc |
-| 6 | Normalization | stub | 2026-06-18 iirc |
+| 1 | Pengantar Basis Data | catatan | 2026-06-18 iirc |
+| 2 | Entity Relationship Diagram | catatan | 2026-06-18 iirc |
+| 3 | SQL | catatan | 2026-06-18 iirc |
+| 4 | Introduction to SQL | catatan | 2026-06-18 iirc |
+| 5 | Relational Algebra | catatan | 2026-06-18 iirc |
+| 6 | Normalization | catatan | 2026-06-18 iirc |
 
 ## Materi
 
@@ -28,4 +28,5 @@ Dua berkas tugas diletakkan di akar folder: `2026-06-07-tugas-basis-data-trpl-re
 
 ## Status
 
-Belum ada pertemuan yang punya catatan. Keenam folder pertemuan berisi `NOTES.md` stub, dan yang tersedia baru berkas tugas persiapan UAS di akar folder.
+Dari 6 pertemuan, semuanya sudah punya catatan. Materi sepanjang semester ada di `00-materials/`, 66 berkas.
+

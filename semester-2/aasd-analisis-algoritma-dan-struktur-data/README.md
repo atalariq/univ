@@ -14,13 +14,13 @@ Folder `2026-06-06-tugas-pengganti-sebelum-uas/` memuat soal latihan pengganti s
 
 | Nomor | Topik | Status | Tanggal |
 |---|---|---|---|
-| 1 | Analisis Algoritma | stub | 2026-06-18 iirc |
-| 2 | Divide and Conquer | stub | 2026-06-18 iirc |
-| 3 | Metode Greedy | stub | 2026-06-18 iirc |
-| 4 | Minimum Spanning Tree | stub | 2026-06-18 iirc |
-| 5 | Dynamic Programming | stub | 2026-06-18 iirc |
-| 6 | Branch and Bound untuk TSP | stub | 2026-06-18 iirc |
-| 7 | Kompresi Data dengan Algoritme Huffman | stub | 2026-06-18 iirc |
+| 1 | Analisis Algoritma | catatan | 2026-06-18 iirc |
+| 2 | Divide and Conquer | catatan | 2026-06-18 iirc |
+| 3 | Metode Greedy | catatan | 2026-06-18 iirc |
+| 4 | Minimum Spanning Tree | catatan | 2026-06-18 iirc |
+| 5 | Dynamic Programming | catatan | 2026-06-18 iirc |
+| 6 | Branch and Bound untuk TSP | catatan | 2026-06-18 iirc |
+| 7 | Kompresi Data dengan Algoritme Huffman | catatan | 2026-06-18 iirc |
 
 ## Materi
 
@@ -28,4 +28,5 @@ Belum ada berkas di `00-materials/`. Semua berkas materi saat ini milik satu per
 
 ## Status
 
-Belum ada pertemuan yang punya catatan. Ketujuh folder pertemuan berisi `NOTES.md` stub, dan catatan yang tersedia baru berupa jawaban tugas di folder `2026-06-06-tugas-pengganti-sebelum-uas/`.
+Dari 7 pertemuan, semuanya sudah punya catatan.
+

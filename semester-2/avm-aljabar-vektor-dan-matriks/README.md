@@ -15,9 +15,9 @@ Dua folder bertanggal menyimpan persiapan ujian, bukan pertemuan: `2025-06-07-ca
 | Nomor | Topik | Status | Tanggal |
 |---|---|---|---|
 | 1 | Matriks dan Operasi Matriks | catatan | 2026-02-18 iirc |
-| 2 | Determinan Matriks | stub | 2026-02-18 iirc |
-| 3 | Invers Matriks | stub | 2026-02-18 iirc |
-| 4 | Sistem Persamaan Linier | stub | 2026-02-18 iirc |
+| 2 | Determinan Matriks | catatan | 2026-02-18 iirc |
+| 3 | Invers Matriks | catatan | 2026-02-18 iirc |
+| 4 | Sistem Persamaan Linier | catatan | 2026-02-18 iirc |
 
 ## Materi
 
@@ -27,4 +27,5 @@ Dua folder bertanggal menyimpan persiapan ujian, bukan pertemuan: `2025-06-07-ca
 
 ## Status
 
-Satu dari empat pertemuan punya catatan, yaitu pertemuan 1 lewat berkas `2025-02-13-aljabar_vektor_matriks.md`. Tiga pertemuan lainnya baru berisi `NOTES.md` stub.
+Dari 4 pertemuan, semuanya sudah punya catatan. Materi sepanjang semester ada di `00-materials/`, 56 berkas.
+
