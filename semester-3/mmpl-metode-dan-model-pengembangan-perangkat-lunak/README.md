@@ -32,5 +32,5 @@ Folder p13 memuat berkas pendukung per framework (`crystal-method.md`, `dsdm.md`
 
 ## Status
 
-Dari 7 pertemuan, 6 sudah punya catatan dan 1 masih berupa stub. Materi sepanjang semester ada di `00-materials/`, 5 berkas.
+Dari 7 pertemuan, 6 sudah punya catatan, 0 masih berupa stub, dan 1 baru berisi materi. Materi sepanjang semester ada di `00-materials/`, 5 berkas.
 

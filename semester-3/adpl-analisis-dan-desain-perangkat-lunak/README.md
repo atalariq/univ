@@ -32,5 +32,5 @@ Deck pertemuan 1, 2, 5, dan 7 ada di `00-materials/` tanpa folder pertemuan.
 
 ## Status
 
-Dari 5 pertemuan, 3 sudah punya catatan dan 2 masih berupa stub. Materi sepanjang semester ada di `00-materials/`, 5 berkas.
+Dari 5 pertemuan, 3 sudah punya catatan, 0 masih berupa stub, dan 2 baru berisi materi. Materi sepanjang semester ada di `00-materials/`, 5 berkas.
 

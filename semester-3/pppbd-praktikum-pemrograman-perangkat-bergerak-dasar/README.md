@@ -29,5 +29,4 @@ Belum ada folder `00-materials`. Modul dari dosen disimpan di folder pertemuan m
 
 ## Status
 
-Dari 8 pertemuan, 4 sudah punya catatan dan 4 masih berupa stub.
-
+Dari delapan folder pertemuan, empat sudah punya catatan (p03, p04, p06, p08) dan empat masih stub (p09 sampai p12). Catatan p08 bernama `notes.md` dan isinya tentang penyusunan laporan, bukan rangkuman materi. Nomor 1, 2, 5, dan 7 tidak punya folder maupun materi, jadi nomornya dilewati.

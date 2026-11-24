@@ -43,5 +43,5 @@ pertemuan punya lembar tugas `task.md` atau catatan tambahan seperti
 
 ## Status
 
-Dari 13 pertemuan, 2 sudah punya catatan dan 11 masih berupa stub. Materi sepanjang semester ada di `00-materials/`, 4 berkas.
+Dari 13 pertemuan, 8 sudah punya catatan, 0 masih berupa stub, dan 5 baru berisi materi. Materi sepanjang semester ada di `00-materials/`, 4 berkas.
 

@@ -53,5 +53,5 @@ dengan salinan yang sudah ada di dalam folder pertemuan terkait.
 
 ## Status
 
-Dari 12 pertemuan, 0 sudah punya catatan dan 12 masih berupa stub. Materi sepanjang semester ada di `00-materials/`, 15 berkas.
+Dari 12 pertemuan, 9 sudah punya catatan, 0 masih berupa stub, dan 3 baru berisi materi. Materi sepanjang semester ada di `00-materials/`, 15 berkas.
 

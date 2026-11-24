@@ -43,5 +43,5 @@ pertemuan tertentu.
 
 ## Status
 
-Dari 9 pertemuan, 1 sudah punya catatan dan 8 masih berupa stub.
+Dari 9 pertemuan, semuanya sudah punya catatan.
 

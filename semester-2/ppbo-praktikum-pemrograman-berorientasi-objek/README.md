@@ -40,5 +40,5 @@ semester selain dua berkas di atas yang penempatannya masih diragukan.
 
 ## Status
 
-Dari 7 pertemuan, 1 sudah punya catatan dan 6 masih berupa stub.
+Dari 7 pertemuan, 3 sudah punya catatan, 0 masih berupa stub, dan 4 baru berisi materi.
 
