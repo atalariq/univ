@@ -50,9 +50,9 @@
     git checkout 93d08334b570022f5138bc590e88f167acdbe572
     mise install
     cp .env.example .env
+    composer install
     php artisan key:generate
     podman-compose -f compose.yaml up -d db
-    composer install
     php artisan migrate --seed
     php artisan storage:link
     npm ci
@@ -191,7 +191,7 @@ melakukan request tambahan.
   header: ([Kode], [Arti], [Contoh pada aplikasi]),
   [`200`], [Request berhasil], [`GET /api/projects`],
   [`404`], [Resource tidak ditemukan], [Slug proyek salah atau proyek draft],
-  [`422`], [Validasi gagal], [Form contact tanpa email],
+  [`422`], [Validasi gagal pada request JSON], [Request JSON tanpa email],
   [`429`], [Batas request terlampaui], [Request ke-61 dalam satu menit],
   align: (center, left, left),
   size: 9pt,
@@ -322,9 +322,9 @@ Untuk mereproduksi keadaan akhir:
   git checkout 93d08334b570022f5138bc590e88f167acdbe572
   mise install
   cp .env.example .env
+  composer install
   php artisan key:generate
   podman-compose -f compose.yaml up -d db
-  composer install
   php artisan migrate --seed
   php artisan storage:link
   npm ci
@@ -480,7 +480,7 @@ detail di browser.
   file: "app/Http/Resources/ProjectResource.php",
 )
 
-Respons nyata untuk `GET /api/projects?search=portfolio&per_page=9` memuat
+Kutipan respons untuk `GET /api/projects?search=portfolio&per_page=9` memuat
 satu proyek, objek `links`, dan objek `meta`. Bentuk ini sama untuk semua
 halaman; yang berubah hanya isi `data` dan URL pada `links`.
 
@@ -499,7 +499,8 @@ halaman; yang berubah hanya isi `data` dan URL pada `links`.
               "project_date": "2026-11-12",
               "is_featured": false,
               "url": "http://127.0.0.1:8000/projects/ppwl-portfolio",
-              "repository_url": "https://github.com/atalariq/ppwl-portfolio"
+              "repository_url": "https://github.com/atalariq/ppwl-portfolio",
+              "project_url": null
           }
       ],
       "links": {
@@ -510,7 +511,11 @@ halaman; yang berubah hanya isi `data` dan URL pada `links`.
       },
       "meta": {
           "current_page": 1,
+          "from": 1,
+          "last_page": 1,
+          "path": "http://127.0.0.1:8000/api/projects",
           "per_page": 9,
+          "to": 1,
           "total": 1
       }
   }
