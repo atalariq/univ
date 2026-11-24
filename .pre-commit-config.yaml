@@ -1,6 +1,6 @@
 # Gate repo publik.
-# Menolak dokumen pihak ketiga, biner besar, dan rahasia sebelum masuk commit.
-# Pasang sekali: pre-commit install
+# Menolak dokumen pihak ketiga, biner besar, rahasia, dan tautan rusak.
+# Pasang sekali: mise run gate
 repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v4.6.0
@@ -21,3 +21,9 @@ repos:
         entry: scripts/check-blocked-paths.sh
         language: script
         types: [file]
+      - id: relative-links
+        name: periksa tautan relatif markdown
+        entry: python3 scripts/check-links.py .
+        language: system
+        files: \.md$
+        pass_filenames: false

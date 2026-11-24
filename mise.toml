@@ -1,0 +1,36 @@
+[tools]
+typst = "0.13"
+pandoc = "3"
+poppler = "latest"
+imagemagick = "latest"
+oxipng = "latest"
+node = "24"
+python = "3.12"
+pre-commit = "latest"
+git-filter-repo = "latest"
+markdownlint-cli2 = "latest"
+"npm:@mermaid-js/mermaid-cli" = "latest"
+
+[tasks."new-session"]
+description = "Buat folder pertemuan baru beserta NOTES.md"
+run = "bash scripts/new-session.sh"
+
+[tasks.links]
+description = "Periksa semua tautan relatif di berkas markdown"
+run = "python3 scripts/check-links.py ."
+
+[tasks.images]
+description = "Kompres gambar yang baru ditambahkan"
+run = "bash scripts/compress-images.sh"
+
+[tasks.sessions]
+description = "Daftar pertemuan per mata kuliah"
+run = "bash scripts/list-sessions.sh"
+
+[tasks.gate]
+description = "Pasang pre-commit pada clone ini"
+run = "pre-commit install"
+
+[tasks.check]
+description = "Jalankan semua pemeriksaan pada seluruh berkas"
+run = "pre-commit run --all-files"
